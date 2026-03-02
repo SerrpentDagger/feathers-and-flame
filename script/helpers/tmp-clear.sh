@@ -1,3 +1,7 @@
 #!/bin/bash
 
-rm -rf "$SCALEH/tmp/"
+if [[ -z "$SCALET" ]]; then
+    echo "SCALET is not set!"
+    exit 1
+fi
+rm -rf "$SCALET"
