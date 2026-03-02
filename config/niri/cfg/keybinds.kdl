@@ -16,6 +16,7 @@ binds {
     Mod+Shift+Space { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
     // niri msg focused-output | grep -P "O
     Mod+Ctrl+Space { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
+    Mod+Shift+W { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
