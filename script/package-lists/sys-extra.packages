@@ -5,11 +5,11 @@
 keepassxc
 authenticator
 
-# Calculators
-libqalculate
-
-# Doc viewers
-evince
+# # Calculators
+# libqalculate
+#
+# # Doc viewers
+# evince
 
 # Virtual machines
 virt-manager
@@ -17,22 +17,5 @@ virt-manager
 # Database viewer
 sqlitebrowser
 
-# Browsers
-#mullvad-browser
-#brave
-omarchy-chromium
-
-# Input
-# input-remapper
-
-# AI help, incl. about system.
-opencode
-
-# Theming
-aether
-
 # Versatile and cool gpu monitor
 nvtop
-
-# Alternative (better!) compositor, automatically configured.
-niri

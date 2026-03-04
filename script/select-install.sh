@@ -1,50 +1,50 @@
 if [[ $# -lt 2 ]]; then
-  echo "Must specify selection file and kind of thing!"
-  exit 1
+	echo "Must specify selection file and kind of thing!"
+	exit 1
 fi
 
 is_aur_package() {
-  return 1
-  local package_name=$1
-  # Check if in aur list
-  if grep -q "^$package_name\$" "$SCALEP/aur.packages"; then
-    return 0
-  else
-    return 1
-  fi
+	local package_name=$1
+	# Check if in aur list
+	if grep -q "^$package_name\$" "$SCALEP/aur.packages"; then
+		return 0
+	else
+		return 1
+	fi
 }
 # Have to export functions for fzf
 export -f is_aur_package
 
 get_package_info() {
-  local package_name=$1
-  if is_aur_package "$package_name"; then
-    yay -Siia "$package_name" || echo "Failed to get info for $package_name"
-  else
-    pacman -Sii "$package_name" || echo "Failed to get info for $package_name"
-  fi
+	local package_name=$1
+	if is_aur_package "$package_name"; then
+		yay -Siia "$package_name" || echo "Failed to get info for $package_name"
+	else
+		pacman -Sii "$package_name" || echo "Failed to get info for $package_name"
+	fi
 }
 # Have to export functions for fzf
 export -f get_package_info
 
 filter_user_selected_aur() {
-  for package in "$@"; do
-    is_aur_package "$package" && echo "$package" >> "$SCALEP/user-selected-aur.packages" || echo "$package" >> "$SCALEP/user-selected.packages"
-  done
+	for package in "$@"; do
+		is_aur_package "$package" && echo "$package" >>"$SCALEP/user-selected-aur.packages" || echo "$package" >>"$SCALEP/user-selected.packages"
+	done
 }
 
 fzf_args=(
-  --multi
-  --header="Select which $2 packages to install."
-  --preview 'get_package_info {1}' 
-  --preview-label='alt-p: toggle description, alt-j/k: scroll, tab: multi-select, escape: none of them'
-  --preview-label-pos='bottom'
-  --preview-window 'down:65%:wrap'
-  --bind 'alt-p:toggle-preview'
-  --bind 'alt-d:preview-half-page-down,alt-u:preview-half-page-up'
-  --bind 'alt-k:preview-up,alt-j:preview-down'
-  --color 'pointer:green,marker:green'
+	--multi
+	--header="Select which $2 packages to install."
+	--preview 'get_package_info {1}'
+	--preview-label='alt-p: toggle description, alt-j/k: scroll, tab: multi-select, escape: none of them'
+	--preview-label-pos='bottom'
+	--preview-window 'down:65%:wrap'
+	--bind 'alt-p:toggle-preview'
+	--bind 'alt-d:preview-half-page-down,alt-u:preview-half-page-up'
+	--bind 'alt-k:preview-up,alt-j:preview-down'
+	--color 'pointer:green,marker:green'
 )
 
+echo "$SCALEP/$1"
 pkg_names=$(grep -v '^#' "$SCALEP/$1" | grep -v '^$' | fzf "${fzf_args[@]}" || true)
 filter_user_selected_aur $pkg_names

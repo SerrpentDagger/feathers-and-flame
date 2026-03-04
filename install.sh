@@ -10,6 +10,6 @@ source "$SCALEH/tmp-clear.sh"
 
 # Install
 source "$SCALES/packages.sh"
-# source "$SCALES/autologin.sh"
-# source "$SCALES/mullvad.sh"
-# source "$SCALE/vintagestory.sh"
+source "$SCALES/autologin.sh"
+source "$SCALES/mullvad.sh"
+source "$SCALE/vintagestory.sh"
