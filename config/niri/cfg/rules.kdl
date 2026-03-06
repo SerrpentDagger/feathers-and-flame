@@ -59,6 +59,13 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+	match app-id=r#"libreoffice-.+"#
+
+	open-fullscreen false
+	open-maximized true
+}
+
 // Windows to open half-height
 /-window-rule {
     match app-id="org.gnome.Nautilus"
@@ -72,6 +79,7 @@ window-rule {
     exclude app-id="gimp"
     exclude app-id=r#"(B|b)rowser"#
     exclude app-id="vlc"
+		exclude app-id=r#"libreoffice-.+"# 
 
     opacity 0.95
 }
