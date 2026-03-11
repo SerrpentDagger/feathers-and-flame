@@ -14,19 +14,19 @@ binds {
     Mod+P hotkey-overlay-title="Cycle Power Profile" { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
     Mod+Comma hotkey-overlay-title="Dissmiss Notification" { spawn-sh "qs -c noctalia-shell ipc call notifications dismissOldest"; }
     Mod+Shift+Space hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
-    Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh random"; }
+    Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh random"; }
     // Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
 		// Mod+Shift+1			{ spawn-sh "qs -c noctalia-shell ipc call wallpaper set /home/serpent/.local/share/scale-shell/wallpaper-presets/1.* $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
-    Mod+Shift+1 hotkey-overlay-title="Wallpaper Favourite 1 (through 0)" { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 1"; }
-    Mod+Shift+2 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 2"; }
-    Mod+Shift+3 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 3"; }
-    Mod+Shift+4 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 4"; }
-    Mod+Shift+5 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 5"; }
-    Mod+Shift+6 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 6"; }
-    Mod+Shift+7 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 7"; }
-    Mod+Shift+8 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 8"; }
-    Mod+Shift+9 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 9"; }
-    Mod+Shift+0 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh preset 0"; }
+    Mod+Shift+1 hotkey-overlay-title="Wallpaper Favourite 1 (through 0)" { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 1"; }
+    Mod+Shift+2 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 2"; }
+    Mod+Shift+3 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 3"; }
+    Mod+Shift+4 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 4"; }
+    Mod+Shift+5 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 5"; }
+    Mod+Shift+6 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 6"; }
+    Mod+Shift+7 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 7"; }
+    Mod+Shift+8 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 8"; }
+    Mod+Shift+9 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 9"; }
+    Mod+Shift+0 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh preset 0"; }
     Mod+Shift+W hotkey-overlay-title="Wallpaper Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
     Mod+Shift+N hotkey-overlay-title="Toggle Nigth-Light" { spawn-sh "niri msg action do-screen-transition && qs -c noctalia-shell ipc call nightLight toggle"; }
 
@@ -42,8 +42,11 @@ binds {
     Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "alacritty -e btop"; }
     Mod+Shift+G                         hotkey-overlay-title="NVIDEA Monitor" { spawn-sh "alacritty -e nvtop"; }
     xF86Calculator { spawn-sh "gnome-calculator"; }
-    Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e source /home/serpent/.local/share/scale-shell/script/triggers/pkg_install.sh"; }
+    // Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e bash /home/serpent/.local/share/scale-shell/script/triggers/pkg_install.sh"; }
 		Mod+N																hotkey-overlay-title="Open LazyVim" { spawn-sh "alacritty -e nvim"; }
+		Mod+Ctrl+S													hotkey-overlay-title="Share File (LocalSend)" { spawn-sh "alacritty -e bash ~/.local/share/scale-shell/script/cmd/share.sh file"; }
+		Mod+Shift+S													hotkey-overlay-title="Share Folder (LocalSend)" { spawn-sh "alacritty -e bash ~/.local/share/scale-shell/script/cmd/share.sh folder"; }
+		Mod+Alt+S														hotkey-overlay-title="Share Clipboard (LocalSend)" { spawn-sh "alacritty -e bash ~/.local/share/scale-shell/script/cmd/share.sh clipboard"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }

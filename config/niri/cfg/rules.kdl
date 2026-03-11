@@ -50,11 +50,19 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+	match title=r#"Rendering.*Kdenlive"#
+
+	default-column-width { proportion 0.5; }
+	default-window-height { proportion 0.6; }
+	open-floating true
+}
+
 // Windows to open maximised. Add as desired.
 window-rule {
     match app-id="gimp"
     match app-id="org.kde.kdenlive"
-    match app-id="vlc"
+    // match app-id="vlc"
 
     open-maximized true
 }
@@ -77,9 +85,10 @@ window-rule {
 window-rule {
     // Windows not to be translucent. Add as desired.
     exclude app-id="gimp"
-    exclude app-id=r#"(B|b)rowser"#
+    exclude app-id=r#"(?i)browser"#
     exclude app-id="vlc"
-		exclude app-id=r#"libreoffice-.+"# 
+		exclude app-id=r#"libreoffice-(draw|impress)"# 
+		exclude app-id="imv"
 
     opacity 0.95
 }
@@ -90,10 +99,15 @@ window-rule {
     opacity 0.87
 }
 
+// Can manually exempt certain windows from proper border-drawing.
+// Default to functionality though.
+window-rule {
+	draw-border-with-background false
+}
+
 // Windows to be extra-translucent.
 window-rule {
     match app-id="org.gnome.Nautilus"
-    draw-border-with-background false
     opacity 0.83
 }
 window-rule {
