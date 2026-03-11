@@ -13,9 +13,9 @@ xdg-mime default imv.desktop image/tiff
 xdg-mime default org.gnome.Evince.desktop application/pdf
 
 # Use Mullvad as the default browser
-xdg-settings set default-web-browser start-mullvad-browser.desktop
-xdg-mime default start-mullvad-browser.desktop x-scheme-handler/http
-xdg-mime default start-mullvad-browser.desktop x-scheme-handler/https
+# xdg-settings set default-web-browser start-mullvad-browser.desktop
+# xdg-mime default start-mullvad-browser.desktop x-scheme-handler/http
+# xdg-mime default start-mullvad-browser.desktop x-scheme-handler/https
 
 # Open video files with vlc
 xdg-mime default vlc.desktop video/mp4

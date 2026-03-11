@@ -16,10 +16,11 @@ source "$HOME/.local/share/scale-shell/vars.sh"
 source "$SCALEH/tmp-clear.sh"
 
 # Install
-source "$SCALES/packages.sh"
+gum confirm "Packages?" && source "$SCALES/packages.sh" || true
 gum confirm "Setup auto-login?" && source "$SCALES/autologin.sh" || true
 
 gum confirm "Install Mullvad Browser?" && source "$SCALES/mullvad.sh" || true
 gum confirm "Install VintageStory? (Semi-closed, requires paid account, flatpak)" && source "$SCALES/vintagestory.sh" || true
 
+source "$SCALES/gnome-terminal.sh"
 source "$SCALES/mimetypes.sh"
