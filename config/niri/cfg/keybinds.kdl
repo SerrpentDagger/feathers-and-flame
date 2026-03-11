@@ -38,7 +38,8 @@ binds {
     Mod+Escape                          hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 		Mod+G 															hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
 
-    Mod+E                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "nautilus"; }
+    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
+		Mod+Shift+E													hotkey-overlay-title="File Manager: Nautilus (starred)" { spawn-sh "nautilus starred:///"; }
     Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "alacritty -e btop"; }
     Mod+Shift+G                         hotkey-overlay-title="NVIDEA Monitor" { spawn-sh "alacritty -e nvtop"; }
     xF86Calculator { spawn-sh "gnome-calculator"; }
