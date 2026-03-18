@@ -47,6 +47,7 @@ window-rule {
     match title=r#"Splash.*Kdenlive"#
     match title=r#"NoScript.*Mullvad"#
 		match app-id="krita" title=r#".+ — Krita"#
+		match app-id="vlc" title="Current Media Information"
 
     open-floating true
 }

@@ -171,12 +171,12 @@
                     ]
                 },
                 {
-                    "hideWhenZero": false,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
+                    "hideWhenZero": true,
+                    "hideWhenZeroUnread": true,
+                    "iconColor": "secondary",
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
+                    "unreadBadgeColor": "tertiary"
                 },
                 {
                     "displayMode": "onhover",
@@ -457,7 +457,7 @@
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
-        "forced": true,
+        "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "2552"
