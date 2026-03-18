@@ -96,7 +96,8 @@ window-rule {
 
 window-rule {
 	// Specific browser pages for translucency
-	match app-id=r#"(?i)browser"# title=r#"(GitHub|GitLab|[Dd]ocumentation)"#
+	match app-id=r#"(?i)browser"# title=r#"(GitHub|GitLab|[Dd]ocumentation|[Ii]nbox)"#
+	exclude title=r#"(?i)youtube"#
 
 	opacity 0.95
 }
