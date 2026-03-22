@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=VintageStory Manual
+GenericName=Survival Game with performance optimisations
+Comment=Uncompromising wilderness survival game
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mesa_glthread=true gamemoderun bash /home/serpent/.local/share/vintagestory/run.sh
+Icon=/home/serpent/.local/share/scale-shell/icons/vintagestory.png
+Terminal=false
+NoDisplay=false
+Categories=Game;
