@@ -1,0 +1,10 @@
+// Here you can include rule-files which are to be hot-swapped with keybinds.
+// Command to toggle an inclusion in this file is as follows:
+// bash /home/serpent/.local/share/scale-shell/script/cmd/hot-rules.sh example
+// That toggles a line starting with include "./hot-rules/example.kdl"
+
+// Performance tweak to disable laptop monitor, go hdmi-only while recording games
+// include "./hot-rules/hdmi-only.kdl"
+
+// In case transparency is bothersom in a certain situation
+include "./hot-rules/transparency.kdl"

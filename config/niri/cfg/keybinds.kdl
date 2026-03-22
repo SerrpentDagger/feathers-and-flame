@@ -30,12 +30,16 @@ binds {
     Mod+Shift+W hotkey-overlay-title="Wallpaper Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
     Mod+Shift+N hotkey-overlay-title="Toggle Nigth-Light" { spawn-sh "niri msg action do-screen-transition && qs -c noctalia-shell ipc call nightLight toggle"; }
 
+    // ─── Hot-Rules ───
+		Mod+Alt+D hotkey-overlay-title="Toggle laptop-monitor on/off" { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/hot-rules.sh hdmi-only"; }
+		Mod+Alt+T hotkey-overlay-title="Toggle global transparency" { spawn-sh "bash /home/serpent/.local/share/scale-shell/script/cmd/hot-rules.sh transparency"; }
+
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+B                               hotkey-overlay-title="Open Browser: mullvad" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
 		Mod+Shift+B													hotkey-overlay-title="Open Private Browser: tor" { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
-    Mod+Shift+L                         hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Shift+O                         hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Escape                          hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 		Mod+G 															hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
 
@@ -101,6 +105,10 @@ binds {
     Mod+Shift+Right                     { focus-monitor-right; }
     Mod+Shift+UP                        { focus-monitor-up; }
     Mod+Shift+Down                      { focus-monitor-down; }
+    Mod+Shift+H                      { focus-monitor-left; }
+    Mod+Shift+L                     { focus-monitor-right; }
+    Mod+Shift+K                        { focus-monitor-up; }
+    Mod+Shift+J                      { focus-monitor-down; }
 
     Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }

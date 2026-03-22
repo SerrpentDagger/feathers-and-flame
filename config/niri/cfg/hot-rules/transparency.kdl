@@ -1,0 +1,41 @@
+/////////////// TRANSPARENCY
+window-rule {
+    // Windows not to be translucent. Add as desired.
+    exclude app-id=r#"(gimp|vlc|imv|FreeTube)"#
+    exclude app-id=r#"(?i)browser"#
+		exclude app-id=r#"libreoffice-(draw|impress)"# 
+		exclude app-id="krita" title=r#"^Krita$"#
+
+    opacity 0.95
+}
+
+window-rule {
+	// Specific browser pages for translucency
+	match app-id=r#"(?i)browser"# title=r#"(GitHub|GitLab|[Dd]ocumentation|[Ii]nbox)"#
+	exclude title=r#"(?i)youtube"#
+
+	opacity 0.95
+}
+
+window-rule {
+    match is-focused=false
+		exclude app-id="gimp"// title=r#".*Color"#
+
+    opacity 0.87
+}
+
+// Can manually exempt certain windows from proper border-drawing.
+// Default to functionality though.
+window-rule {
+	draw-border-with-background false
+}
+
+// Windows to be extra-translucent.
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    opacity 0.83
+}
+window-rule {
+    match is-focused=false app-id="org.gnome.Nautilus"
+    opacity 0.75
+}
