@@ -24,6 +24,7 @@ gum confirm "Install Mullvad Browser?" && source "$SCALES/mullvad.sh" || true
 gum confirm "Install Tor Browser?" && source "$SCALES/mullvad.sh" tor || true
 gum confirm "Install Brave browser?" && source "$SCALES/brave.sh" || true
 gum confirm "Install VintageStory? (Semi-closed, requires paid account, flatpak)" && source "$SCALES/vintagestory.sh" || true
+gum confirm "Install and enable TLP advanced power management? (Recommended for laptops)" && source "$SCALES/tlp.sh" || true
 
 gum confirm "Setup Alacritty context menu entry for Nautilus?" && source "$SCALES/gnome-terminal.sh" || true
 gum confirm "Setup mimetypes?" && source "$SCALES/mimetypes.sh" || true
