@@ -40,8 +40,9 @@ binds {
     Mod+B                               hotkey-overlay-title="Open Browser: mullvad" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
 		Mod+Shift+B													hotkey-overlay-title="Open Private Browser: tor" { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
     Mod+Shift+O                         hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-    Mod+Escape                          hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Escape                          repeat=false hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 		Mod+G 															hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
+		Mod+Y																hotkey-overlay-title="Open FreeTube (YT-viewer)" { spawn "freetube"; }
 
     Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
 		Mod+Shift+E													hotkey-overlay-title="File Manager: Nautilus (starred)" { spawn-sh "nautilus starred:///"; }

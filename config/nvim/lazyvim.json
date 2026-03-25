@@ -2,7 +2,10 @@
   "extras": [
     "lazyvim.plugins.extras.coding.mini-comment",
     "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.editor.dial",
+    "lazyvim.plugins.extras.lang.clangd",
+    "lazyvim.plugins.extras.lang.cmake",
     "lazyvim.plugins.extras.lang.git",
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.lang.json",
