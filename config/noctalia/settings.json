@@ -235,7 +235,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Cherry Blossom",
+        "predefinedScheme": "Solarized",
         "schedulingMode": "off",
         "useWallpaperColors": true
     },

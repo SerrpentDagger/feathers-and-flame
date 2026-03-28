@@ -3,3 +3,5 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.expandtab = false -- Stupid spaces
+
+vim.filetype.add({ extension = { scajl = "scajl" } })
