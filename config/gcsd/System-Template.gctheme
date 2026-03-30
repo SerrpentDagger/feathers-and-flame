@@ -1,0 +1,12 @@
+background:{{colors.surface.default.rgb}};1;
+trim:{{colors.secondary.default.rgb}};1;
+text:{{colors.on_surface.default.rgb}};1;
+secondary_text:{{colors.on_surface_variant.default.rgb}};1;
+other:{{colors.surface_container_lowest.default.rgb | darken 5}};0.5;
+contrast:{{colors.error.default.rgb}};1;
+contrast2:{{colors.primary.default.rgb | invert}};1;
+transluscent:{{colors.secondary_container.default.rgb}};0.3;
+clear:clear
+tooltip_border:{{colors.secondary_container.default.rgb}};1;
+tooltip_text:{{colors.on_surface_variant.default.rgb}};1;
+tooltip_back:{{colors.surface_variant.default.rgb}};1;
