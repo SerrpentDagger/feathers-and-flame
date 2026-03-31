@@ -18,7 +18,7 @@ source "$SCALEH/tmp-clear.sh"
 # Install
 gum confirm "Install/Upgrade system packages?" && source "$SCALES/packages.sh" || true
 gum confirm "Setup auto-login?" && source "$SCALES/autologin.sh" || true
-gum confirm "Setup .desktop entries?" && source "$SCALES/desktops.sh" || true
+gum confirm "Setup .desktop entries and hide supurfluous ones?" && source "$SCALES/desktops.sh" || true
 
 gum confirm "Install Mullvad Browser?" && source "$SCALES/mullvad.sh" || true
 gum confirm "Install Tor Browser?" && source "$SCALES/mullvad.sh" tor || true
