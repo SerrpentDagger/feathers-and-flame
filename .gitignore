@@ -1,7 +1,3 @@
-# Ignore fishy spam
-*fish_history
-*recently-used.xbel
-
 # Ignore autogenned color files
 config/niri/noctalia.kdl
 config/noctalia/colors.json
