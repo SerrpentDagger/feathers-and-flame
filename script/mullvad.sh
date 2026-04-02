@@ -24,6 +24,7 @@ cd ~/.local/share/$app_name-browser || exit 1
 ./start-$app_name-browser.desktop --register-app
 # Fix said broken .desktop
 sed -i "s|\\./Browser|$HOME/.local/share/$app_name-browser/Browser|g" ~/.local/share/applications/start-$app_name-browser.desktop
+sed -i "s|Exec=.*$|Exec=$HOME/.local/share/$app_name-browser/Browser/start-$app_name-browser" ~/.local/share/applications/start-$app_name-browser.desktop
 
 # Remove archive download
 source "$FEATHERH/tmp-clear.sh"

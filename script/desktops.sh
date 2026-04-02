@@ -24,3 +24,4 @@ source "$FEATHERH/hide-desktop.sh" /usr/share/applications/qt6ct.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/qvidcap.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/qv4l2.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/vim.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/kvantummanager.desktop

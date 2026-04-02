@@ -19,3 +19,7 @@ sqlitebrowser
 
 # Versatile and cool gpu monitor
 nvtop
+
+# Network analyser
+wireshark-cli
+wireshark-qt
