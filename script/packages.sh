@@ -13,6 +13,10 @@ source "$FEATHERS/from-file-aur.sh" user-selected-aur.packages
 function pkg_installed() {
 	pacman -Q "$1" 2>/dev/null
 }
-# Run setup scripts based on what was installed
+
+##### Run setup scripts based on what was installed
 pkg_installed virt-manager && source "$FEATHERPS/virt-manager.sh"
 pkg_installed localsend && source "$FEATHERPS/localsend.sh"
+
+# imv background
+pkg_installed imv && sudo sed -i "s/Exec=imv %F/Exec=imv -b checks %F/g" /usr/share/applications/imv.desktop || true

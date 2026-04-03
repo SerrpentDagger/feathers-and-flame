@@ -5,9 +5,8 @@ set -euo pipefail
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 if ! [[ -f "$1" ]]; then
-	echo "Nonexistant file: $1"
-	echo "Usage: $0 <DESKTOP_FILE>"
-	exit 1
+	echo "Hide-Desktop Warning: Nonexistant file: $1"
+	return 0
 fi
 target="$1"
 source "$FEATHERH/backup.sh" "$target"

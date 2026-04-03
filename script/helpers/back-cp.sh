@@ -15,7 +15,7 @@ dest=$(realpath "$2")
 echo "  Copying $source to $dest"
 # Copy source to dest
 if [[ -d "$source" ]]; then
-	cp -R "$source" "$dest" || sudo cp -R "$source" "$dest"
+	cp -R "$source" "$dest" &>/dev/null || sudo cp -R "$source" "$dest"
 else
-	cp "$source" "$dest" || sudo cp "$source" "$dest"
+	cp "$source" "$dest" &>/dev/null || sudo cp "$source" "$dest"
 fi
