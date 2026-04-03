@@ -49,6 +49,7 @@ window-rule {
     match title=r#"NoScript.*Mullvad"#
 		match app-id="krita" title=r#".+ — Krita"#
 		match app-id="vlc" title="Current Media Information"
+		match app-id="Tor Browser" title="Close Tor Browser"
 
     open-floating true
 }

@@ -29,9 +29,11 @@ tar -xvf "$FEATHERT/$app_name-browser-linux-x86_64-"*".tar.xz"
 cd ~/.local/share/$app_name-browser || exit 1
 # Have it make a broken .desktop for itself in applications folder
 ./start-$app_name-browser.desktop --register-app
+desktop_name="$HOME/.local/share/applications/start-$app_name-browser.desktop"
 # Fix said broken .desktop
-sed -i "s+\\./Browser+$HOME/.local/share/$app_name-browser/Browser+g" ~/.local/share/applications/start-$app_name-browser.desktop
-sed -i "s+Exec=.*$+Exec=$HOME/.local/share/$app_name-browser/Browser/start-$app_name-browser+g" ~/.local/share/applications/start-$app_name-browser.desktop
+sed -i "s+\\./Browser+$HOME/.local/share/$app_name-browser/Browser+g" "$desktop_name"
+sed -i "s+Exec=.*$+Exec=$HOME/.local/share/$app_name-browser/Browser/start-$app_name-browser+g" "$desktop_name"
+chmod +x "$desktop_name"
 
 # Remove archive download
 source "$FEATHERH/tmp-clear.sh"
