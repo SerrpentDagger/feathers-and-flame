@@ -10,7 +10,6 @@ if ! [[ -f "$1" ]]; then
 	exit 1
 fi
 target="$1"
-echo "Backing up $target for desktop hide"
 source "$FEATHERH/backup.sh" "$target"
 
 # Now modify

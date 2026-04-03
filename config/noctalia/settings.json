@@ -198,7 +198,7 @@
                 {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
-                    "customIconPath": "/home/serpent/.local/share/feathers-and-flame/icons/feathers.png",
+                    "customIconPath": "",
                     "enableColorization": false,
                     "icon": "noctalia",
                     "id": "ControlCenter",
@@ -435,17 +435,19 @@
     },
     "location": {
         "analogClockInCalendar": false,
+        "autoLocate": true,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": true,
         "hideWeatherTimezone": true,
-        "name": "Lund",
+        "name": "Malmo",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true
+        "weatherShowEffects": true,
+        "weatherTaliaMascotAlways": false
     },
     "network": {
         "bluetoothAutoConnect": true,

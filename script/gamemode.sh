@@ -7,22 +7,13 @@ echo "Adding $USER to gamemode group"
 
 echo "Backing-up and copying config file into place"
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
-source "$FEATHERH/get-timestamp.sh"
-
-feather_backup="$HOME/Documents/feathers-and-flame-back/user/$FEATHERSTAMP"
-mkdir -p "$feather_backup"
 
 gm_dir="/usr/share/gamemode"
 gm_file="$gm_dir/gamemode.ini"
 
 # Make sure dir exists
 sudo mkdir -p $gm_dir
-
-# Backup/move existing conf file
-[[ -e "$gm_file" ]] && sudo mv "$gm_file" "$feather_backup/" || true
-
-# Copy ours in
-sudo cp "$FEATHERC/gamemode/gamemode.ini" "$gm_file"
+source "$FEATHERH/back-cp.sh" "$FEATHERC/gamemode/gamemode.ini" "$gm_file"
 
 echo "Enabling gamemoded service"
 systemctl --user enable --now gamemoded

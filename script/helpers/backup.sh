@@ -6,18 +6,23 @@ if [[ "--move" == "$1" ]] || [[ "-m" == "$1" ]]; then
 	shift
 fi
 if ! [[ -e "$1" ]]; then
-	exit 0
+	return 0
 fi
-target="$1"
+target=$(realpath "$1")
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 source "$FEATHERH/get-timestamp.sh"
 
 feather_backup="$HOME/Documents/feathers-and-flame-back/$FEATHERSTAMP"
 dest="$feather_backup$target"
+echo "Backing up existing file to: $dest"
 mkdir -p "$(dirname "$dest")"
 if [[ "$move_file" -eq 1 ]]; then
-	mv "$target" "$dest"
+	if [[ -w "$target" ]]; then # Might need sudo for system file backups
+		mv "$target" "$dest"
+	else
+		sudo mv "$target" "$dest"
+	fi
 else
 	cp "$target" "$dest"
 fi

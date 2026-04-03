@@ -1,33 +1,19 @@
 #!/bin/bash
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
-source "$FEATHERH/get-timestamp.sh"
-
-feather_backup="$HOME/Documents/feathers-and-flame-back/user/$FEATHERSTAMP"
-mkdir -p "$feather_backup"
 
 cd "$FEATHERC" || exit 1
-mv ~/.config/niri "$feather_backup/niri"
-mv ~/.config/noctalia "$feather_backup/noctalia"
-mv ~/.config/nvim "$feather_backup/nvim"
-mv ~/.config/alacritty/alacritty.toml "$feather_backup/alacritty.toml"
-mkdir "$feather_backup/qt"
-mv ~/.config/qt5ct/qt5ct.conf "$feather_backup/qt"
-mv ~/.config/qt6ct/qt6ct.conf "$feather_backup/qt"
-sudo mv /etc/tlp.conf "$feather_backup/tlp.conf"
+source "$FEATHERH/back-cp.sh" niri ~/.config/niri
+source "$FEATHERH/back-cp.sh" noctalia ~/.config/noctalia
+source "$FEATHERH/back-cp.sh" nvim ~/.config/nvim
+source "$FEATHERH/back-cp.sh" alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+source "$FEATHERH/back-cp.sh" qt/qt5ct.conf ~/.config/qt5ct/qt5ct.conf
+source "$FEATHERH/back-cp.sh" qt/qt6ct.conf ~/.config/qt6ct/qt6ct.conf
+source "$FEATHERH/back-cp.sh" tlp.conf /etc/tlp.conf
 
-cp -R niri ~/.config/niri
-cp -R noctalia ~/.config/noctalia
-cp -R nvim ~/.config/nvim
-cp alacritty/alacritty.toml ~/.config/alacritty/
-cp qt/qt6ct.conf ~/.config/qt6ct/
-cp qt/qt5ct.conf ~/.config/qt5ct/
-sudo cp tlp.conf /etc/tlp.conf
-
-sed_string="s|/home/serpent|/home/$USER|g"
-sed -i "$sed_string" ~/.config/noctalia/settings.json
-sed -i "$sed_string" ~/.config/niri/cfg/misc.kdl
-sed -i "$sed_string" ~/.config/niri/cfg/keybinds.kdl
-sed -i "$sed_string" ~/.config/niri/cfg/hot-rules.kdl
-sed -i "$sed_string" ~/.config/qt5ct/qt5ct.conf
-sed -i "$sed_string" ~/.config/qt6ct/qt6ct.conf
+source "$FEATHERH/sed-user.sh" ~/.config/noctalia/settings.json
+source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/misc.kdl
+source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/keybinds.kdl
+source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/hot-rules.kdl
+source "$FEATHERH/sed-user.sh" ~/.config/qt5ct/qt5ct.conf
+source "$FEATHERH/sed-user.sh" ~/.config/qt6ct/qt6ct.conf
