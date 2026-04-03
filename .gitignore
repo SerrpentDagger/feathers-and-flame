@@ -6,6 +6,7 @@ config/alacritty/themes/noctalia.toml
 
 # Ignore user-selected package list
 script/package-lists/user-selected.packages
+script/package-lists/user-selected-aur.packages
 
 # Ignore wallpaper changes
 wallpaper

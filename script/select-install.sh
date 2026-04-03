@@ -3,39 +3,24 @@ if [[ $# -lt 2 ]]; then
 	exit 1
 fi
 
-is_aur_package() {
-	local package_name=$1
-	# Check if in aur list
-	if grep -q "^$package_name\$" "$FEATHERP/aur.packages"; then
-		return 0
-	else
-		return 1
-	fi
-}
-# Have to export functions for fzf
-export -f is_aur_package
-
-get_package_info() {
-	local package_name=$1
-	if is_aur_package "$package_name"; then
-		yay -Siia "$package_name" || echo "Failed to get info for $package_name"
-	else
-		pacman -Sii "$package_name" || echo "Failed to get info for $package_name"
-	fi
-}
-# Have to export functions for fzf
-export -f get_package_info
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+is_aur=0
+if [[ 'aur.packages' = "$1" ]]; then
+	is_aur=1
+fi
 
 filter_user_selected_aur() {
 	for package in "$@"; do
-		is_aur_package "$package" && echo "$package" >>"$FEATHERP/user-selected-aur.packages" || echo "$package" >>"$FEATHERP/user-selected.packages"
+		[[ $is_aur -eq 1 ]] && echo "$package" >>"$FEATHERP/user-selected-aur.packages" || echo "$package" >>"$FEATHERP/user-selected.packages"
 	done
 }
 
+package_info='pacman -Sii {1} || echo "Failed to get info for {1}"'
+[[ $is_aur -eq 1 ]] && package_info='yay -Siia {1} || echo "Failed to get info for {1}"'
 fzf_args=(
 	--multi
 	--header="Select which $2 packages to install."
-	--preview 'get_package_info {1}'
+	--preview "$package_info"
 	--preview-label='alt-p: toggle description, alt-j/k: scroll, tab: multi-select, escape: none of them'
 	--preview-label-pos='bottom'
 	--preview-window 'down:65%:wrap'
