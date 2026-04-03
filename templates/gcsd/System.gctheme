@@ -1,0 +1,12 @@
+background:rgb(9, 30, 53);1;
+trim:rgb(79, 79, 227);1;
+text:rgb(242, 242, 243);1;
+secondary_text:rgb(175, 178, 182);1;
+other:rgb(1, 2, 4);0.5;
+contrast:rgb(253, 70, 99);1;
+contrast2:rgb(154, 91, 25);1;
+transluscent:rgb(8, 8, 120);0.3;
+clear:clear
+tooltip_border:rgb(8, 8, 120);1;
+tooltip_text:rgb(175, 178, 182);1;
+tooltip_back:rgb(12, 40, 70);1;

@@ -2,10 +2,12 @@
 # Usage: ./convert_rgba.sh inputfile
 # Replaces rgba(R, G, B, A) with r;g;b;a where r,g,b are R/255 and a is A (all 0..1)
 
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+
 themes=$HOME/Desktop/GCSD/data/themes
-target="$themes/System.gctheme"
-output="$themes/System-Out.gctheme"
-! [[ -f "$target" ]] && exit 1
+target="$FEATHERSTL/gcsd/System.gctheme"
+output="$themes/System.gctheme"
+! [[ -d "$(dirname "$output")" ]] && return 1
 
 awk '
 BEGIN{ OFS=""; }
@@ -22,5 +24,3 @@ BEGIN{ OFS=""; }
   print line
 }
 ' "$target" >"$output"
-rm "$target"
-mv "$output" "$target"
