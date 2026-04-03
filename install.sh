@@ -30,3 +30,4 @@ gum confirm "Setup .desktop entries and hide supurfluous ones?" && source "$FEAT
 
 gum confirm "Setup Alacritty context menu entry for Nautilus?" && source "$FEATHERS/gnome-terminal.sh" || true
 gum confirm "Setup mimetypes?" && source "$FEATHERS/mimetypes.sh" || true
+gum confirm "Copy configs into place?" && source "$FEATHERS/configs.sh" || true
