@@ -16,3 +16,5 @@ source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/keybinds.kdl
 source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/hot-rules.kdl
 source "$FEATHERH/sed-user.sh" ~/.config/qt5ct/qt5ct.conf
 source "$FEATHERH/sed-user.sh" ~/.config/qt6ct/qt6ct.conf
+
+source "$FEATHERS/btop.sh"
