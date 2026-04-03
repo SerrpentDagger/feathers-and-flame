@@ -22,7 +22,6 @@ gum confirm "Setup auto-login?" && source "$FEATHERS/autologin.sh" || true
 gum confirm "Install LazyVim?" && source "$FEATHERS/lazyvim.sh" || true
 gum confirm "Install Mullvad Browser?" && source "$FEATHERS/mullvad.sh" || true
 gum confirm "Install Tor Browser?" && source "$FEATHERS/mullvad.sh" tor || true
-gum confirm "Install Brave browser?" && source "$FEATHERS/brave.sh" || true
 gum confirm "Install VintageStory? (Semi-closed, requires paid account, flatpak)" && source "$FEATHERS/vintagestory.sh" || true
 gum confirm "Install and enable TLP advanced power management? (Recommended for laptops)" && source "$FEATHERS/tlp.sh" || true
 
