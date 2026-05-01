@@ -13,4 +13,4 @@
 include "./hot-rules/transparency.kdl"
 
 // Map drawing tablet to HDMI monitor:
-include "./hot-rules/tablet-to-hdmi.kdl"
+// include "./hot-rules/tablet-to-hdmi.kdl"

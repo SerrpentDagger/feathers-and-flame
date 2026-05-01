@@ -1,6 +1,8 @@
 input {
 	tablet {
-		map-to-output "HDMI-A-1"
-		calibration-matrix 1.0 0.0 0.0 0.0 1.2 0.0
+		// map-to-output "HDMI-A-1"
+		map-to-focused-output
+		// calibration-matrix 1.0 0.0 0.0 0.0 1.2 0.0
+		// calibration-matrix 0.0 -1.0 1.0 1.0 0.0 0.0 // Rotate 90 clock for testing
 	}
 }
