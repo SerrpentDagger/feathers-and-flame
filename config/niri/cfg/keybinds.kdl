@@ -13,7 +13,7 @@ binds {
     Mod+S hotkey-overlay-title="Toggle Noctalia Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+P hotkey-overlay-title="Cycle Power Profile" { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
     Mod+Comma hotkey-overlay-title="Dismiss Notifications						( <span background=\"#303030\"><tt>+Shift</tt></span>: Clear )" { spawn-sh "qs -c noctalia-shell ipc call notifications dismissAll"; }
-		Mod+Shift+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications clear"; }
+		Mod+Shift+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications clear && qs -c noctalia-shell ipc call notifications dismissAll"; }
     Mod+Shift+Space hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
     Mod+Ctrl+Space hotkey-overlay-title="Random Wallpaper" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh random"; }
 		Mod+Shift+U hotkey-overlay-title="<b>Update Feathers and Flame</b>" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }

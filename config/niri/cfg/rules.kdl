@@ -71,6 +71,7 @@ window-rule {
 
 window-rule {
 	match title=r#"Rendering.*Kdenlive"#
+	match app-id="soffice"
 
 	default-column-width { proportion 0.5; }
 	default-window-height { proportion 0.6; }

@@ -166,7 +166,7 @@
                     ],
                     "chevronColor": "none",
                     "colorizeIcons": false,
-                    "drawerEnabled": true,
+                    "drawerEnabled": false,
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
@@ -237,7 +237,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Inky Sky",
+        "predefinedScheme": "Lilac AMOLED",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -355,7 +355,7 @@
         "clockStyle": "custom",
         "compactLockScreen": true,
         "dimmerOpacity": 0.2,
-        "enableBlurBehind": true,
+        "enableBlurBehind": false,
         "enableLockScreenCountdown": false,
         "enableLockScreenMediaControls": false,
         "enableShadows": true,
