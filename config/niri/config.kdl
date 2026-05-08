@@ -6,10 +6,10 @@
 // Feathers and Flame system configs. These SHOULDN'T be modified directly.
 // Instead, feel free to look at them as examples, and modify the next
 // section's files.
-include "~/.local/share/feathers-and-flame/config-ref/niri/cfg/autostart.kdl"
-include "~/.local/share/feathers-and-flame/config-ref/niri/cfg/keybinds.kdl"
-include "~/.local/share/feathers-and-flame/config-ref/niri/cfg/rules.kdl"
-include "~/.local/share/feathers-and-flame/config-ref/niri/cfg/misc.kdl"
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/autostart.kdl"
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/keybinds.kdl"
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/rules.kdl"
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/misc.kdl"
 
 // These are empty or template files waiting for you to customize them.
 // They won't be automatically modified on update.
