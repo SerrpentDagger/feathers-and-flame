@@ -54,6 +54,8 @@ for selected in "${FI_SELECTION[@]}"; do
 	esac
 done
 
+source "$FEATHERS/migrations.sh" --set-done
+
 gum style --bold --foreground="#55FF99" "Installation completed successfully!"
 gum style --underline "It is recommended to reboot after installation."
 if gum confirm --show-help=false --affirmative "Reboot Now" --negative "" ""; then

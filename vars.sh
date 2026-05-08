@@ -15,6 +15,7 @@ export FEATHERPS="$FEATHERS/pkg-setups"
 export FEATHERSTL="$FEATHER_PATH/templates"
 export FEATHERX="$FEATHER_PATH/textual"
 export FEATHERSTATE="$FEATHERH/state"
+export FEATHERM="$FEATHERS/migrations"
 
 export NIRI_CONFIG="$HOME/.config/niri"
 export NIRI_CONFIG_CFG="$NIRI_CONFIG/cfg"
