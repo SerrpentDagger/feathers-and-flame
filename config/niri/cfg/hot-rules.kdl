@@ -3,6 +3,9 @@
 // bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh example
 // That toggles a line starting with include "./hot-rules/example.kdl"
 
+// The idea is that this allows you to bind entire chunks of niri configs
+// to a keybind toggle. Examples below.
+
 // Performance tweak to disable laptop monitor, go hdmi-only while recording games
 // include "./hot-rules/hdmi-only.kdl"
 
