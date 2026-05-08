@@ -17,7 +17,13 @@ if [[ "--full-cfg" == "$1" ]]; then
 	fi
 else
 	# Make sure files are provided and from exists
-	if [[ $# -lt 2 ]] || [[ -e "$1" ]]; then
+	if [[ $# -lt 2 ]]; then
+		echo "Usage: bash diff-cp-req.sh <FROM TO|--full-cfg>"
+		exit 1
+	fi
+
+	if ! [[ -e "$1" ]]; then
+		echo "Nonexistant file $1"
 		echo "Usage: bash diff-cp-req.sh <FROM TO|--full-cfg>"
 		exit 1
 	fi
