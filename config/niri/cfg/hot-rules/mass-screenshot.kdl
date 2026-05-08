@@ -1,0 +1,3 @@
+binds {
+	Mod+MouseRight		{ spawn-sh "niri msg action screenshot -p false"; }
+}

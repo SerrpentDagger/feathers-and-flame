@@ -89,8 +89,10 @@ window-rule {
 
 window-rule {
 	match app-id=r#"libreoffice-.+"#
+	match app-id="" title="LibreOffice" // libreoffice-startcenter can spawn without app-id
 	exclude app-id=r#"libreoffice-(writer|calc)"#
 
 	open-fullscreen false
 	open-maximized true
+	default-window-height { proportion 1.0; }
 }

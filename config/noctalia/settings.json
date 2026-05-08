@@ -237,7 +237,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Lilac AMOLED",
+        "predefinedScheme": "Solarized Dark",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true

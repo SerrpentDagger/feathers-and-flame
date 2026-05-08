@@ -12,7 +12,8 @@ binds {
 	// See available: qs -c noctalia-shell ipc show
 	Mod+S hotkey-overlay-title="Toggle Noctalia Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
 	Mod+P hotkey-overlay-title="Cycle Power Profile" { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
-	Mod+Comma hotkey-overlay-title="Dismiss Notifications						( <span background=\"#303030\"><tt>+Shift</tt></span>: Clear )" { spawn-sh "qs -c noctalia-shell ipc call notifications dismissAll"; }
+	Mod+Comma hotkey-overlay-title="Show Notifications						( <span background=\"#303030\"><tt>+Ctrl</tt></span>: Dismiss Current,  <span background=\"#303030\"><tt>+Shift</tt></span>: Clear History )" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+	Mod+Ctrl+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications dismissAll"; }
 	Mod+Shift+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications clear && qs -c noctalia-shell ipc call notifications dismissAll"; }
 	Mod+Shift+Space hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
 	Mod+Ctrl+Space hotkey-overlay-title="Random Wallpaper" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh random"; }
@@ -21,8 +22,6 @@ binds {
 	Mod+Shift+V hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh force --current"; }
 	Mod+Alt+V hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/helpers/state.sh toggle 'screensaver_disabled' --notify"; }
 	Mod+Shift+Ctrl+Q hotkey-overlay-title="<b>Restart Noctalia</b>" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noctalia-restart.sh"; }
-	// Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
-	// Mod+Shift+1 { spawn-sh "qs -c noctalia-shell ipc call wallpaper set /home/serpent/.local/share/feathers-and-flame/wallpaper-presets/1.* $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
 	Mod+Shift+1 hotkey-overlay-title="Wallpaper Favourite 1					( <span background=\"#303030\"><tt>Numbers</tt></span> )" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 1"; }
 	Mod+Shift+2 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 2"; }
 	Mod+Shift+3 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 3"; }
@@ -40,6 +39,7 @@ binds {
 	Mod+Alt+D hotkey-overlay-title="Toggle laptop-monitor on/off" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh hdmi-only"; }
 	Mod+Alt+T hotkey-overlay-title="Toggle global transparency" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh transparency"; }
 	Mod+Alt+P hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh tablet-to-hdmi"; }
+	Mod+Alt+C hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh mass-screenshot && notify-send 'Toggled Mass-Screenshot Binding'"; }
 
 	// ─── Applications ───
 	Mod+Return                          hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
