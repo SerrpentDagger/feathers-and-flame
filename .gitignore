@@ -17,3 +17,6 @@ backups
 
 # Ignore state
 script/helpers/state
+
+# Ignore deployed reference configs
+config-ref/deployed

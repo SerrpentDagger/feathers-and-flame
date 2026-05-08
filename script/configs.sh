@@ -8,6 +8,17 @@ if [[ "--for-diff" = "${1:-}" ]]; then
 	subdir="$FEATHERT/feather"
 	for_diff=1
 	shift
+else
+	rm -rf "$FEATHER_PATH/config-ref/deployed"
+	mkdir -p "$FEATHERCRD"
+
+	cp -r "$FEATHERCR/niri" "$FEATHERCRD/niri"
+
+	source "$FEATHERH/sed-user.sh" "$FEATHERCRD/niri/cfg/misc.kdl"
+	source "$FEATHERH/sed-user.sh" "$FEATHERCRD/niri/cfg/keybinds.kdl"
+	if [[ "--deploy-refs" == "$1" ]]; then
+		return
+	fi
 fi
 
 cd "$FEATHERC" || exit 1
@@ -19,8 +30,6 @@ source "$FEATHERH/back-cp.sh" qt/qt5ct.conf "$subdir/qt5ct/qt5ct.conf"
 source "$FEATHERH/back-cp.sh" qt/qt6ct.conf "$subdir/qt6ct/qt6ct.conf"
 
 source "$FEATHERH/sed-user.sh" "$subdir/noctalia/settings.json"
-source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/misc.kdl"
-source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/keybinds.kdl"
 source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/hot-rules.kdl"
 source "$FEATHERH/sed-user.sh" "$subdir/qt5ct/qt5ct.conf"
 source "$FEATHERH/sed-user.sh" "$subdir/qt6ct/qt6ct.conf"
