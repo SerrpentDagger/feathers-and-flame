@@ -18,6 +18,10 @@ while IFS=$'\t' read -r NAME URL EXP_SHA || [[ -n "$NAME" ]]; do
 
 	target="$FEATHERT/$NAME"
 	mkdir -p "$(dirname "$target")"
+	if [[ -e "$FEATHER_PATH/$NAME" ]]; then
+		echo "Skipping existing file: $FEATHER_PATH/$NAME"
+		continue
+	fi
 	echo "Downloading $URL to $target"
 	if ! curl -fsSL "$URL" -o "$target"; then
 		echo "Download failed for $URL" >&2
