@@ -1,3 +1,5 @@
+// Laptop monitor is usually called this, but you may need to update it to match properly.
+// Run `niri msg outputs` to see names of connected monitors.
 output "eDP-1" {
 	off
 }

@@ -1,43 +1,6 @@
-/////////////// TRANSPARENCY
-window-rule {
-    // Windows not to be translucent. Add as desired.
-    exclude app-id=r#"(gimp|vlc|imv|mpv|FreeTube)"#
-    exclude app-id=r#"(?i)browser"#
-		exclude app-id=r#"libreoffice-(draw|impress)"# 
-		exclude app-id="krita" title=r#"^Krita$"#
-		exclude app-id="Graphing Calculator SD"
-		exclude app-id="com.serpentdagger.feathers-update"
+// This is the system transparency defaults. Don't modify it or you'll break the update procedure.
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/transparency.kdl"
 
-    opacity 0.95
-}
-
-window-rule {
-	// Specific browser pages for translucency
-	match app-id=r#"(?i)browser"# title=r#"(GitHub|GitLab|[Dd]ocumentation|[Ii]nbox)"#
-	exclude title=r#"(?i)youtube"#
-
-	opacity 0.95
-}
-
-window-rule {
-    match is-focused=false
-		exclude app-id="gimp"// title=r#".*Color"#
-
-    opacity 0.87
-}
-
-// Can manually exempt certain windows from proper border-drawing.
-// Default to functionality though.
-window-rule {
-	draw-border-with-background false
-}
-
-// Windows to be extra-translucent.
-window-rule {
-    match app-id="org.gnome.Nautilus"
-    opacity 0.83
-}
-window-rule {
-    match is-focused=false app-id="org.gnome.Nautilus"
-    opacity 0.75
-}
+// If you want custom transparency rules, add them here at the end of this file.
+// Feel free to look at the above file for examples on how that's done.
+// You find information about a given window with `niri msg pick-window`.

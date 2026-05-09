@@ -1,0 +1,98 @@
+window-rule {
+	geometry-corner-radius 10
+	clip-to-geometry true
+}
+layer-rule {
+	match namespace="^noctalia-wallpaper*"
+	place-within-backdrop true
+}
+
+//////////////////////// GEOMETRY
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+	// This app-id regular expression will work for both:
+	// - host Firefox (app-id is "firefox")
+	// - Flatpak Firefox (app-id is "org.mozilla.firefox")
+	match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
+	open-floating true
+}
+
+// Block out password managers from screen capture.
+window-rule {
+	match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+	match app-id=r#"^org\.gnome\.World\.Secrets$"#
+	match app-id="Bitwarden"
+
+	block-out-from "screen-capture"
+
+	// Use this instead if you want them visible on third-party screenshot tools.
+	// block-out-from "screencast"
+}
+
+// Open localsend and authenticator as small floating windows.
+window-rule {
+	match app-id="localsend"
+	match app-id=r#".*Authenticator$"#
+	match app-id="keepassxc" title="Open database"
+	match app-id="org.gnome.Calculator"
+	match app-id="org.cachyos.hello"
+
+	open-floating true
+	default-column-width { proportion 0.3; }
+	default-window-height { proportion 0.7; }
+}
+
+window-rule {
+	match app-id="com.serpentdagger.feathers-update"
+
+	open-floating true
+	default-column-width { proportion 0.65; }
+	default-window-height { proportion 0.8; }
+}
+
+window-rule {
+	match app-id="com.serpentdagger.screensaver"
+	open-fullscreen true
+}
+
+// Let these windows decide their own size to avoid weird rendering.
+window-rule {
+	match title=r#"Splash.*Kdenlive"#
+	match title=r#"NoScript.*Mullvad"#
+	match app-id="krita" title=r#".+ — Krita"#
+	match app-id="vlc" title="Current Media Information"
+	match app-id="Tor Browser" title="Close Tor Browser"
+	match app-id="gimp" title="Preferences"
+	match app-id="org.gnome.DejaDup"
+
+	open-floating true
+}
+
+window-rule {
+	match title=r#"Rendering.*Kdenlive"#
+	match app-id="soffice"
+
+	default-column-width { proportion 0.5; }
+	default-window-height { proportion 0.6; }
+	open-floating true
+}
+
+// Windows to open maximised. Add as desired.
+window-rule {
+	match app-id="org.kde.kdenlive"
+	match app-id="krita" title=r#"^Krita$"#
+	match app-id="gimp" title="GNU Image Manipulation Program"
+
+	open-maximized true
+}
+
+window-rule {
+	match app-id=r#"libreoffice-.+"#
+	match app-id="" title="LibreOffice" // libreoffice-startcenter can spawn without app-id
+	exclude app-id=r#"libreoffice-(writer|calc)"#
+
+	open-fullscreen false
+	open-maximized true
+	default-window-height { proportion 1.0; }
+}

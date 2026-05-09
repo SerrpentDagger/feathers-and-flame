@@ -1,11 +1,28 @@
+// This is the entry file for niri configuration, where you can toggle various
+// aspects of the config on/off in their entirety.
+// Usually, it's better to just modify individual files themselves.
+
+
+// Feathers and Flame system configs. These SHOULDN'T be modified directly.
+// Instead, feel free to look at them as examples, and modify the next
+// section's files.
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/autostart.kdl"
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/keybinds.kdl"
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/rules.kdl"
+include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/misc.kdl"
+
+// These are empty or template files waiting for you to customize them.
+// They won't be automatically modified on update.
+include "./cfg/animation.kdl"
 include "./cfg/autostart.kdl"
+include "./cfg/display.kdl"
 include "./cfg/keybinds.kdl"
-include "./cfg/input.kdl"
 include "./cfg/layout.kdl"
 include "./cfg/rules.kdl"
 include "./cfg/hot-rules.kdl"
-include "./cfg/display.kdl"
-include "./cfg/misc.kdl"
+include "./cfg/input.kdl"
 
+// This is Noctalia's generated colour file. Will be overwritten every time
+// the theme changes, to include the new colours.
 include "./noctalia.kdl"
 

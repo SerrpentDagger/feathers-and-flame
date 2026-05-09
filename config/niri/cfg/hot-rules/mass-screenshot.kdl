@@ -1,0 +1,4 @@
+// Default toggle binding is `Mod+Alt+C`.
+binds {
+	Mod+MouseRight		{ spawn-sh "niri msg action screenshot -p false"; }
+}
