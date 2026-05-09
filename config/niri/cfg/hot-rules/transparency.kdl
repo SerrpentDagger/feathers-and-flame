@@ -1,2 +1,6 @@
-/////////////// TRANSPARENCY
+// This is the system transparency defaults. Don't modify it or you'll break the update procedure.
 include "~/.local/share/feathers-and-flame/config-ref/deployed/niri/cfg/transparency.kdl"
+
+// If you want custom transparency rules, add them here at the end of this file.
+// Feel free to look at the above file for examples on how that's done.
+// You find information about a given window with `niri msg pick-window`.

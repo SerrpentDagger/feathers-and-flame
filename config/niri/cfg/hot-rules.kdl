@@ -5,6 +5,8 @@
 
 // The idea is that this allows you to bind entire chunks of niri configs
 // to a keybind toggle. Examples below.
+// See also the included system keybinds (referenced in `niri/config.kdl`)
+// for examples on how to create such a bind yourself.
 
 // Performance tweak to disable laptop monitor, go hdmi-only while recording games
 // include "./hot-rules/hdmi-only.kdl"

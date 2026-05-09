@@ -31,6 +31,7 @@ source "$FEATHERH/back-cp.sh" qt/qt6ct.conf "$subdir/qt6ct/qt6ct.conf"
 
 source "$FEATHERH/sed-user.sh" "$subdir/noctalia/settings.json"
 source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/hot-rules.kdl"
+source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/keybinds.kdl"
 source "$FEATHERH/sed-user.sh" "$subdir/qt5ct/qt5ct.conf"
 source "$FEATHERH/sed-user.sh" "$subdir/qt6ct/qt6ct.conf"
 

@@ -1,3 +1,6 @@
+// This is where you can put custom auto-start commands, for example:
+// spawn-sh-at-startup "notify-send 'System started!'"
+
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 

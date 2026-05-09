@@ -1,13 +1,15 @@
+// You can customise the default input configurations.
+
 // ────────────── Input Configuration ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 
 input {
 	keyboard {
-		repeat-delay 200
-		repeat-rate 45
+		repeat-delay 200 // Delay before repeats start
+		repeat-rate 45 // Delay between repeat presses
 		xkb {
-			layout "us" // Use the American keyboard layout
-			options "compose:ralt"
+			// layout "us" // Use the American keyboard layout, for example
+			options "compose:ralt" // Compose key is right-alt
 		}
 		numlock // Enable numlock on startup
 	}
@@ -17,7 +19,7 @@ input {
 		natural-scroll // Enable natural (macOS-style) scrolling
 	}
 
-	mouse {
+	mouse { // Disables mouse accelleration
 		accel-speed 0
 		accel-profile "flat"
 	}

@@ -1,15 +1,20 @@
+// This is where you can add your own keybinds.
+// See the system keybind file (referenced in `niri/config.kdl`) for extensive examples.
+
+// ────────────── Keybindings ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
+
 binds {
-
-	// ────────────── Keybindings ──────────────
-	// https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
-
-	// ─── noctalia-shell keybinds ───
-	// https://docs.noctalia.dev/getting-started/keybinds/
-
 	// ─── Noctalia ───
 	// See available: qs -c noctalia-shell ipc show
+	// Example:
+	// Mod+Shift+Ctrl+Alt+Space hotkey-overlay-title="Emoji Picker" { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
+
 
 	// ─── Hot-Rules ───
+	// Toggle custom chunks of niri config with keybinds
+	// Mod+Shift+Ctrl+Alt+Space hotkey-overlay-title="Toggle global transparency" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh transparency"; }
 
 	// ─── Applications ───
+	// Run applications with keybinds
 }

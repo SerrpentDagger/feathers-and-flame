@@ -1,3 +1,7 @@
+// Niri tablet support seems a bit buggy.
+// A more reliable solution is to turn off monitors you aren't useing for drawing,
+// because mapping to focused output can mess up drawing region, and calibration-matrix
+// doesn't do anything.
 input {
 	tablet {
 		// map-to-output "HDMI-A-1"

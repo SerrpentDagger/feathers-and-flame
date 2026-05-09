@@ -1,1 +1,5 @@
 // This is where you can add your window rules.
+// Many examples can be found in the system config file referenced in `niri/config.kdl`
+
+// ────────────── Window Rules ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules

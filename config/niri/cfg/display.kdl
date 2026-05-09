@@ -1,5 +1,7 @@
+// This is where you can put your custom display configurations.
+
 // ────────────── Output Configuration ──────────────
-// You can run `niri msg outputs` to get the correct name for your displays.
+// You can run `niri msg outputs` to get the correct name and mode for your displays.
 // You will have to remove "/-" and edit it before it takes effect.
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 

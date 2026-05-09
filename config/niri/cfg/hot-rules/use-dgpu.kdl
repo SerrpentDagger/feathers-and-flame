@@ -1,3 +1,7 @@
+// This probably won't be useful for you.
+// I've experienced some stuttering in my HDMI display, which
+// can be transferred to my laptop display by switching render device.
+// Off by default with no toggle binding.
 debug {
 	// emulate-zero-presentation-time
 	render-drm-device "/dev/dri/renderD129"
