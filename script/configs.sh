@@ -1,6 +1,5 @@
 #!/bin/bash
 
-gum style --bold --foreground="#DDDD44" "Copying over configs..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 subdir="$HOME/.config"
 for_diff=0
@@ -20,6 +19,7 @@ else
 		return
 	fi
 fi
+gum style --bold --foreground="#DDDD44" "Copying over configs..."
 
 cd "$FEATHERC" || exit 1
 source "$FEATHERH/back-cp.sh" niri "$subdir/niri"
