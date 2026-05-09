@@ -16,7 +16,7 @@ else
 
 	source "$FEATHERH/sed-user.sh" "$FEATHERCRD/niri/cfg/misc.kdl"
 	source "$FEATHERH/sed-user.sh" "$FEATHERCRD/niri/cfg/keybinds.kdl"
-	if [[ "--deploy-refs" == "$1" ]]; then
+	if [[ "--deploy-refs" == "${1:-}" ]]; then
 		return
 	fi
 fi
