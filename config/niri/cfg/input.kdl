@@ -8,7 +8,7 @@ input {
 		repeat-delay 200 // Delay before repeats start
 		repeat-rate 45 // Delay between repeat presses
 		xkb {
-			// layout "us" // Use the American keyboard layout, for example
+			layout "us" // Use a particular keyboard layout
 			options "compose:ralt" // Compose key is right-alt
 		}
 		numlock // Enable numlock on startup
