@@ -20,3 +20,4 @@ wallpaper/pixel-moon_Purple Nord.png	https://w.wallhaven.cc/full/zp/wallhaven-zp
 wallpaper/dappled-grove_Gruvbox.png	https://w.wallhaven.cc/full/1q/wallhaven-1qxwow.png	f06ffce7743996ee891c88809c3b1fad61dfafa67b2ad2ff92809abaa18aca4c
 wallpaper/inky-sky_Inky Sky.jpg	https://w.wallhaven.cc/full/k8/wallhaven-k8kr2d.jpg	4281a7515899c109fff1793840cad4e0492841e9c8170da67c76331b43458940
 wallpaper/sun-coming-through.jpg	https://w.wallhaven.cc/full/rq/wallhaven-rqowjw.jpg	0c01831dcd2fb89021a12299e3447ff18d8f1ee0e4b6479da6d74f72ae200635
+wallpaper/lantern-valley_Purplized Dark.jpg	https://w.wallhaven.cc/full/j5/wallhaven-j58dj5.jpg	4ef29fed2d3b685715f751dcf53be5d8da847354399e3f84b2b75010fb6516c0
