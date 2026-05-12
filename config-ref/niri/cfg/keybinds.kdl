@@ -11,6 +11,9 @@ binds {
 	// ─── Noctalia ───
 	// See available: qs -c noctalia-shell ipc show
 	Mod+S hotkey-overlay-title="Toggle Noctalia Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+	Mod+I hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }
+	Mod+M hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call systemMonitor toggle"; }
+	Mod+Alt+Space hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
 	Mod+P hotkey-overlay-title="Cycle Power Profile" { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
 	Mod+Comma hotkey-overlay-title="Show Notifications						( <span background=\"#303030\"><tt>+Ctrl</tt></span>: Dismiss Current,  <span background=\"#303030\"><tt>+Shift</tt></span>: Clear History )" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
 	Mod+Ctrl+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications dismissAll"; }
@@ -83,7 +86,7 @@ binds {
 	//	Mod+Shift+W                         { spawn-sh "alacritty -e niri msg pick-window && sleep 2"; }
 	Mod+W                               { close-window; }
 	Mod+O                               repeat=false { toggle-overview; }
-	Mod+M																repeat=false hotkey-overlay-title="Mirror Focused Monitor" { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+	Mod+Shift+M													repeat=false hotkey-overlay-title="Mirror Focused Monitor" { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 
 	Mod+Left                            hotkey-overlay-title="Switch Focus							( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span> )" { focus-column-or-monitor-left; }
 	Mod+H                               { focus-column-or-monitor-left; }
