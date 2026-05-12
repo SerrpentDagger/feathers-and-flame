@@ -22,4 +22,4 @@ wallpaper/inky-sky_Inky Sky.jpg	https://w.wallhaven.cc/full/k8/wallhaven-k8kr2d.
 wallpaper/sun-coming-through.jpg	https://w.wallhaven.cc/full/rq/wallhaven-rqowjw.jpg	0c01831dcd2fb89021a12299e3447ff18d8f1ee0e4b6479da6d74f72ae200635
 wallpaper/lantern-valley_Purplized Dark.jpg	https://w.wallhaven.cc/full/j5/wallhaven-j58dj5.jpg	4ef29fed2d3b685715f751dcf53be5d8da847354399e3f84b2b75010fb6516c0
 wallpaper/dragon-lich.jpg	https://w.wallhaven.cc/full/lm/wallhaven-lmoxo2.jpg	a7f9bd01609376de061199879529613a4d08e53ab9789f26503cd2b4c430f3d1
-wallpaper/dragon-festival Murata.jpg	https://w.wallhaven.cc/full/ex/wallhaven-expwlo.jpg	13c3d3f0c4cf50f2bd4dce2e2df625088fd37ed56e6921ef61d4b9145b458e8b
+wallpaper/dragon-festival_Murata.jpg	https://w.wallhaven.cc/full/ex/wallhaven-expwlo.jpg	13c3d3f0c4cf50f2bd4dce2e2df625088fd37ed56e6921ef61d4b9145b458e8b

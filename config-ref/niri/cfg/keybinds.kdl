@@ -32,7 +32,8 @@ binds {
 	Mod+Shift+8 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 8"; }
 	Mod+Shift+9 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 9"; }
 	Mod+Shift+0 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 0"; }
-	Mod+Shift+W hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
+	Mod+Shift+W hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+	Mod+Shift+Ctrl+W hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
 	Mod+Shift+N hotkey-overlay-title="Toggle Night-Light" { spawn-sh "niri msg action do-screen-transition && qs -c noctalia-shell ipc call nightLight toggle"; }
 
 	// ─── Hot-Rules ───
