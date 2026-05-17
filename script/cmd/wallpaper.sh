@@ -35,13 +35,17 @@ scheme-from-wallpaper() {
 SCHEME_PREF="FEATHER_COLOR_SCHEME_"
 if [[ $1 == "hook" ]]; then
 	shift
+	fetch_monitor=$(get-active-monitor | grep -m 1 ".")
+	wallpaper="$(qs -c noctalia-shell ipc call wallpaper get "$fetch_monitor")"
+	scheme="$(scheme-from-wallpaper "$wallpaper")"
+	# Sync to SDDM theme
+	if [[ -d "/usr/share/sddm/themes/noctalia/Assets" ]]; then
+		source "$FEATHERCMD/sync-shell-wallpaper.sh" "$wallpaper"
+	fi
 	if [[ $1 == "--clear" ]]; then
 		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 		exit 0
 	fi
-	fetch_monitor=$(get-active-monitor | grep -m 1 ".")
-	wallpaper="$(qs -c noctalia-shell ipc call wallpaper get "$fetch_monitor")"
-	scheme="$(scheme-from-wallpaper "$wallpaper")"
 	if [[ -n "$scheme" ]]; then
 		echo "Setting state for $scheme"
 		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
@@ -86,7 +90,3 @@ fi
 for out in $(get-active-monitor); do
 	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
 done
-# Sync to SDDM theme
-if [[ -d "/usr/share/sddm/themes/noctalia/Assets" ]]; then
-	source "$FEATHERCMD/sync-shell-wallpaper.sh" "$wallpaper"
-fi
