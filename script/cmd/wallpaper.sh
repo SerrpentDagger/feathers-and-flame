@@ -88,5 +88,5 @@ for out in $(get-active-monitor); do
 done
 # Sync to SDDM theme
 if [[ -d "/usr/share/sddm/themes/noctalia/Assets" ]]; then
-	source "$FEATHERCMD/sync-shell-wallpaper.sh"
+	source "$FEATHERCMD/sync-shell-wallpaper.sh" "$wallpaper"
 fi

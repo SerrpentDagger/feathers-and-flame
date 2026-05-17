@@ -3,6 +3,11 @@
 gum style --bold --foreground="#DDDD44" "Installing SDDM Theme..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
+if ! sudo pacman -S --needed qt5-graphicaleffects qt5-quickcontrols2; then
+	echo "Error in installing dependancies! Exiting."
+	exit 1
+fi
+
 # Download repo into tmp
 source "$FEATHERH/tmp-spawn.sh"
 git clone https://github.com/SerrpentDagger/noctalia-sddm-theme "$FEATHERT/noctalia-sddm-theme" >/dev/null
@@ -28,6 +33,7 @@ noct_file="$HOME/.config/noctalia/user-templates.toml"
 if ! grep "\\[templates\\.sddm\\]" "$noct_file" &>/dev/null; then
 	source "$FEATHERH/backup.sh" "$noct_file"
 	cat <<EOF | tee -a "$noct_file"
+
 [templates.sddm]
 input_path = "/usr/share/sddm/themes/noctalia/theme.template.conf"
 output_path = "/usr/share/sddm/themes/noctalia/theme.conf"
