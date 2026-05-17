@@ -3,7 +3,7 @@
 gum style --bold --foreground="#DDDD44" "Installing SDDM Theme..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-if ! sudo pacman -S --needed qt5-graphicaleffects qt5-quickcontrols2; then
+if ! sudo pacman -S --noconfirm --needed qt5-graphicaleffects qt5-quickcontrols2; then
 	echo "Error in installing dependancies! Exiting."
 	exit 1
 fi
