@@ -14,7 +14,7 @@ gum style --bold "A new component has been made available:"
 echo "$comp_name: $comp_desc"
 if gum confirm "Would you like to install it?"; then
 	source "$FEATHERH/sel-comps.sh" add "$comp_name" "$comp_desc"
-	source "$FEATHERH/sel-comps.sh" add --pending "$comp_name" "$comp_desc"
+	source "$FEATHERH/sel-comps.sh" --pending add "$comp_name" "$comp_desc"
 
 	if ! bash "$FEATHERS/$script_name.sh"; then
 		gum style --foreground="#FF2222" "ERROR: Failed to install new component."

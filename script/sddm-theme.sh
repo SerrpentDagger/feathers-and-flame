@@ -5,25 +5,19 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 # Download repo into tmp
 source "$FEATHERH/tmp-spawn.sh"
-
-# Clear current install
-sudo rm -rf /usr/share/sddm/themes/noctalia
-
-git clone https://github.com/SerrpentDagger/noctalia-sddm-theme "$FEATHERT" >/dev/null
+git clone https://github.com/SerrpentDagger/noctalia-sddm-theme "$FEATHERT/noctalia-sddm-theme" >/dev/null
 cd "$FEATHERT" || exit 1
 if ! [[ -d "./noctalia-sddm-theme" ]]; then
 	echo "Failed to clone noctalia-sddm-theme! Exiting."
 	exit 1
 fi
+rm -rf "$FEATHERT/noctalia-sddm-theme/.git"
 
-sudo cp -r noctalia-sddm-theme /usr/share/sddm/themes/noctalia
-al_file="/etc/sddm.conf.d/noctalia-theme.conf"
-
-# Make sure dir exists
-sudo mkdir -p /etc/sddm.conf.d
+source "$FEATHERH/back-cp.sh" noctalia-sddm-theme /usr/share/sddm/themes/noctalia
+nt_file="/etc/sddm.conf.d/noctalia-theme.conf"
 
 # Copy ours in
-source "$FEATHERH/back-cp.sh" "$FEATHERC/sddm/noctalia-theme.conf" "$al_file"
+source "$FEATHERH/back-cp.sh" "$FEATHERC/sddm/noctalia-theme.conf" "$nt_file"
 
 # Make template and background writable
 sudo chmod 666 "/usr/share/sddm/themes/noctalia/theme.conf"
