@@ -86,3 +86,7 @@ fi
 for out in $(get-active-monitor); do
 	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
 done
+# Sync to SDDM theme
+if [[ -d "/usr/share/sddm/themes/noctalia/Assets" ]]; then
+	source "$FEATHERCMD/sync-shell-wallpaper.sh"
+fi
