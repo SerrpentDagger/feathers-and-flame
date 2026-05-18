@@ -20,3 +20,6 @@ nethogs
 
 # Slick backups
 deja-dup
+
+# Disk usage analyzer
+baobab
