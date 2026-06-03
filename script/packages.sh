@@ -2,7 +2,7 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 gum style --bold --foreground="#DDDD44" "Updating system and installing important packages..."
-sudo pacman -Syu --noconfirm --needed wlsunset wl-mirror fzf yay qt6ct qt5ct qt5-wayland gnome-calculator imv mpv evince localsend
+sudo pacman -Syu --noconfirm --needed wlsunset wl-mirror fzf yay qt6ct qt5ct qt5-wayland xorg-xhost gnome-calculator imv mpv evince localsend
 
 selection_file="$FEATHERP/user-selected.packages"
 selection_file_aur="$FEATHERP/user-selected-aur.packages"
