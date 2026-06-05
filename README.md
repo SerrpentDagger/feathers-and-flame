@@ -49,19 +49,14 @@ First, install CachyOS normally (from a flashed USB with [their iso](https://cac
 ### of Feathers and Flame
 
 Once you've booted into your basic installation, press `Mod+Return` to open a terminal and run:
-`curl -fsSL https://serpentdagger.com/feathers-and-flame/install | bash`. You'll be greeted by a flashy owl: <img width="478" height="520" alt="feathers installer welcome" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-welcome.jpg" />
+`curl -fsSL https://serpentdagger.com/feathers-and-flame/install | bash`. You'll be greeted by a flashy owl:
 
-Select the components you want, or just `Ctrl + A` for all of them!
-<img width="478" height="520" alt="installer select components for install" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-main-selection.jpg" />
+<img width="478" height="520" alt="feathers installer welcome" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-welcome.jpg" />
 
-You will be asked for confirmation before installing:
-<img width="478" height="520" alt="installer confirm selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-confirm-selection.jpg" />
-
-After pressing `Yes`, the installer will take a while to download and configure the system for you, depending on your bandwidth and hardware. After it's done, you will be prompted to reboot:
-<img width="478" height="520" alt="installer finished reboot prompt" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-finished-reboot.jpg" />
-
-Once you've rebooted again, Feathers and Flame is ready for your enjoyment! I hope you have as great a time using it as I did setting it up!
-<img width="564" height="309" alt="install finished welcome screen boot" src="https://serpentdagger.com/assets/images/feathers-and-flame/install-finished-first-boot.jpg" />
+1. Select the components you want, or just `Ctrl + A` for all of them! <img width="478" height="520" alt="installer select components for install" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-main-selection.jpg" />
+2. You will be asked for confirmation before installing: <img width="478" height="520" alt="installer confirm selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-confirm-selection.jpg" />
+3. After pressing `Yes`, the installer will take a while to download and configure the system for you, depending on your bandwidth and hardware. After it's done, you will be prompted to reboot: <img width="478" height="520" alt="installer finished reboot prompt" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-finished-reboot.jpg" />
+4. Once you've rebooted again, Feathers and Flame is ready for your enjoyment! I hope you have as great a time using it as I did setting it up! <img width="564" height="309" alt="install finished welcome screen boot" src="https://serpentdagger.com/assets/images/feathers-and-flame/install-finished-first-boot.jpg" />
 
 ### Trouble?
 
