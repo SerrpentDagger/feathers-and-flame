@@ -3,7 +3,7 @@
 # Media dev
 kdenlive
 obs-studio
-audacity
+tenacity
 gimp
 krita
 blender
@@ -24,3 +24,6 @@ hieroglyphic
 
 # Communication
 signal-desktop
+
+# Phones
+android-file-transfer
