@@ -4,7 +4,6 @@ gum style --bold --foreground="#DDDD44" "Downloading extra wallpapers..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 wall_file="$FEATHERX/wallpapers.txt"
-trap 'source "$FEATHERH/tmp-clear.sh"' EXIT
 source "$FEATHERH/tmp-spawn.sh"
 cd "$FEATHER_PATH" || exit 1
 
@@ -40,6 +39,8 @@ while IFS=$'\t' read -r NAME URL EXP_SHA || [[ -n "$NAME" ]]; do
 		is_success=0
 	fi
 done <"$wall_file"
+
+source "$FEATHERH/tmp-clear.sh"
 
 if [[ $is_success -eq 1 ]]; then
 	source "$FEATHERH/sel-comps.sh" --pending remove "Wallpapers"
