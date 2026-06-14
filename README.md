@@ -40,7 +40,6 @@ Installation takes the form of a single `curl` command in an appropriate fresh C
 First, install CachyOS normally (from a flashed USB with [their iso](https://cachyos.org/download/)), subject to the following notes:
 
 1. Select `Limine` as your bootloader.
-
  <div>
   <img width="564" height="309" alt="limine bootloader selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/choose-limine.jpg" />
  </div>
@@ -68,8 +67,7 @@ The setup may install properly on other Arch-based systems, or a 'dirty' CachyOs
  <div>
   <img width="478" height="520" alt="feathers installer welcome" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-welcome.jpg" />
  </div>
-
-1. Select the components you want, or just `Ctrl + A` for all of them!
+2. Select the components you want, or just `Ctrl + A` for all of them!
  <div>
   <img width="478" height="520" alt="installer select components for install" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-main-selection.jpg" />
  </div>
