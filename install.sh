@@ -50,6 +50,7 @@ for selected in "${FI_SELECTION[@]}"; do
 	Alacritty*) source "$FEATHERS/gnome-terminal.sh" ;;
 	Mimetypes) source "$FEATHERS/mimetypes.sh" ;;
 	Configs) source "$FEATHERS/configs.sh" ;;
+	SDDM*) source "$FEATHERS/sddm-theme.sh" ;;
 	*) echo "Unrecognised installation instruction $selected! Exiting." && exit 1 ;;
 	esac
 done

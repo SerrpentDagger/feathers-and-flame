@@ -60,6 +60,7 @@ window-rule {
 window-rule {
 	match title=r#"Splash.*Kdenlive"#
 	match title=r#"NoScript.*Mullvad"#
+	match app-id="org.kde.kdenlive" title=r#"Clip Problems.*Kdenlive"#
 	match app-id="krita" title=r#".+ — Krita"#
 	match app-id="vlc" title="Current Media Information"
 	match app-id="Tor Browser" title="Close Tor Browser"

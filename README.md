@@ -39,29 +39,50 @@ Installation takes the form of a single `curl` command in an appropriate fresh C
 
 First, install CachyOS normally (from a flashed USB with [their iso](https://cachyos.org/download/)), subject to the following notes:
 
-1. Select `Limine` as your bootloader. <img width="564" height="309" alt="limine bootloader selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/choose-limine.jpg" />
-2. Encrypt your drive by selecting `btrfs` and `Encrypt System` in the `Partitions` section. <img width="564" height="309" alt="btrfs drive encryption" src="https://serpentdagger.com/assets/images/feathers-and-flame/btrfs-encrypted-partitioning.jpg" />
+1. Select `Limine` as your bootloader.
+   <div>
+      <img width="564" height="309" alt="limine bootloader selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/choose-limine.jpg" />
+   </div>
+2. Encrypt your drive by selecting `btrfs` and `Encrypt System` in the `Partitions` section.
+   <div>
+      <img width="564" height="309" alt="btrfs drive encryption" src="https://serpentdagger.com/assets/images/feathers-and-flame/btrfs-encrypted-partitioning.jpg" />
+   </div>
 3. Select `Niri` in the `Desktop` section.
-4. You can uncheck Firefox in the `Packages` section, since Feathers can install Mullvad and Tor Browsers for you. <img width="1128" height="309" alt="package selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/package-selection.jpg" />
-5. Choose the same password for your user login as you did for encryption. <img width="564" height="309" alt="login password same" src="https://serpentdagger.com/assets/images/feathers-and-flame/login-details-same-password.jpg" />
+4. You can uncheck Firefox in the `Packages` section, since Feathers can install Mullvad and Tor Browsers for you.
+   <div>
+      <img width="1128" height="309" alt="package selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/package-selection.jpg" />
+   </div>
+5. Choose the same password for your user login as you did for encryption.
+   <div>
+      <img width="564" height="309" alt="login password same" src="https://serpentdagger.com/assets/images/feathers-and-flame/login-details-same-password.jpg" />
+   </div>
 6. Reboot!
 
 ### of Feathers and Flame
 
-Once you've booted into your basic installation, press `Mod+Return` to open a terminal and run:
-`curl -fsSL https://serpentdagger.com/feathers-and-flame/install | bash`. You'll be greeted by a flashy owl: <img width="478" height="520" alt="feathers installer welcome" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-welcome.jpg" />
+The setup may install properly on other Arch-based systems, or a 'dirty' CachyOs install, but testing is done on clean CachyOs installations. If you're unsure, feel free to ask in an issue, or test in a VM first.
 
-Select the components you want, or just `Ctrl + A` for all of them!
-<img width="478" height="520" alt="installer select components for install" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-main-selection.jpg" />
-
-You will be asked for confirmation before installing:
-<img width="478" height="520" alt="installer confirm selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-confirm-selection.jpg" />
-
-After pressing `Yes`, the installer will take a while to download and configure the system for you, depending on your bandwidth and hardware. After it's done, you will be prompted to reboot:
-<img width="478" height="520" alt="installer finished reboot prompt" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-finished-reboot.jpg" />
-
-Once you've rebooted again, Feathers and Flame is ready for your enjoyment! I hope you have as great a time using it as I did setting it up!
-<img width="564" height="309" alt="install finished welcome screen boot" src="https://serpentdagger.com/assets/images/feathers-and-flame/install-finished-first-boot.jpg" />
+1. Once you've booted into your basic installation, press `Mod+Return` to open a terminal and run:
+`curl -fsSL https://serpentdagger.com/feathers-and-flame/install | bash`. You'll be greeted by a flashy owl:
+   <div>
+      <img width="478" height="520" alt="feathers installer welcome" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-welcome.jpg" />
+   </div>
+2. Select the components you want, or just `Ctrl + A` for all of them!
+   <div>
+      <img width="478" height="520" alt="installer select components for install" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-main-selection.jpg" />
+   </div>
+3. You will be asked for confirmation before installing:
+   <div>
+      <img width="478" height="520" alt="installer confirm selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-confirm-selection.jpg" />
+   </div>
+4. After pressing `Yes`, the installer will take a while to download and configure the system for you, depending on your bandwidth and hardware. After it's done, you will be prompted to reboot:
+   <div>
+      <img width="478" height="520" alt="installer finished reboot prompt" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-finished-reboot.jpg" />
+   </div>
+5. Once you've rebooted again, Feathers and Flame is ready for your enjoyment! I hope you have as great a time using it as I did setting it up!
+   <div>
+      <img width="564" height="309" alt="install finished welcome screen boot" src="https://serpentdagger.com/assets/images/feathers-and-flame/install-finished-first-boot.jpg" />
+   </div>
 
 ### Trouble?
 

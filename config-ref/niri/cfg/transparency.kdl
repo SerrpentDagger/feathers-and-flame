@@ -1,9 +1,10 @@
 /////////////// TRANSPARENCY
 window-rule {
 	// Windows not to be translucent. Add as desired.
-	exclude app-id=r#"(gimp|vlc|imv|mpv|FreeTube)"#
+	exclude app-id=r#"(gimp|vlc|imv|mpv|FreeTube|freetube)"#
 	exclude app-id=r#"(?i)browser"#
 	exclude app-id=r#"libreoffice-(draw|impress)"# 
+	exclude app-id="krita" title=r#"[a-zA-Z]+\.[a-zA-Z]+ \(.*\)\s.*—\sKrita$"#
 	exclude app-id="krita" title=r#"^Krita$"#
 	exclude app-id="Graphing Calculator SD"
 	exclude app-id="com.serpentdagger.feathers-update"

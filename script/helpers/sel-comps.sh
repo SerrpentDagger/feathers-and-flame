@@ -21,6 +21,7 @@ if [[ "generate" == "$1" ]]; then
 			"Alacritty in Nautilus: Set up context menu entry for Nautilus" \
 			"Mimetypes: Default applications to open files (RECOMMENDED)" \
 			"Configs: Copy config files into place (RECOMMENDED)" \
+			"SDDM Theme: Cohesive Noctalia theme for SDDM's login greeter" \
 			--header "Select the desired components to install:" --no-limit --height=8 | tee "$selection_file" "$pending_file" >/dev/null
 	fi
 else
@@ -47,8 +48,12 @@ else
 	elif [[ "remove" == "$1" ]]; then
 		sed -i "s/^$2:.*//g" "$selection_file"
 		gum style --bold --foreground="#55FF99" "Installation success: $2"
+	elif [[ "add" == "$1" ]]; then
+		if ! grep -Po "^$2:" "$selection_file" >/dev/null; then # Check if it's there first
+			echo "$2: ${3:-PLACEHOLDER}" >>"$selection_file"
+		fi
 	else
-		echo "Usage: $0 <generate|fetch|check NAME|remove NAME>"
+		echo "Usage: $0 <generate|fetch|check NAME|remove NAME|add NAME [DESCRIPTION]>"
 		return 1
 	fi
 fi
