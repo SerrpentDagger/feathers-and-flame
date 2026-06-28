@@ -40,6 +40,9 @@ pkg_installed keepassxc && source "$FEATHERH/back-cp.sh" "$FEATHERC/keepassxc/ke
 # Btop theme
 pkg_installed btop && source "$FEATHERH/back-cp.sh" "$FEATHERC/btop/btop.conf" "$HOME/.config/btop/btop.conf"
 
+# ttyper .desktop
+pkg_installed ttyper && source "$FEATHERH/back-cp.sh" "$FEATHERA/manual-ttyper.desktop" "$HOME/.local/share/applications/manual-ttyper.desktop"
+
 # Gimp theme (I actually prefer plain dark theme here.)
 # pkg_installed gimp && source "$FEATHERPS/gimp.sh"
 
