@@ -9,3 +9,7 @@
 	mode "1920x1080@60.019" // Set resolution and refresh rate
 	scale 1 // No scaling (use 2 for HiDPI)
 }
+
+/-output "HDMI-A-1" {
+	position x=1920 y=0 // Position the external monitor to the right of the first monitor.
+}
