@@ -20,6 +20,10 @@ if [[ -f "$HOME/.local/share/applications/start-tor-browser.desktop" ]]; then
 	xdg-mime default start-tor-browser.desktop x-scheme-handler/https
 fi
 
+if pacman -Q blender &>/dev/null; then
+	xdg-mime default blender.desktop application/x-blender
+fi
+
 # Open video files with mpv
 xdg-mime default mpv.desktop video/mp4
 xdg-mime default mpv.desktop video/x-msvideo
