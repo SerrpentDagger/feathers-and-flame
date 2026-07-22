@@ -22,3 +22,6 @@ deja-dup
 
 # Disk usage analyzer
 baobab
+
+# Command line git helper
+lazygit
