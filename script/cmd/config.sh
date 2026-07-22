@@ -80,7 +80,7 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"  Hot-Rules: Custom Niri configs which can be hot-swapped with keybinds." \
 	"  Animation: Animations of window movement and resizing, overview open/close, and screenshot UI." \
 	"Wallpapers: Place image files here to add them to the main wallpaper list." \
-	"Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside." \
+	"Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside. Then Super-Shift-<Number>" \
 	"Theme User Templates: Define custom theming for your favourite applications. (Noctalia User Templates)" \
 	"Shell Settings: Open the Noctalia settings menu. (Super-S)" \
 	"Fish Config: Set command aliases and other shell script configs." \
