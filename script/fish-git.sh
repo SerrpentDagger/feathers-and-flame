@@ -3,13 +3,15 @@
 gum style --bold --foreground="#DDDD44" "Adding Fish git aliases..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-bash "$FEATHERH/fish-add-alias.sh" --category 'Lazy Git'
-bash "$FEATHERH/fish-add-alias.sh" gs 'git status'
-bash "$FEATHERH/fish-add-alias.sh" gd 'git diff'
-bash "$FEATHERH/fish-add-alias.sh" gdh 'git diff HEAD'
-bash "$FEATHERH/fish-add-alias.sh" gsa 'git stage *'
-bash "$FEATHERH/fish-add-alias.sh" gcm 'git commit -m'
-bash "$FEATHERH/fish-add-alias.sh" gp 'git push'
-bash "$FEATHERH/fish-add-alias.sh" g git
+source "$FEATHERH/backup.sh" "$HOME/.config/fish/config.fish"
 
-# source "$FEATHERH/sel-comps.sh" --pending remove "Fish Git"
+source "$FEATHERH/fish-add-alias.sh" --category 'Git in brief'
+source "$FEATHERH/fish-add-alias.sh" gs 'git status'
+source "$FEATHERH/fish-add-alias.sh" gd 'git diff'
+source "$FEATHERH/fish-add-alias.sh" gdh 'git diff HEAD'
+source "$FEATHERH/fish-add-alias.sh" gsa 'git stage *'
+source "$FEATHERH/fish-add-alias.sh" gcm 'git commit -m'
+source "$FEATHERH/fish-add-alias.sh" gp 'git push'
+source "$FEATHERH/fish-add-alias.sh" g git
+
+source "$FEATHERH/sel-comps.sh" --pending remove "Fish Git"
