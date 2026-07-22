@@ -8,7 +8,7 @@ binds {
 
 	Mod+Shift+Slash { show-hotkey-overlay; }
 	Mod+Shift+U hotkey-overlay-title="<b>Update Feathers and Flame</b>" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }
-	Mod+G hotkey-overlay-title="<b>Configuration Helper</b>" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/script/cmd/config.sh"; }
+	Mod+G hotkey-overlay-title="<b>Configuration Helper</b>					( With full hotkeys list )" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/script/cmd/config.sh"; }
 
 	// ─── Noctalia ───
 	// See available: qs -c noctalia-shell ipc show
