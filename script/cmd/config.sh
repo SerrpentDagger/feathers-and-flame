@@ -21,7 +21,6 @@ if [[ "--sub" == "$1" ]]; then
 		xdg-open "$target" >/dev/null
 	fi
 	if [[ $ronly == "1" ]]; then
-		notify-send "Removing"
 		rm "$target"
 		if ! [ "$(ls -A "$FEATHERT")" ]; then
 			source "$FEATHERH/tmp-clear.sh"
@@ -84,7 +83,6 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside." \
 	"Theme User Templates: Define custom theming for your favourite applications. (Noctalia User Templates)" \
 	"Shell Settings: Open the Noctalia settings menu. (Super-S)" \
-	"Test" \
 	--header "Choose what configs to view and/or edit." --height=16)
 
 ro="0"
