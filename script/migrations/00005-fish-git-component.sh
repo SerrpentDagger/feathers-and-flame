@@ -2,4 +2,4 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-source "$FEATHERH/new-comp.sh" fish-git "Fish Git" "Brief git aliases for common tasks (g, gs, gd, gdh, gsa, gcm, gp, lg)"
+source "$FEATHERH/new-comp.sh" fish-git "Fish Git" "Brief git aliases for common tasks (g, gs, ga, gd, gdh, gsa, gcm, gp, lg)"
