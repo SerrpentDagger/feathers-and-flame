@@ -7,6 +7,8 @@ binds {
 	// https://docs.noctalia.dev/getting-started/keybinds/
 
 	Mod+Shift+Slash { show-hotkey-overlay; }
+	Mod+Shift+U hotkey-overlay-title="<b>Update Feathers and Flame</b>" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }
+	Mod+G hotkey-overlay-title="<b>Configuration Helper</b>" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/script/cmd/config.sh"; }
 
 	// ─── Noctalia ───
 	// See available: qs -c noctalia-shell ipc show
@@ -20,7 +22,6 @@ binds {
 	Mod+Shift+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications clear && qs -c noctalia-shell ipc call notifications dismissAll"; }
 	Mod+Shift+Space hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
 	Mod+Ctrl+Space hotkey-overlay-title="Random Wallpaper" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh random"; }
-	Mod+Shift+U hotkey-overlay-title="<b>Update Feathers and Flame</b>" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }
 	Mod+V hotkey-overlay-title="Activate Screensaver						( <span background=\"#303030\"><tt>+Shift</tt></span>: Current Monitor,  <span background=\"#303030\"><tt>+Alt</tt></span>: Toggle Active )" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh force"; }
 	Mod+Shift+V hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh force --current"; }
 	Mod+Alt+V hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/helpers/state.sh toggle 'screensaver_disabled' --notify"; }
@@ -52,8 +53,7 @@ binds {
 	Mod+Shift+B                         hotkey-overlay-title=null { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
 	Mod+Shift+O                         hotkey-overlay-title="Lock Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 	Mod+Escape                          repeat=false hotkey-overlay-title="Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
-	Mod+G                               hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
-	// Mod+Shift+G 															hotkey-overlay-title="Open Krita" { spawn "krita"; }
+	Mod+Shift+Ctrl+G                               hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
 	Mod+Y																hotkey-overlay-title="Open FreeTube YT-viewer" { spawn "freetube"; }
 
 	Mod+E                               hotkey-overlay-title="File Manager							( <span background=\"#303030\"><tt>+Shift</tt></span>: Starred )" { spawn-sh "nautilus"; }
@@ -62,7 +62,6 @@ binds {
 	Mod+Shift+I                         hotkey-overlay-title=null { spawn-sh "alacritty -e nethogs -d 0.2"; }
 	Mod+Shift+G                         hotkey-overlay-title=null { spawn-sh "alacritty -e nvtop"; }
 	xF86Calculator { spawn-sh "gnome-calculator"; }
-	// Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e bash /home/serpent/.local/share/feathers-and-flame/script/triggers/pkg_install.sh"; }
 	Mod+N																hotkey-overlay-title="Open LazyVim" { spawn-sh "alacritty -e nvim"; }
 	Mod+Ctrl+S													hotkey-overlay-title="LocalSend Share File						( <span background=\"#303030\"><tt>Shift</tt></span>: Folder,  <span background=\"#303030\"><tt>Alt</tt></span>: Clipboard )" { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh file"; }
 	Mod+Shift+S													hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh folder"; }
@@ -83,7 +82,6 @@ binds {
 	XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
 	// ─── Window Movement and Focus ───
-	//	Mod+Shift+W                         { spawn-sh "alacritty -e niri msg pick-window && sleep 2"; }
 	Mod+W                               { close-window; }
 	Mod+O                               repeat=false { toggle-overview; }
 	Mod+Shift+M													repeat=false hotkey-overlay-title="Mirror Focused Monitor" { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
@@ -188,8 +186,8 @@ binds {
 
 	// ─── Layout Controls ───
 	Mod+F                               { maximize-column; }
-	Mod+R { switch-preset-column-width; }
-	Mod+Shift+R { switch-preset-window-height; }
+	Mod+R                               { switch-preset-column-width; }
+	Mod+Shift+R                         { switch-preset-window-height; }
 	Mod+C                               { center-column; }
 	Mod+CTRL+C                          { center-visible-columns; }
 	Mod+Minus                           { set-column-width "-10%"; }
@@ -199,10 +197,10 @@ binds {
 
 
 	// ─── Modes ───
-	Mod+Ctrl+T                               { toggle-window-floating; }
-	Mod+T                         { switch-focus-between-floating-and-tiling; }
-	Mod+Shift+F                         hotkey-overlay-title="Fullscreen Window" { fullscreen-window; }
-	Mod+Q                               { toggle-column-tabbed-display; }
+	Mod+Ctrl+T                                                    { toggle-window-floating; }
+	Mod+T                                                         { switch-focus-between-floating-and-tiling; }
+	Mod+Shift+F       hotkey-overlay-title="Fullscreen Window"    { fullscreen-window; }
+	Mod+Q                                                         { toggle-column-tabbed-display; }
 
 	// ─── Screenshots ───
 	Print hotkey-overlay-title="Take a Screenshot						( <span background=\"#303030\"><tt>+Ctrl</tt></span>: Screen,  <span background=\"#303030\"><tt>+Alt</tt></span>: Window )" { screenshot; }
@@ -215,6 +213,6 @@ binds {
 	Mod+Shift+Q                          hotkey-overlay-title="<b>Reclaim Keyboard Control</b>" allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
 	// ─── Exit / Power ───
-	CTRL+ALT+Delete                     { quit; } // Also quits Niri
-	Mod+Shift+P                         hotkey-overlay-title="Power Off Moniters" { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+	CTRL+ALT+Delete                                                         { quit; } // Also quits Niri
+	Mod+Shift+P            hotkey-overlay-title="Power Off Moniters"        { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
 }
