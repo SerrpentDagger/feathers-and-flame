@@ -21,7 +21,7 @@ if [[ "generate" == "$1" ]]; then
 			"Alacritty in Nautilus: Set up context menu entry for Nautilus" \
 			"Mimetypes: Default applications to open files (RECOMMENDED)" \
 			"Configs: Copy config files into place (RECOMMENDED)" \
-			"Fish Git: Brief git aliases for common tasks (g, gs, gd, gdh, gsa, gcm, gp)" \
+			"Fish Git: Brief git aliases for common tasks (g, gs, gd, gdh, gsa, gcm, gp, lg)" \
 			"SDDM Theme: Cohesive Noctalia theme for SDDM's login greeter" \
 			--header "Select the desired components to install:" --no-limit --height=8 | tee "$selection_file" "$pending_file" >/dev/null
 	fi

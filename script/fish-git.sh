@@ -14,4 +14,8 @@ source "$FEATHERH/fish-add-alias.sh" gcm 'git commit -m'
 source "$FEATHERH/fish-add-alias.sh" gp 'git push'
 source "$FEATHERH/fish-add-alias.sh" g git
 
+if pacman -Q lazygit &>/dev/null; then
+	source "$FEATHERH/fish-add-alias.sh" lg 'lazygit'
+fi
+
 source "$FEATHERH/sel-comps.sh" --pending remove "Fish Git"
