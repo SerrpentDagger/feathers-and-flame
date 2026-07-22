@@ -83,11 +83,14 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside." \
 	"Theme User Templates: Define custom theming for your favourite applications. (Noctalia User Templates)" \
 	"Shell Settings: Open the Noctalia settings menu. (Super-S)" \
-	--header "Choose what configs to view and/or edit." --height=16)
+	"Fish Config: Set command aliases and other shell script configs." \
+	"Alacritty Config: Change terminal settings like font size and bindings." \
+	--header "Choose what configs to view and/or edit." --height=18) || exit 0
 
 ro="0"
 
-niri_top="$HOME/.config/niri/"
+h_conf="$HOME/.config/"
+niri_top="$h_conf/niri/"
 niri_cf="$niri_top/cfg/"
 niri_dep="$FEATHERCRD/niri/cfg/"
 
@@ -109,6 +112,9 @@ Wallpapers*) cf="$FEATHERW" ;;
 Wallpaper\ Favourites*) mkdir -p "$FEATHERWP" && cf="$FEATHERWP" ;;
 Theme\ User*) cf="$HOME/.config/noctalia/user-templates.toml" ;;
 Shell\ Settings*) qs -c noctalia-shell ipc call settings toggle ;;
+
+Fish\ Config*) cf="$h_conf/fish/config.fish" ;;
+Alacritty*) cf="$h_conf/alacritty/alacritty.toml" ;;
 
 *) echo "ERROR: Unrecognised option! Exiting." && sleep 2 && exit 1 ;;
 esac
