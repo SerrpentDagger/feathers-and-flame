@@ -3,12 +3,6 @@
 [templates]
 
 # User-defined templates
-# The file at input_path should be a template config file with colour placeholders.
-# The output_path will be overwritten with those colour files filled in, and can then
-# be used for dynamically theming a given application.
-#
-# For more information: https://docs.noctalia.dev/v4/theming/user-templates/
-#
 # Add your custom templates below
 # Example:
 # [templates.myapp]
