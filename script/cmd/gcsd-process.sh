@@ -7,8 +7,10 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 themes=$HOME/Desktop/GCSD/data/themes
 target="$FEATHERT/gcsd/System.gctheme"
 output="$themes/System.gctheme"
+clean_folder="$FEATHERT/gcsd/"
 cleanup() {
-	source "$FEATHERH/tmp-clear.sh"
+	rm -rf "$clean_folder"
+	source "$FEATHERH/tmp-clear.sh" --if-empty
 }
 ! [[ -d "$(dirname "$output")" ]] && cleanup && return 1
 
