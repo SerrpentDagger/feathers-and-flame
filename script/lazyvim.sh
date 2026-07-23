@@ -2,7 +2,7 @@
 
 gum style --bold --foreground="#DDDD44" "Installing LazyVim..."
 # npm cargo R
-sudo pacman -S --noconfirm --needed npm ripgrep fd neovim
+sudo pacman -S --noconfirm --needed npm lazygit ripgrep fd neovim
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
