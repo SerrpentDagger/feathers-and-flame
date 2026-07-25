@@ -25,3 +25,4 @@ wallpaper/dragon-lich.jpg	https://w.wallhaven.cc/full/lm/wallhaven-lmoxo2.jpg	a7
 wallpaper/dragon-festival_Murata.jpg	https://w.wallhaven.cc/full/ex/wallhaven-expwlo.jpg	13c3d3f0c4cf50f2bd4dce2e2df625088fd37ed56e6921ef61d4b9145b458e8b
 wallpaper/dark-grassy.jpg	https://w.wallhaven.cc/full/3l/wallhaven-3ldeey.jpg	e92d17a3df05d3bb0f83b39911c9f47c4f5297cbe8576855f7bdcf0a9af46add
 wallpaper/fungal-forest.png	https://w.wallhaven.cc/full/zp/wallhaven-zpp2xg.png	3e167b78066e87637aec4f15d4437d7f0fa003b40279332e3fe61c4545fa6a85
+wallpaper/molten-moon_Garnet.jpg	https://w.wallhaven.cc/full/xe/wallhaven-xe61ql.jpg	f743ec3d3ebbb3ddd38812728947ef25f59caf61c64dba4f299e840ee12b5e7b
