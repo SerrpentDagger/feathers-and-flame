@@ -195,7 +195,7 @@ binds {
 	// ─── Workspace Switching ───
 	Mod+WheelScrollDown             hotkey-overlay-title="Switch Workspace Down					( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { focus-workspace-down; }
 	Mod+WheelScrollUp               hotkey-overlay-title=null cooldown-ms=150 { focus-workspace-up; }
-	Mod+CTRL+WheelScrollDown        hotkey-overlay-title="Move Column to Workspace Down			( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { move-column-to-workspace-down; }
+	Mod+CTRL+WheelScrollDown        hotkey-overlay-title="Move Column to Workspace Down				( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { move-column-to-workspace-down; }
 	Mod+CTRL+WheelScrollUp          hotkey-overlay-title=null cooldown-ms=150 { move-column-to-workspace-up; }
 
 	Mod+WheelScrollRight            hotkey-overlay-title=null                 { focus-column-right; }
