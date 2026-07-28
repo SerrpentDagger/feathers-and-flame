@@ -29,7 +29,11 @@ get_random_file_or_return_path() {
 }
 
 scheme-from-wallpaper() {
-	basename "$1" | grep -Po "_\\K[a-zA-Z ()]+"
+	basename "$1" | grep -Po "_\\K[a-zA-Z ()_]+"
+}
+
+use-wallpaper-colors() {
+	! grep -q '"useWallpaperColors": false' "$HOME/.config/noctalia/settings.json"
 }
 
 SCHEME_PREF="FEATHER_COLOR_SCHEME_"
@@ -46,7 +50,7 @@ if [[ $1 == "hook" ]]; then
 		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 		exit 0
 	fi
-	if [[ -n "$scheme" ]]; then
+	if [[ -n "$scheme" ]] && use-wallpaper-colors; then
 		echo "Setting state for $scheme"
 		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
 			exit 0
