@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profiles version="13">
+<profile kind="CodeFormatterProfile" name="CurlyNextline" version="13">
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_type_declaration" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_constructor_declaration" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_enum_declaration" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_block_in_case" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_block" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_method_declaration" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_enum_constant" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_switch" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_annotation_type_declaration" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_array_initializer" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.lineSplit" value="1000"/>
+<setting id="org.eclipse.jdt.core.formatter.join_wrapped_lines" value="false"/>
+<setting id="org.eclipse.jdt.core.formatter.insert_new_line_before_else_in_if_statement" value="insert"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_anonymous_type_declaration" value="next_line"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_lambda_body" value="next_line"/>
+</profile>
+</profiles>
