@@ -1,0 +1,182 @@
+# Base settings for Noctalia v5
+config_version = 8
+
+[desktop_widgets]
+enabled = false
+
+[lockscreen_widgets]
+enabled = false
+
+[hooks]
+colors_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
+session_locked = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill"
+started = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noct-start.sh"
+wallpaper_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook --clear"
+
+[notification]
+background_opacity = 0.87999998033046722
+
+[system.monitor]
+cpu_poll_seconds = 1
+
+[battery]
+warning_threshold = 15
+
+[idle]
+behavior_order = [ "Screensaver", "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 0
+
+    [idle.behavior.Screensaver]
+    action = "command"
+    command = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh"
+    enabled = true
+    timeout = 480.0
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 1800.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 800.0
+
+[shell]
+clipboard_enabled = false
+corner_radius_scale = 2.0
+offline_mode = true
+show_location = false
+
+    [shell.panel]
+    session_placement = "floating"
+    session_position = "center"
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = false
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "destructive"
+
+    [shell.launcher]
+    fetch_exchange_rates = false
+
+    [shell.screenshot]
+    copy_to_clipboard = false
+    freeze_screen = false
+    save_to_file = false
+
+    [shell.shadow]
+    alpha = 0.59999998658895493
+    direction = "down_right"
+
+[bar.default]
+end = [ "active_window", "between", "tray", "notifications", "network", "grouped", "battery", "control-center", "edge" ]
+margin_edge = 9
+margin_ends = 8
+start = [ "edge", "cpu", "ram", "sysmon", "between", "workspaces" ]
+thickness = 25
+widget_spacing = 8
+
+    [bar.default.dead_zone.actions]
+    left = "exec niri msg action toggle-overview"
+    right = "exec niri msg action show-hotkey-overlay"
+
+[widget.active_window]
+max_length = 145
+title_scroll = "on_hover"
+
+[widget.battery]
+display_mode = "graphic"
+scale = 0.80000000000000004
+show_label = false
+
+[widget.between]
+length = 25
+type = "spacer"
+
+[widget.control-center]
+custom_image = "/home/serpent/.local/share/feathers-and-flame/icons/feathers.png"
+
+[widget.cpu]
+display = "graph"
+show_label = false
+
+[widget.edge]
+length = 4
+type = "spacer"
+
+[widget.grouped]
+length = 15
+type = "spacer"
+
+[widget.network]
+show_label = false
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.ram]
+show_label = false
+
+[widget.sysmon]
+label_show_units = false
+show_label = false
+stat = "swap_pct"
+
+[nightlight]
+enabled = true
+temperature_night = 2600
+
+[weather]
+enabled = false
+
+[backdrop]
+blur_intensity = 0.0
+
+[lockscreen]
+blur_intensity = 0.0
+
+[theme]
+source = "wallpaper"
+wallpaper_scheme = "faithful"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "kcolorscheme", "niri" ]
+
+[wallpaper]
+directory = "/home/serpent/.local/share/feathers-and-flame/wallpaper"

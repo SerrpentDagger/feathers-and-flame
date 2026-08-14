@@ -1,7 +1,7 @@
 // You can customise look and feel of niri by tweaking these defaults.
 
 layout {
-	gaps 16 // Gap between windows
+	gaps 13 // Gap between windows
 	center-focused-column "never" // Don’t auto-center focused column
 	always-center-single-column
 
@@ -16,6 +16,6 @@ layout {
 	struts {}
 
 	focus-ring {
-		width 3
+		width 2
 	}
 }
