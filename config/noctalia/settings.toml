@@ -124,6 +124,7 @@ widget_spacing = 8
 
 [widget.active_window]
 max_length = 145
+min_length = 0
 title_scroll = "on_hover"
 
 [widget.battery]
