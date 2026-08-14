@@ -99,6 +99,7 @@ show_location = false
 
     [shell.launcher]
     fetch_exchange_rates = false
+    categories = false
 
     [shell.screenshot]
     copy_to_clipboard = false
