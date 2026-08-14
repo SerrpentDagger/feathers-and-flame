@@ -1,5 +1,5 @@
 window-rule {
-	geometry-corner-radius 10
+	geometry-corner-radius 8
 	clip-to-geometry true
 }
 layer-rule {
@@ -66,6 +66,7 @@ window-rule {
 	match app-id="Tor Browser" title="Close Tor Browser"
 	match app-id="gimp" title="Preferences"
 	match app-id="org.gnome.DejaDup"
+	match app-id="dev.noctalia.Noctalia"
 
 	open-floating true
 }

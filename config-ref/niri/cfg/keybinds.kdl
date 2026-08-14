@@ -21,21 +21,21 @@ binds {
 	Mod+Shift+P hotkey-overlay-title="Power Off Moniters"                                     { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
 
 	// ────── Noctalia ──────
-	// See available: qs -c noctalia-shell ipc show
+	// See available: noctalia msg --help
 	Mod+Shift+Ctrl+Q repeat=false hotkey-overlay-title="<b>Restart Noctalia</b>" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noctalia-restart.sh"; }
 
 	// ─── Panels ───
-	Mod+S         repeat=false hotkey-overlay-title="Toggle Noctalia Settings"   { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
-	Mod+I         repeat=false hotkey-overlay-title=null                         { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }
-	Mod+M         repeat=false hotkey-overlay-title=null                         { spawn-sh "qs -c noctalia-shell ipc call systemMonitor toggle"; }
-	Mod+Alt+Space repeat=false hotkey-overlay-title=null                         { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+	Mod+S         repeat=false hotkey-overlay-title="Toggle Noctalia Settings"   { spawn-sh "noctalia msg settings-toggle"; }
+	Mod+I         repeat=false hotkey-overlay-title=null                         { spawn-sh "noctalia msg panel-toggle control-center network"; }
+	Mod+M         repeat=false hotkey-overlay-title=null                         { spawn-sh "noctalia msg panel-toggle control-center system"; }
+	Mod+Alt+Space repeat=false hotkey-overlay-title=null                         { spawn-sh "noctalia msg panel-toggle control-center"; }
 	// ─── Notifications / Power ───
-	Mod+P           repeat=false hotkey-overlay-title="Cycle Power Profile"      { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
-	Mod+Ctrl+Comma  hotkey-overlay-title=null                                    { spawn-sh "qs -c noctalia-shell ipc call notifications dismissAll"; }
-	Mod+Shift+Comma hotkey-overlay-title=null                                    { spawn-sh "qs -c noctalia-shell ipc call notifications clear && qs -c noctalia-shell ipc call notifications dismissAll"; }
-	Mod+Comma       hotkey-overlay-title="Show Notifications						( <span background=\"#303030\"><tt>+Ctrl</tt></span>: Dismiss Current,  <span background=\"#303030\"><tt>+Shift</tt></span>: Clear History )" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+	Mod+P           repeat=false hotkey-overlay-title="Cycle Power Profile"      { spawn-sh "noctalia msg power-cycle"; }
+	Mod+Ctrl+Comma  hotkey-overlay-title=null                                    { spawn-sh "noctalia msg notification-clear-active"; }
+	Mod+Shift+Comma hotkey-overlay-title=null                                    { spawn-sh "noctalia msg notification-clear-active && noctalia msg notification-clear-history"; }
+	Mod+Comma       hotkey-overlay-title="Show Notifications						( <span background=\"#303030\"><tt>+Ctrl</tt></span>: Dismiss Current,  <span background=\"#303030\"><tt>+Shift</tt></span>: Clear History )" { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
 	// ─── Bar / Launcher ───
-	Mod+Shift+Space repeat=false hotkey-overlay-title="Toggle Noctalia Bar"      { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
+	Mod+Shift+Space repeat=false hotkey-overlay-title="Toggle Noctalia Bar"      { spawn-sh "noctalia msg bar-toggle"; }
 	// ─── Screensaver ───
 	Mod+V           repeat=false hotkey-overlay-title="Activate Screensaver						( <span background=\"#303030\"><tt>+Shift</tt></span>: Current Monitor,  <span background=\"#303030\"><tt>+Alt</tt></span>: Toggle Active )" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh force"; }
 	Mod+Shift+V     repeat=false hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh force --current"; }
@@ -53,11 +53,10 @@ binds {
 	Mod+Shift+8      repeat=false hotkey-overlay-title=null               { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 8"; }
 	Mod+Shift+9      repeat=false hotkey-overlay-title=null               { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 9"; }
 	Mod+Shift+0      repeat=false hotkey-overlay-title=null               { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 0"; }
-	Mod+Shift+W      repeat=false hotkey-overlay-title=null               { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
-	Mod+Shift+Ctrl+W repeat=false hotkey-overlay-title=null               { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
+	Mod+Shift+W      repeat=false hotkey-overlay-title=null               { spawn-sh "noctalia msg panel-toggle wallpaper"; }
 
 	// ─── Night Light ───
-	Mod+Shift+N      repeat=false hotkey-overlay-title="Toggle Night-Light"           { spawn-sh "niri msg action do-screen-transition && qs -c noctalia-shell ipc call nightLight toggle"; }
+	Mod+Shift+N      repeat=false hotkey-overlay-title="Toggle Night-Light"           { spawn-sh "niri msg action do-screen-transition && noctalia msg nightlight-toggle"; }
 
 	// ─── Hot-Rules ───
 	Mod+Alt+D        repeat=false hotkey-overlay-title="Toggle laptop-monitor on/off" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh hdmi-only"; }
@@ -69,9 +68,9 @@ binds {
 	Mod+B            repeat=false hotkey-overlay-title="Open Browser							( <span background=\"#303030\"><tt>+Shift</tt></span>: Private )" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
 	Mod+Shift+B      repeat=false hotkey-overlay-title=null                       { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
 	Mod+Return       repeat=false hotkey-overlay-title="Open Terminal"            { spawn "alacritty"; }
-	Mod+Space        repeat=false hotkey-overlay-title="<b>Open App Launcher</b>" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-	Mod+Shift+O      repeat=false hotkey-overlay-title="Lock Screen"              { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-	Mod+Escape       repeat=false hotkey-overlay-title="Session Menu"             { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+	Mod+Space        repeat=false hotkey-overlay-title="<b>Open App Launcher</b>" { spawn-sh "noctalia msg panel-toggle launcher"; }
+	Mod+Shift+O      repeat=false hotkey-overlay-title="Lock Screen"              { spawn-sh "noctalia msg session lock"; }
+	Mod+Escape       repeat=false hotkey-overlay-title="Session Menu"             { spawn-sh "noctalia msg panel-toggle session"; }
 	Mod+Shift+Ctrl+G repeat=false hotkey-overlay-title="Open Gimp"                { spawn "gimp"; }
 	Mod+Y            repeat=false hotkey-overlay-title="Open FreeTube YT-viewer"  { spawn "freetube"; }
 
@@ -93,18 +92,18 @@ binds {
 	Mod+Alt+S        repeat=false hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh clipboard"; }
 
 	// ─── Media Controls ───
-	XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-	XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-	XF86AudioMute         allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-	XF86AudioMicMute      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
-	XF86AudioNext         allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
-	XF86AudioPrev         allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
-	XF86AudioPlay         allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
-	XF86AudioPause        allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+	XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+	XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+	XF86AudioMute         allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+	XF86AudioMicMute      allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+	XF86AudioNext         allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+	XF86AudioPrev         allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+	XF86AudioPlay         allow-when-locked=true { spawn-sh "noctalia msg media play"; }
+	XF86AudioPause        allow-when-locked=true { spawn-sh "noctalia msg media pause"; }
 
 	// ─── Brightness Controls ───
-	XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-	XF86MonBrightnessDown allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+	XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+	XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
 
 	// ─── Layout Controls ───
 	Mod+F repeat=false { maximize-column; }
@@ -195,7 +194,7 @@ binds {
 	// ─── Workspace Switching ───
 	Mod+WheelScrollDown             hotkey-overlay-title="Switch Workspace Down					( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { focus-workspace-down; }
 	Mod+WheelScrollUp               hotkey-overlay-title=null cooldown-ms=150 { focus-workspace-up; }
-	Mod+CTRL+WheelScrollDown        hotkey-overlay-title="Move Column to Workspace Down				( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { move-column-to-workspace-down; }
+	Mod+CTRL+WheelScrollDown        hotkey-overlay-title="Move Column to Workspace Down			( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { move-column-to-workspace-down; }
 	Mod+CTRL+WheelScrollUp          hotkey-overlay-title=null cooldown-ms=150 { move-column-to-workspace-up; }
 
 	Mod+WheelScrollRight            hotkey-overlay-title=null                 { focus-column-right; }
@@ -218,7 +217,7 @@ binds {
 	Mod+8                                                                                                                       { focus-workspace 8; }
 	Mod+9                                                                                                                       { focus-workspace 9; }
 
-	Mod+CTRL+1 hotkey-overlay-title="Move Column to Workspace 1			( <span background=\"#303030\"><tt>Numbers</tt></span> )"  { move-column-to-workspace 1; }
+	Mod+CTRL+1 hotkey-overlay-title="Move Column to Workspace 1				( <span background=\"#303030\"><tt>Numbers</tt></span> )"  { move-column-to-workspace 1; }
 	Mod+CTRL+2                                                                                                                  { move-column-to-workspace 2; }
 	Mod+CTRL+3                                                                                                                  { move-column-to-workspace 3; }
 	Mod+CTRL+4                                                                                                                  { move-column-to-workspace 4; }
