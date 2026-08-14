@@ -4,6 +4,9 @@ config_version = 8
 [desktop_widgets]
 enabled = false
 
+[control_center]
+sidebar_section = "none"
+
 [lockscreen_widgets]
 enabled = false
 
@@ -56,6 +59,8 @@ show_location = false
     [shell.panel]
     session_placement = "floating"
     session_position = "center"
+    control_center_position = "top_right"
+    open_near_click_control_center = true
 
     [[shell.session.actions]]
     action = "lock"

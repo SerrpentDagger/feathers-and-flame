@@ -28,6 +28,7 @@ binds {
 	Mod+S         repeat=false hotkey-overlay-title="Toggle Noctalia Settings"   { spawn-sh "noctalia msg settings-toggle"; }
 	Mod+I         repeat=false hotkey-overlay-title=null                         { spawn-sh "noctalia msg panel-toggle control-center network"; }
 	Mod+M         repeat=false hotkey-overlay-title=null                         { spawn-sh "noctalia msg panel-toggle control-center system"; }
+	Mod+A         repeat=false hotkey-overlay-title=null                         { spawn-sh "noctalia msg panel-toggle control-center audio"; }
 	Mod+Alt+Space repeat=false hotkey-overlay-title=null                         { spawn-sh "noctalia msg panel-toggle control-center"; }
 	// ─── Notifications / Power ───
 	Mod+P           repeat=false hotkey-overlay-title="Cycle Power Profile"      { spawn-sh "noctalia msg power-cycle"; }
