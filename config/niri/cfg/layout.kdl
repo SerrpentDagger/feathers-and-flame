@@ -5,7 +5,7 @@ layout {
 	center-focused-column "never" // Don’t auto-center focused column
 	always-center-single-column
 
-	background-color "transparent" // <- needed for noctalia-shell to set wallpaper
+	background-color "transparent" // <- needed for noctalia to set wallpaper
 
 	preset-column-widths {
 		proportion 0.33333

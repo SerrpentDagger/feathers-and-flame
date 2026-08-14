@@ -6,9 +6,9 @@
 
 binds {
 	// ─── Noctalia ───
-	// See available: qs -c noctalia-shell ipc show
+	// See available: noctalia msg --help
 	// Example:
-	// Mod+Shift+Ctrl+Alt+Space hotkey-overlay-title="Emoji Picker" { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
+	// Mod+Shift+Ctrl+Alt+Space hotkey-overlay-title="Emoji Picker" { spawn-sh "noctalia msg panel-toggle launcher /emo"; }
 
 
 	// ─── Hot-Rules ───
