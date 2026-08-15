@@ -27,3 +27,4 @@ wallpaper/dark-grassy.jpg	https://w.wallhaven.cc/full/3l/wallhaven-3ldeey.jpg	e9
 wallpaper/fungal-forest.png	https://w.wallhaven.cc/full/zp/wallhaven-zpp2xg.png	3e167b78066e87637aec4f15d4437d7f0fa003b40279332e3fe61c4545fa6a85
 wallpaper/molten-moon_Garnet.jpg	https://w.wallhaven.cc/full/xe/wallhaven-xe61ql.jpg	f743ec3d3ebbb3ddd38812728947ef25f59caf61c64dba4f299e840ee12b5e7b
 wallpaper/pixel-swamp_Kanagawa Dragon.jpg	https://w.wallhaven.cc/full/7p/wallhaven-7pqokv.jpg	15d35eb56e9d45c1c109b109dae5beff1f6083f4f1dae7a6630b815ea0e01afb
+wallpaper/dueling-dragons.jpg	https://w.wallhaven.cc/full/ly/wallhaven-lydkg2.jpg	03ca7138fb538578001d62ab9cd5a19c25904fc4ab80a37f7cb6a215303bf32e
