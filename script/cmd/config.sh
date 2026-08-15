@@ -111,7 +111,7 @@ Niri\ Modules*) cf="$niri_top/config.kdl" ;;
 Wallpapers*) cf="$FEATHERW" ;;
 Wallpaper\ Favourites*) mkdir -p "$FEATHERWP" && cf="$FEATHERWP" ;;
 Theme\ User*) cf="$HOME/.config/noctalia/user-templates.toml" ;;
-Shell\ Settings*) qs -c noctalia-shell ipc call settings toggle ;;
+Shell\ Settings*) noctalia msg settings-toggle ;;
 
 Fish\ Config*) cf="$h_conf/fish/config.fish" ;;
 Alacritty*) cf="$h_conf/alacritty/alacritty.toml" ;;

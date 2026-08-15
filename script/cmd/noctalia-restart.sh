@@ -1,5 +1,5 @@
 #!/bin/bash
 
-pkill -f 'qs -c noctalia-shell'
+pkill -x 'noctalia'
 sleep 0.5
-nohup qs -c noctalia-shell >/dev/null 2>&1 &
+nohup noctalia >/dev/null 2>&1 &

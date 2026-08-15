@@ -3,13 +3,9 @@
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 if [[ $# -lt 1 ]]; then
-	echo "Usage: bash wallpaper.sh <random|preset NUM|hook [--clear]>"
+	echo "Usage: bash wallpaper.sh <random|preset NUM|hook>"
 	exit
 fi
-
-get-active-monitor() {
-	niri msg outputs | grep -B 1 "Current mode" | grep -Po "Output.*\\(\\K[^\\)]+"
-}
 
 get_random_file_or_return_path() {
 	local path="$1"
@@ -33,38 +29,31 @@ scheme-from-wallpaper() {
 }
 
 use-wallpaper-colors() {
-	! grep -q '"useWallpaperColors": false' "$HOME/.config/noctalia/settings.json"
+	current_scheme=$(noctalia msg color-scheme-get)
+	[[ "$current_scheme" == "wallpaper faithful" ]] || echo "$current_scheme" | grep -Pq "^custom"
 }
 
-SCHEME_PREF="FEATHER_COLOR_SCHEME_"
 if [[ $1 == "hook" ]]; then
 	shift
-	fetch_monitor=$(get-active-monitor | grep -m 1 ".")
-	wallpaper="$(qs -c noctalia-shell ipc call wallpaper get "$fetch_monitor")"
-	scheme="$(scheme-from-wallpaper "$wallpaper")"
-	# Sync to SDDM theme
-	if [[ -d "/usr/share/sddm/themes/noctalia/Assets" ]]; then
-		source "$FEATHERCMD/sync-shell-wallpaper.sh" "$wallpaper"
-	fi
-	if [[ $1 == "--clear" ]]; then
-		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
-		exit 0
-	fi
-	if [[ -n "$scheme" ]] && use-wallpaper-colors; then
-		echo "Setting state for $scheme"
-		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
-			exit 0
-		else
-			source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
-			source "$FEATHERH/state.sh" set "$SCHEME_PREF$scheme"
+	if use-wallpaper-colors; then
+		wallpaper="$(noctalia msg wallpaper-get)"
+		scheme="$(scheme-from-wallpaper "$wallpaper")"
+		# Sync to SDDM theme
+		if [[ -d "/usr/share/sddm/themes/noctalia/Assets" ]]; then
+			source "$FEATHERCMD/sync-shell-wallpaper.sh" "$wallpaper"
 		fi
-		sleep 3
-		qs -c noctalia-shell ipc call colorScheme set "$scheme"
-	else
-		echo "Wallpaper colors; clearing state."
-		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
+		target_source="wallpaper"
+		target_name="faithful"
+		if [[ -n "$scheme" ]]; then
+			target_source="custom"
+			target_name="$scheme"
+		fi
+		current_scheme=$(noctalia msg color-scheme-get)
+		if [[ "$current_scheme" != "$target_source $target_name" ]]; then
+			noctalia msg color-scheme-set "$target_source" "$target_name"
+		fi
+		sleep 1
 	fi
-	sleep 1.5
 
 	# Refresh gnome stuff to dark theme
 	gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
@@ -81,16 +70,10 @@ if [[ $1 == "random" ]]; then
 elif [[ $1 == "preset" ]]; then
 	chosen_preset="$(get_random_file_or_return_path "$FEATHERWP/$2")"
 	# Ensure different name for new background, else noctalia ignores
-	target="$FEATHERW/$temp_name$(basename "$chosen_preset")"
-	# Have to put them in the wallpaper directory first
 	if [[ -e "$chosen_preset" ]]; then
-		cp "$chosen_preset" "$target"
+		wallpaper="$chosen_preset"
 	else
-		# Fallback to handle single files with extensions
-		cp "$chosen_preset."* "$target"
+		wallpaper=$(ls "$chosen_preset."*)
 	fi
-	wallpaper="$target"
 fi
-for out in $(get-active-monitor); do
-	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
-done
+noctalia msg wallpaper-set "$wallpaper"
