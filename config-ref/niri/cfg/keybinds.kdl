@@ -93,18 +93,23 @@ binds {
 	Mod+Alt+S        repeat=false hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh clipboard"; }
 
 	// ─── Media Controls ───
-	XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
-	XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
-	XF86AudioMute         allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
-	XF86AudioMicMute      allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
-	XF86AudioNext         allow-when-locked=true { spawn-sh "noctalia msg media next"; }
-	XF86AudioPrev         allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
-	XF86AudioPlay         allow-when-locked=true { spawn-sh "noctalia msg media play"; }
-	XF86AudioPause        allow-when-locked=true { spawn-sh "noctalia msg media pause"; }
+	XF86AudioRaiseVolume       allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+	XF86AudioLowerVolume       allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+	Shift+XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg mic-volume-up"; }
+	Shift+XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg mic-volume-down"; }
+	XF86AudioMute              allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+	Shift+XF86AudioMute        allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+	XF86AudioMicMute           allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+	XF86AudioNext              allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+	XF86AudioPrev              allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+	XF86AudioPlay              allow-when-locked=true { spawn-sh "noctalia msg media play"; }
+	XF86AudioPause             allow-when-locked=true { spawn-sh "noctalia msg media pause"; }
 
 	// ─── Brightness Controls ───
-	XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
-	XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
+	XF86MonBrightnessUp         allow-when-locked=true { spawn-sh "noctalia msg brightness-up all"; }
+	XF86MonBrightnessDown       allow-when-locked=true { spawn-sh "noctalia msg brightness-down all"; }
+	Shift+XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+	Shift+XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
 
 	// ─── Layout Controls ───
 	Mod+F repeat=false { maximize-column; }
