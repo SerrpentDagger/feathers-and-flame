@@ -11,10 +11,10 @@ sidebar_section = "none"
 enabled = false
 
 [hooks]
-colors_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
+colors_changed = ""
 session_locked = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill"
 started = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noct-start.sh"
-wallpaper_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook --clear"
+wallpaper_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
 
 [notification]
 background_opacity = 0.87999998033046722
@@ -53,7 +53,7 @@ pre_action_fade_seconds = 0
 [shell]
 clipboard_enabled = false
 corner_radius_scale = 2.0
-offline_mode = true
+offline_mode = false
 show_location = false
 
     [shell.panel]
@@ -138,6 +138,7 @@ type = "spacer"
 
 [widget.control-center]
 custom_image = "/home/serpent/.local/share/feathers-and-flame/icons/feathers.png"
+custom_image_colorize = true
 
 [widget.cpu]
 display = "graph"
@@ -170,7 +171,7 @@ enabled = true
 temperature_night = 2600
 
 [weather]
-enabled = false
+enabled = true
 
 [backdrop]
 blur_intensity = 0.0
