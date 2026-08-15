@@ -11,7 +11,7 @@ sidebar_section = "none"
 enabled = false
 
 [hooks]
-colors_changed = ""
+colors_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
 session_locked = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill"
 started = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noct-start.sh"
 wallpaper_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
