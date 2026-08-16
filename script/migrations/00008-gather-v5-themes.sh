@@ -41,4 +41,15 @@ extract_from "$sys_src_dir"
 echo "From user folder..."
 extract_from "$usr_src_dir"
 
+# Fix Ayu terminal background colour
+ayu_theme="$target_dir/Ayu.json"
+if [[ -f "$ayu_theme" ]]; then
+	gum style --bold "The default Ayu theme terminal background colour is disproportionately bright."
+	if gum confirm "Fix it?"; then
+		source "$FEATHERH/backup.sh" "$ayu_theme"
+		good_bg="#0B0E14"
+		sed -i "s/background\": \"#1f2430/background\": \"$good_bg/g" "$ayu_theme"
+	fi
+fi
+
 gum style --bold "Done"
