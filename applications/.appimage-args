@@ -1,10 +1,19 @@
 # Here you can define custom arguments for each AppImage
 # you want to run with the Feathers AppImage Launcher.
 #
-# Comments must be on their own line.
-#
-# Args are defined as 'NAME: ARG1=VALUE1 ARG2=VALUE2...'
+# Args are defined as 'NAME: ARG1=VALUE1 ARG2=VALUE2...'.
 # Each AppImage whose filename starts with NAME will get those
 # arguments applied on launch.
-
+#
+# If an AppImage matches multiple NAMEs, their respective
+# arguments will be merged.
+#
+# Lines starting with # are comments and will not be checked.
+#
+##############################################################
+#
+# Example fix for the Krita AppImage not launching.
+# This applies to the AppImages with names starting
+# with 'krita', placed in the applications directory.
+# For example: krita-5.3.1-x86_64.AppImage
 krita: QT_QPA_PLATFORM=xcb
