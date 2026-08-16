@@ -2,6 +2,11 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
+if ! source "$FEATHERH/sel-comps.sh" check "Configs"; then
+	echo "Skipping automatic theme gather because Configs was not a selected component."
+	exit 0
+fi
+
 gum style --bold "Gathering existing Noctalia v4 themes into the v5 folder."
 
 target_dir="$HOME/.config/noctalia/palettes"
