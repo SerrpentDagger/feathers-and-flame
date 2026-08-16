@@ -1,6 +1,9 @@
 # Here you can define custom arguments for each AppImage
 # you want to run with the Feathers AppImage Launcher.
 #
+# AppImages you want available in the launcher
+# should be placed in the ~/AppImages/ directory.
+#
 # Args are defined as 'NAME: ARG1=VALUE1 ARG2=VALUE2...'.
 # Each AppImage whose filename starts with NAME will get those
 # arguments applied on launch.
