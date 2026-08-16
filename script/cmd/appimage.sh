@@ -2,7 +2,7 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-applications_dir="$HOME/.local/share/applications"
+applications_dir="$HOME/AppImages"
 args_file=".appimage-args"
 if ! cd "$applications_dir"; then
 	echo "Unable to cd to $applications_dir! Exiting."
