@@ -44,6 +44,14 @@ window-rule {
 }
 
 window-rule {
+	match app-id="com.serpentdagger.appimage-launcher"
+
+	open-floating true
+	default-column-width { proportion 0.3; }
+	default-window-height { proportion 0.5; }
+}
+
+window-rule {
 	match app-id="com.serpentdagger.feathers-update"
 
 	open-floating true
