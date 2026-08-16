@@ -79,20 +79,24 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"  System Transparency: View the system transparency rules for reference (Read-Only)." \
 	"  Hot-Rules: Custom Niri configs which can be hot-swapped with keybinds." \
 	"  Animation: Animations of window movement and resizing, overview open/close, and screenshot UI." \
-	"Wallpapers: Place image files here to add them to the main wallpaper list." \
-	"Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside. Then Super-Shift-<Number>" \
-	"Theme User Templates: Define custom theming for your favourite applications. (Noctalia User Templates)" \
 	"Shell Settings: Open the Noctalia settings menu. (Super-S)" \
+	"  Wallpapers: Place image files here to add them to the main wallpaper list." \
+	"  Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside. Then Super-Shift-<Number>" \
+	"  Theme User Templates: Define custom theming for your favourite applications. (Noctalia User Templates)" \
+	"  Theme System Templates: View the system theme templates for reference (Read-Only)" \
+	"AppImage Args: Define custom environment arguments for certain AppImages in the AppImage Launcher." \
 	"Fish Config: Set command aliases and other shell script configs." \
 	"Alacritty Config: Change terminal settings like font size and bindings." \
-	--header "Choose what configs to view and/or edit." --height=18) || exit 0
+	--header "Choose what configs to view and/or edit." --height=12) || exit 0
 
 ro="0"
 
-h_conf="$HOME/.config/"
-niri_top="$h_conf/niri/"
-niri_cf="$niri_top/cfg/"
-niri_dep="$FEATHERCRD/niri/cfg/"
+h_conf="$HOME/.config"
+niri_top="$h_conf/niri"
+niri_cf="$niri_top/cfg"
+niri_dep="$FEATHERCRD/niri/cfg"
+noct_top="$h_conf/noctalia"
+noct_dep="$FEATHERCRD/noctalia"
 
 case "$choice" in
 Niri\ Modules*) cf="$niri_top/config.kdl" ;;
@@ -108,10 +112,13 @@ Niri\ Modules*) cf="$niri_top/config.kdl" ;;
 *Hot-Rules*) cf="$niri_cf/hot-rules.kdl" ;;
 *Animation*) cf="$niri_cf/animation.kdl" ;;
 
-Wallpapers*) cf="$FEATHERW" ;;
-Wallpaper\ Favourites*) mkdir -p "$FEATHERWP" && cf="$FEATHERWP" ;;
-Theme\ User*) cf="$HOME/.config/noctalia/user-templates.toml" ;;
 Shell\ Settings*) noctalia msg settings-toggle ;;
+*Wallpapers*) cf="$FEATHERW" ;;
+*Wallpaper\ Favourites*) mkdir -p "$FEATHERWP" && cf="$FEATHERWP" ;;
+*Theme\ User*) cf="$noct_top/user-templates-v5.toml" ;;
+*Theme\ System*) ro="1" && cf="$noct_dep/user-templates.toml" ;;
+
+AppImage*) cf="$HOME/AppImages/.appimage-args" ;;
 
 Fish\ Config*) cf="$h_conf/fish/config.fish" ;;
 Alacritty*) cf="$h_conf/alacritty/alacritty.toml" ;;

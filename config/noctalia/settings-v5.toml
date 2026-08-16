@@ -1,0 +1,14 @@
+# Base settings for Noctalia v5
+config_version = 8
+
+# Feathers and Flame base configuration files for Noctalia v5.
+# These SHOULDN'T be modified directly.
+# Instead, make changes through the GUI (Super+S),
+# which are applied on top of this base.
+#
+# See: https://docs.noctalia.dev/noctalia/configuration/ for more information.
+[include]
+files = [
+	"~/.local/share/feathers-and-flame/config-ref/deployed/noctalia/settings.toml",
+	"~/.local/share/feathers-and-flame/config-ref/deployed/noctalia/user-templates.toml",
+]

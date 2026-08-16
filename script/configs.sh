@@ -12,9 +12,11 @@ else
 	mkdir -p "$FEATHERCRD"
 
 	cp -r "$FEATHERCR/niri" "$FEATHERCRD/niri"
+	cp -r "$FEATHERCR/noctalia" "$FEATHERCRD/noctalia"
 
 	source "$FEATHERH/sed-user.sh" "$FEATHERCRD/niri/cfg/misc.kdl"
 	source "$FEATHERH/sed-user.sh" "$FEATHERCRD/niri/cfg/keybinds.kdl"
+	source "$FEATHERH/sed-user.sh" "$FEATHERCRD/noctalia/settings.toml"
 
 	if ! [[ -f "$FEATHERSTATE/gum/gum-theme.kdl" ]]; then
 		mkdir -p "$FEATHERSTATE/gum/"
