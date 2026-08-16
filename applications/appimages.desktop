@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Launch AppImage
+GenericName=Launch an AppImage from user applications directory
+Comment=Launch AppImage programs placed in .local/share/applications
+Exec=alacritty --class=com.serpentdagger.appimage-launcher -e bash /home/serpent/.local/share/feathers-and-flame/script/cmd/appimage.sh
+Icon=media-seek-forward-symbolic
+Categories=Utility;System;
+Keywords=appimage;program;app;image
