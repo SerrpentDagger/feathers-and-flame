@@ -40,6 +40,7 @@ xdg-mime default imv.desktop image/gif
 xdg-mime default imv.desktop image/webp
 xdg-mime default imv.desktop image/bmp
 xdg-mime default imv.desktop image/tiff
+xdg-mime default imv.desktop image/svg
 
 # Open PDFs with the Document Viewer
 xdg-mime default org.gnome.Evince.desktop application/pdf
