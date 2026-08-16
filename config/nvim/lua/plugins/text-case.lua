@@ -1,7 +1,7 @@
 return {
-  "johmsalas/text-case.nvim",
+	"johmsalas/text-case.nvim",
 	lazy = false,
-  config = true,
+	config = true,
 	cmd = {
 		"Subs",
 		"TextCaseStartReplacingCommand",

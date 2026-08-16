@@ -12,6 +12,7 @@ if [[ "--category" == "$1" ]]; then
 	if [[ -z "$2" ]]; then
 		echo "Empty category supplied"
 		echo "Usage: $0 --category <CATEGORY>"
+		return 1
 	fi
 	echo "Adding category $2"
 	echo "" | tee -a "$target"
@@ -28,6 +29,7 @@ else
 	a_check="^\\s*alias\\s+$name='"
 	if grep -Pq "$a_check" "$target"; then
 		echo "ERROR: Alias already existed!"
+		return 1
 	else
 		echo "alias $name='$a_cmd'" | tee -a "$target"
 	fi
