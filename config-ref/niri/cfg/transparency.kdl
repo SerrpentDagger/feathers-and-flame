@@ -11,6 +11,7 @@ window-rule {
 	exclude app-id="Minecraft"
 	exclude app-id="Godot"
 	exclude app-id="blender"
+	exclude app-id="Blockbench"
 
 	opacity 0.95
 }
