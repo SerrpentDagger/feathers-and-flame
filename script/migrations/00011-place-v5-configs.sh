@@ -2,7 +2,7 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-if source "$FEATHERH/sel-comps" check "Configs"; then
+if source "$FEATHERH/sel-comps.sh" check "Configs"; then
 	gum style --bold "Placing the new Noctalia v5 configs."
 
 	target_dir="$HOME/.config/noctalia"
