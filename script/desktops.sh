@@ -25,4 +25,11 @@ source "$FEATHERH/hide-desktop.sh" /usr/share/applications/bvnc.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/lstopo.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/kvantummanager.desktop
 
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/java-java17-openjdk.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/java-java21-openjdk.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/jconsole-java17-openjdk.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/jconsole-java21-openjdk.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/jshell-java17-openjdk.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/jshell-java21-openjdk.desktop
+
 source "$FEATHERH/sel-comps.sh" --pending remove "Desktop Entries"
