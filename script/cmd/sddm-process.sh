@@ -8,8 +8,8 @@ if ! [[ -f "$coloured" ]]; then
 else
 	target="/usr/share/sddm/themes/noctalia/theme.conf"
 	if [[ -f "$target" ]]; then
-		rm "$target" || return 1
 		cp "$coloured" "$target"
 	fi
 fi
+rm "$coloured"
 source "$FEATHERH/tmp-clear.sh" --if-empty
