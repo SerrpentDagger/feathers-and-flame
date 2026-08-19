@@ -169,6 +169,7 @@ stat = "swap_pct"
 [nightlight]
 enabled = true
 temperature_night = 2600
+temperature_day = 5700
 
 [weather]
 enabled = true
