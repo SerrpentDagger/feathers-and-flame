@@ -2,7 +2,7 @@ wallpaper/goose-pond.jpg	https://w.wallhaven.cc/full/ly/wallhaven-lywpjl.jpg	132
 wallpaper/sunset-mountains_Cherry Blossom.jpg	https://w.wallhaven.cc/full/96/wallhaven-969kvd.jpg	3b1b907281197259f07e94505d4b10080054b17be40dc2e8079941e73b21a2df
 wallpaper/lakeside-village.jpg	https://w.wallhaven.cc/full/e8/wallhaven-e8eyow.jpg	acc2ae4d08653466089fc2305a3df150b8d4b901fd578fce194b74ef6a841a47
 wallpaper/moonlit-night.jpg	https://w.wallhaven.cc/full/21/wallhaven-21el7m.jpg	4986f3fa70e1060a4d021729e61df0ccbb40ff68f0ce2fdc908c8b740d9e76ef
-wallpaper/aetheria-cosmos_GitHub Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/aetheria/refs/heads/omarchy-aetheria-theme/backgrounds/aetheria-1-4k%40.jpg	6e930f9455bf9e24a71d394c4c883f8ca8f2335f0ab0982f0f98675b425b97f2
+wallpaper/aetheria-cosmos_GitHub Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/aetheria/d5157ddef00fbde6c9ae28e90564082038dc9b59/backgrounds/aetheria-1-4k%40.jpg	6e930f9455bf9e24a71d394c4c883f8ca8f2335f0ab0982f0f98675b425b97f2
 wallpaper/drake-canyon.jpg	https://w.wallhaven.cc/full/ym/wallhaven-yme18g.jpg	db759ea171abe9c4949f818e7d24c3ebd21dabbfdb3ffeebbee0f6bfe5cd09a7
 wallpaper/mystic-tree.png	https://w.wallhaven.cc/full/yj/wallhaven-yjr9y7.png	dc3823abc9c7b62107e2b799bf9398a10bacfa527cbad0a0ed7e12a70306ab46
 wallpaper/selective-bloom_Occult Umbral.jpg	https://w.wallhaven.cc/full/wy/wallhaven-wyqg8q.jpg	0e6273144acfeba85ab70da0b5d94f152a2b9fd8aaa360e24faeae2a486de9d1
