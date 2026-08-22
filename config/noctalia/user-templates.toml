@@ -27,3 +27,7 @@ output_path = "~/.config/qt5ct/colors/noctalia.conf"
 [templates.qt6ct]
 input_path = "~/.local/share/feathers-and-flame/templates/qt/qtct.conf"
 output_path = "~/.config/qt6ct/colors/noctalia.conf"
+
+[templates.gum]
+input_path = "~/.local/share/feathers-and-flame/templates/gum/gum-theme.kdl"
+output_path = "~/.local/share/feathers-and-flame/script/helpers/state/gum/gum-theme.kdl"

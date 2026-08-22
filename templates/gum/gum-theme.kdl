@@ -1,0 +1,14 @@
+// To be set:
+environment {
+	GUM_SPIN_SPINNER_FOREGROUND "{{colors.secondary.default.hex}}" // 212
+
+	GUM_CHOOSE_CURSOR_FOREGROUND "{{colors.secondary.default.hex}}"           // 212
+	GUM_CHOOSE_HEADER_FOREGROUND "{{colors.primary.default.hex}}" // 99
+	GUM_CHOOSE_SELECTED_FOREGROUND "{{colors.secondary.default.hex}}"         // 212
+
+	GUM_CONFIRM_PROMPT_FOREGROUND "{{colors.primary.default.hex}}"     // 757..
+	GUM_CONFIRM_SELECTED_FOREGROUND "{{colors.on_secondary.default.hex}}" // 230
+	GUM_CONFIRM_SELECTED_BACKGROUND "{{colors.secondary.default.hex}}"    // 212
+	GUM_CONFIRM_UNSELECTED_FOREGROUND "{{colors.on_surface_variant.default.hex}}"   // 254
+	GUM_CONFIRM_UNSELECTED_BACKGROUND "{{colors.surface_container_low.default.hex}}"      // 235
+}

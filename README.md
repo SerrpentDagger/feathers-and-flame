@@ -12,16 +12,19 @@ It's completely modular; you can either breeze through the install menu, pressin
 - `cbonsai` screensaver
 - Night light with `wlsunset`
 - Fine-tuned window rules and shell configuration; custom hot-swap rules
+- Quick-Config menu to easily customise your system (`Super-G`)
 - LUKS-encrypted auto-login
 - Refined LazyVim out of the box
 - Advanced power-management with `tlp`
 - Performance optimisations with `gamemode`
 - Privacy-focused browser setup with Tor and Mullvad browsers
 - Hide supurfluous `.desktop` entries to keep the launcher clean
+- SDDM login theme cohesive with Noctalia
 - File-sharing binds for `localsend`
 - Improved Nautilus integration for LazyVim and Alacritty
 - Preconfigured Virt-Manager with QEMU
 - Pre-set mimetypes
+- Abreviated git aliases for Fish
 - Easy-installation of suggested programs
 - Limine snapshots
 

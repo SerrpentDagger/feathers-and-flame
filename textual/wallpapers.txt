@@ -2,7 +2,7 @@ wallpaper/goose-pond.jpg	https://w.wallhaven.cc/full/ly/wallhaven-lywpjl.jpg	132
 wallpaper/sunset-mountains_Cherry Blossom.jpg	https://w.wallhaven.cc/full/96/wallhaven-969kvd.jpg	3b1b907281197259f07e94505d4b10080054b17be40dc2e8079941e73b21a2df
 wallpaper/lakeside-village.jpg	https://w.wallhaven.cc/full/e8/wallhaven-e8eyow.jpg	acc2ae4d08653466089fc2305a3df150b8d4b901fd578fce194b74ef6a841a47
 wallpaper/moonlit-night.jpg	https://w.wallhaven.cc/full/21/wallhaven-21el7m.jpg	4986f3fa70e1060a4d021729e61df0ccbb40ff68f0ce2fdc908c8b740d9e76ef
-wallpaper/aetheria-cosmos_GitHub Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/aetheria/refs/heads/omarchy-aetheria-theme/backgrounds/aetheria-1-4k%40.jpg	6e930f9455bf9e24a71d394c4c883f8ca8f2335f0ab0982f0f98675b425b97f2
+wallpaper/aetheria-cosmos_GitHub Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/aetheria/d5157ddef00fbde6c9ae28e90564082038dc9b59/backgrounds/aetheria-1-4k%40.jpg	6e930f9455bf9e24a71d394c4c883f8ca8f2335f0ab0982f0f98675b425b97f2
 wallpaper/drake-canyon.jpg	https://w.wallhaven.cc/full/ym/wallhaven-yme18g.jpg	db759ea171abe9c4949f818e7d24c3ebd21dabbfdb3ffeebbee0f6bfe5cd09a7
 wallpaper/mystic-tree.png	https://w.wallhaven.cc/full/yj/wallhaven-yjr9y7.png	dc3823abc9c7b62107e2b799bf9398a10bacfa527cbad0a0ed7e12a70306ab46
 wallpaper/selective-bloom_Occult Umbral.jpg	https://w.wallhaven.cc/full/wy/wallhaven-wyqg8q.jpg	0e6273144acfeba85ab70da0b5d94f152a2b9fd8aaa360e24faeae2a486de9d1
@@ -15,7 +15,7 @@ wallpaper/artemis-earthrise_Nord Dark.jpg	https://images-assets.nasa.gov/image/a
 wallpaper/sunlit-arch_Osaka jade.jpg	https://w.wallhaven.cc/full/vp/wallhaven-vpml78.jpg	195e34cd66240f9bc0f1eedc369ed2da7d1f30df3c8b886b3c628cc551004ca2
 wallpaper/poly-forest_Kanagawa.jpg	https://w.wallhaven.cc/full/96/wallhaven-966ekk.jpg	99a27f0b1d7e8afad5c19226eae222677be5972b86ba64c7e6cb9c51b8272f93
 wallpaper/city-glare_Solarized Dark.jpg	https://raw.githubusercontent.com/chrisintheshell/omarchy-lairetam-theme/refs/heads/main/backgrounds/nm-1.jpg	0f94132f3b2623d30bd6a65682d60d99c7c29c826de6012d6c85b8c75c857fd7
-wallpaper/color-rush_Purplized Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/base16-tarot/refs/heads/main/backgrounds/tarot.jpg	adc41e84854b837b97cf90ab666e1dd2c30396582d8657526348877da3f39872
+wallpaper/color-rush_Purplized Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/base16-tarot/e986a6c8a7899853f4b6eee7c4b29f983ceb4695/backgrounds/tarot.jpg	adc41e84854b837b97cf90ab666e1dd2c30396582d8657526348877da3f39872
 wallpaper/pixel-moon_Purple Nord.png	https://w.wallhaven.cc/full/zp/wallhaven-zpp3mg.png	95c3ef78166b92273650c1b60ac7d4349f97f2a423dbdc04c6b8923d595a6874
 wallpaper/dappled-grove_Gruvbox.png	https://w.wallhaven.cc/full/1q/wallhaven-1qxwow.png	f06ffce7743996ee891c88809c3b1fad61dfafa67b2ad2ff92809abaa18aca4c
 wallpaper/inky-sky_Inky Sky.jpg	https://w.wallhaven.cc/full/k8/wallhaven-k8kr2d.jpg	4281a7515899c109fff1793840cad4e0492841e9c8170da67c76331b43458940
@@ -23,3 +23,7 @@ wallpaper/sun-coming-through.jpg	https://w.wallhaven.cc/full/rq/wallhaven-rqowjw
 wallpaper/lantern-valley_Purplized Dark.jpg	https://w.wallhaven.cc/full/j5/wallhaven-j58dj5.jpg	4ef29fed2d3b685715f751dcf53be5d8da847354399e3f84b2b75010fb6516c0
 wallpaper/dragon-lich.jpg	https://w.wallhaven.cc/full/lm/wallhaven-lmoxo2.jpg	a7f9bd01609376de061199879529613a4d08e53ab9789f26503cd2b4c430f3d1
 wallpaper/dragon-festival_Murata.jpg	https://w.wallhaven.cc/full/ex/wallhaven-expwlo.jpg	13c3d3f0c4cf50f2bd4dce2e2df625088fd37ed56e6921ef61d4b9145b458e8b
+wallpaper/dark-grassy.jpg	https://w.wallhaven.cc/full/3l/wallhaven-3ldeey.jpg	e92d17a3df05d3bb0f83b39911c9f47c4f5297cbe8576855f7bdcf0a9af46add
+wallpaper/fungal-forest.png	https://w.wallhaven.cc/full/zp/wallhaven-zpp2xg.png	3e167b78066e87637aec4f15d4437d7f0fa003b40279332e3fe61c4545fa6a85
+wallpaper/molten-moon_Garnet.jpg	https://w.wallhaven.cc/full/xe/wallhaven-xe61ql.jpg	f743ec3d3ebbb3ddd38812728947ef25f59caf61c64dba4f299e840ee12b5e7b
+wallpaper/pixel-swamp_Kanagawa Dragon.jpg	https://w.wallhaven.cc/full/7p/wallhaven-7pqokv.jpg	15d35eb56e9d45c1c109b109dae5beff1f6083f4f1dae7a6630b815ea0e01afb

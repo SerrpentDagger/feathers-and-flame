@@ -84,6 +84,7 @@ window-rule {
 	match app-id="org.kde.kdenlive"
 	match app-id="krita" title=r#"^Krita$"#
 	match app-id="gimp" title="GNU Image Manipulation Program"
+	match app-id="Godot"
 
 	open-maximized true
 }

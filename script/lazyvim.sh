@@ -10,7 +10,6 @@ source "$FEATHERH/backup.sh" -m ~/.local/share/nvim
 source "$FEATHERH/backup.sh" -m ~/.local/state/nvim
 source "$FEATHERH/backup.sh" -m ~/.cache/nvim
 source "$FEATHERH/back-cp.sh" "$FEATHERC/nvim" ~/.config/nvim
-
-source "$FEATHERPS/lazyvim.sh"
+source "$FEATHERH/back-cp.sh" "$FEATHERA/nvim.desktop" "$HOME/.local/share/applications/nvim.desktop"
 
 source "$FEATHERH/sel-comps.sh" --pending remove "LazyVim"

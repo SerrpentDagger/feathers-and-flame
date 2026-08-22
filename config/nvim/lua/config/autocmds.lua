@@ -18,14 +18,23 @@ end
 
 set_autoformat({ "cpp" }, false)
 set_autoformat({ "java" }, false)
+set_autoformat({ "json" }, false)
 set_autoformat({ "fish" }, false)
 set_autoformat({ "lua" }, false)
 set_autoformat({ "perl" }, false)
 set_autoformat({ "yaml" }, false)
+set_autoformat({ "py" }, false)
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = "*",
 	callback = function()
 		vim.opt.expandtab = false -- Stupid Spaces!!!! >:(
+	end
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = "java",
+	callback = function()
+		vim.bo.indentkeys = vim.bo.indentkeys:gsub(",?0{,?", "")
 	end
 })

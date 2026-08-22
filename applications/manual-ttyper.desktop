@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=ttyper
+GenericName=Typing practice
+Comment=Terminal touch-typing practice.
+Icon=micro
+Exec=ttyper
+Terminal=true
+Categories=Game;Education;ConsoleOnly;Utility;
+Keywords=typing;test;tutor

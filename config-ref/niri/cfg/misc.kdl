@@ -12,6 +12,9 @@ environment {
 	QS_ICON_THEME "Adwaita"
 }
 
+// gum themed environment variables
+include "~/.local/share/feathers-and-flame/script/helpers/state/gum/gum-theme.kdl"
+
 debug {
 	// Allows notification actions and window activation from Noctalia.
 	honor-xdg-activation-with-invalid-serial
