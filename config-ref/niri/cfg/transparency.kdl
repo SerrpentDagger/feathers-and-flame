@@ -27,6 +27,7 @@ window-rule {
 window-rule {
 	match is-focused=false
 	exclude app-id="gimp"// title=r#".*Color"#
+	exclude app-id="mpv|vlc"
 
 	opacity 0.87
 }
