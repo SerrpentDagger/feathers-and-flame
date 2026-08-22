@@ -15,7 +15,7 @@ wallpaper/artemis-earthrise_Nord Dark.jpg	https://images-assets.nasa.gov/image/a
 wallpaper/sunlit-arch_Osaka jade.jpg	https://w.wallhaven.cc/full/vp/wallhaven-vpml78.jpg	195e34cd66240f9bc0f1eedc369ed2da7d1f30df3c8b886b3c628cc551004ca2
 wallpaper/poly-forest_Kanagawa.jpg	https://w.wallhaven.cc/full/96/wallhaven-966ekk.jpg	99a27f0b1d7e8afad5c19226eae222677be5972b86ba64c7e6cb9c51b8272f93
 wallpaper/city-glare_Solarized Dark.jpg	https://raw.githubusercontent.com/chrisintheshell/omarchy-lairetam-theme/refs/heads/main/backgrounds/nm-1.jpg	0f94132f3b2623d30bd6a65682d60d99c7c29c826de6012d6c85b8c75c857fd7
-wallpaper/color-rush_Purplized Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/base16-tarot/refs/heads/main/backgrounds/tarot.jpg	adc41e84854b837b97cf90ab666e1dd2c30396582d8657526348877da3f39872
+wallpaper/color-rush_Purplized Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/base16-tarot/e986a6c8a7899853f4b6eee7c4b29f983ceb4695/backgrounds/tarot.jpg	adc41e84854b837b97cf90ab666e1dd2c30396582d8657526348877da3f39872
 wallpaper/pixel-moon_Purple Nord.png	https://w.wallhaven.cc/full/zp/wallhaven-zpp3mg.png	95c3ef78166b92273650c1b60ac7d4349f97f2a423dbdc04c6b8923d595a6874
 wallpaper/dappled-grove_Gruvbox.png	https://w.wallhaven.cc/full/1q/wallhaven-1qxwow.png	f06ffce7743996ee891c88809c3b1fad61dfafa67b2ad2ff92809abaa18aca4c
 wallpaper/inky-sky_Inky Sky.jpg	https://w.wallhaven.cc/full/k8/wallhaven-k8kr2d.jpg	4281a7515899c109fff1793840cad4e0492841e9c8170da67c76331b43458940
