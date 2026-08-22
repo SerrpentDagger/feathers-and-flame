@@ -35,7 +35,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = "java",
 	callback = function()
-		vim.bo.indentkeys = vim.bo.indentkeys:gsub(",?0{", "")
-		vim.bo.indentkeys = vim.bo.indentkeys:gsub(",?%{", "")
+		vim.bo.indentkeys = vim.bo.indentkeys:gsub(",?0{,?", "")
 	end
 })
