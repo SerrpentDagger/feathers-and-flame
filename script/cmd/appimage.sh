@@ -20,8 +20,38 @@ fzf_args=(
 	--bind 'alt-p:toggle-preview'
 )
 
+spacer() {
+	echo ""
+	echo '------------------------------------------------------------------------'
+	echo ""
+}
+
+cleanup() {
+	dflt_bye='Something went wrong! Review the log for more information.'
+	bye_msg="${1:-"$dflt_bye"}"
+
+	spacer
+	gum style --bold "$bye_msg"
+	source "$FEATHERH/show-done.sh" "Press any key to close..."
+	exit 1
+}
+
 target=$(find '.' -name "*.AppImage" | fzf "${fzf_args[@]}")
 if ! [[ -z "$target" ]]; then
+	if ! stat -c="%A" "$target" | grep -q x; then
+		source "$FEATHERH/show-logo.sh" -small
+		gum style --bold "The selected file is not executable."
+		echo "  File: $target"
+		echo ""
+		if gum confirm "Make it executable?"; then
+			if ! chmod +x "$target"; then
+				cleanup "Unable to make file executable! Aborting."
+			fi
+		else
+			cleanup "Cannot launch non-executable AppImage."
+		fi
+	fi
+
 	niri msg action move-window-to-tiling
 	niri msg action set-window-width 50%
 
@@ -42,12 +72,10 @@ if ! [[ -z "$target" ]]; then
 			echo "   $target"
 			gum style --bold "with args:"
 			echo "   $launch_args"
-			echo "--------------------------------------------------------------------------------"
+			spacer
 		fi
 	fi
 	if ! env $launch_args "$target"; then
-		echo "--------------------------------------------------------------------------------"
-		gum style --bold "Something went wrong! Review the above log for more information."
-		gum spin --title "Press any key to close..." -- bash -c 'read -n 1 -s'
+		cleanup
 	fi
 fi
