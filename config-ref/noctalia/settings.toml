@@ -12,9 +12,17 @@ enabled = false
 
 [hooks]
 colors_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
-session_locked = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill"
+session_locked = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screen-lock.sh"
 started = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noct-start.sh"
 wallpaper_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
+
+[keybinds]
+down = [ "Down", "Ctrl+j", "Ctrl+n" ]
+left = [ "Left", "Ctrl+h" ]
+right = [ "Right", "Ctrl+l" ]
+tab_next = [ "Tab", "Ctrl+d" ]
+tab_previous = [ "Shift+ISO_Left_Tab", "Ctrl+u" ]
+up = [ "Up", "Ctrl+k", "Ctrl+p" ]
 
 [notification]
 background_opacity = 0.87999998033046722

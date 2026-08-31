@@ -1,0 +1,70 @@
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+
+    [lockscreen_widgets.grid]
+    cell_size = 24
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."ff-lockscreen-login-box@OUTPUT_PLACEHOLDER"]
+    box_height = 128.0
+    box_width = 720.0
+    cx = 960.0
+    cy = 908.0
+    output = "OUTPUT_PLACEHOLDER"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."ff-lockscreen-login-box@OUTPUT_PLACEHOLDER".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 10.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = false
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = false
+
+    [lockscreen_widgets.widget."ff-lockscreen-clock@OUTPUT_PLACEHOLDER"]
+    box_height = 144.0
+    box_width = 240.0
+    cx = 960.0
+    cy = 156.0
+    output = "OUTPUT_PLACEHOLDER"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget."ff-lockscreen-clock@OUTPUT_PLACEHOLDER".settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        center_text = false
+        circle = true
+        clock_style = "digital"
+        color = "on_surface"
+        font_family = ""
+        format = "{:%H:%M}"
+        shadow = true
+        timezone = ""
+
+    [lockscreen_widgets.widget."ff-lockscreen-label@OUTPUT_PLACEHOLDER"]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 960.0
+    cy = 220.0
+    output = "OUTPUT_PLACEHOLDER"
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget."ff-lockscreen-label@OUTPUT_PLACEHOLDER".settings]
+        background = false
+        title = "USER_PLACEHOLDER"

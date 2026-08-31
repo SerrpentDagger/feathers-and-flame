@@ -11,4 +11,5 @@ config_version = 8
 files = [
 	"~/.local/share/feathers-and-flame/config-ref/deployed/noctalia/settings.toml",
 	"~/.local/share/feathers-and-flame/config-ref/deployed/noctalia/user-templates.toml",
+	"~/.local/share/feathers-and-flame/script/helpers/state/noctalia/autogen/",
 ]
