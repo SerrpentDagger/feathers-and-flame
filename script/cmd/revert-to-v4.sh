@@ -2,8 +2,8 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-if ! pacman -Qi noctalia-shell &>/dev/null; then
-	gum style --bold "Noctalia V4 package not found."
+if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
+	gum style --bold "System not marked as migrated from V1."
 	echo "The revert option is only available to migrated systems."
 	echo "It will be removed in the next update."
 	source "$FEATHERH/show-done.sh" --no-done
