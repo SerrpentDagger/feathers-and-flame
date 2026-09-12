@@ -2,7 +2,6 @@
 
 # Passwords
 keepassxc
-authenticator
 
 # Flashing
 etcher-bin
