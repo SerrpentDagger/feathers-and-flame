@@ -5,7 +5,7 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
 	gum style --bold "System not marked as migrated from V1."
 	echo "The revert option is only available to migrated systems."
-	echo "It will be removed in the next update."
+	echo "It will be removed in the next feature update."
 	source "$FEATHERH/show-done.sh" --no-done
 	exit 1
 fi
