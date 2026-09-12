@@ -89,6 +89,7 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"AppImage Args: Define custom environment arguments for certain AppImages in the AppImage Launcher." \
 	"Fish Config: Set command aliases and other shell script configs." \
 	"Alacritty Config: Change terminal settings like font size and bindings." \
+	"Revert to V4: Reverts to using Noctalia V4. Deprecated; available in case of problems migrating." \
 	--header "Choose what configs to view and/or edit." --height=12) || exit 0
 
 ro="0"
@@ -126,6 +127,7 @@ AppImage*) cf="$HOME/AppImages/.appimage-args" ;;
 
 Fish\ Config*) cf="$h_conf/fish/config.fish" ;;
 Alacritty*) cf="$h_conf/alacritty/alacritty.toml" ;;
+Revert*) source "$FEATHERCMD/revert-to-v4.sh" ;;
 
 *) echo "ERROR: Unrecognised option! Exiting." && sleep 2 && exit 1 ;;
 esac
