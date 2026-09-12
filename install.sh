@@ -40,6 +40,7 @@ for selected in "${FI_SELECTION[@]}"; do
 	LazyVim) source "$FEATHERS/lazyvim.sh" ;;
 	Mullvad*) source "$FEATHERS/mullvad.sh" ;;
 	Tor*) source "$FEATHERS/mullvad.sh" tor ;;
+	AppImage*) source "$FEATHERS/appimage-launcher.sh" ;;
 	Vintage*) source "$FEATHERS/vintagestory.sh" ;;
 	TLP) source "$FEATHERS/tlp.sh" ;;
 	Gamemode) source "$FEATHERS/gamemode.sh" ;;

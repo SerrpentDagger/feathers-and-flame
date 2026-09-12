@@ -14,6 +14,7 @@ if [[ "generate" == "$1" ]]; then
 			"LazyVim: A gorgeous editor" \
 			"Mullvad Browser: A reasonably private browser for daily use" \
 			"Tor Browser: The anonymous browser" \
+			"AppImage Launcher: A simple TUI to start AppImages from the system launcher." \
 			"TLP: Advanced power management (Sometimes better battery life for laptops)" \
 			"Gamemode: Run games with performance optimisations using the gamemoderun command" \
 			"Desktop Entries: Set up application menu and hide supurfluous entries" \

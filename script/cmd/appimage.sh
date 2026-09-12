@@ -9,6 +9,14 @@ if ! cd "$applications_dir"; then
 	sleep 2
 	exit 1
 fi
+if ! [ "$(ls -A "$applications_dir")" ]; then
+	source "$FEATHERH/show-logo.sh" -small
+	gum style --bold "No AppImages found."
+	echo "To launch an AppImage through this launcher, you must place it in $applications_dir"
+	echo ""
+	source "$FEATHERH/show-done.sh" --no-done
+	exit 0
+fi
 
 preview_cmd="echo \"Launch the AppImage {1}\""
 fzf_args=(
