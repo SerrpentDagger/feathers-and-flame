@@ -8,10 +8,10 @@ schema_version = 2
     visible = true
 
     [lockscreen_widgets.widget."ff-lockscreen-login-box@OUTPUT_PLACEHOLDER"]
-    box_height = 128.0
-    box_width = 720.0
-    cx = 960.0
-    cy = 908.0
+    box_height = HEIGHT12P
+    box_width = WIDTH38P
+    cx = WIDTH50P
+    cy = HEIGHT87P
     output = "OUTPUT_PLACEHOLDER"
     rotation = 0.0
     type = "login_box"
@@ -33,10 +33,10 @@ schema_version = 2
         show_weather = false
 
     [lockscreen_widgets.widget."ff-lockscreen-clock@OUTPUT_PLACEHOLDER"]
-    box_height = 144.0
-    box_width = 240.0
-    cx = 960.0
-    cy = 156.0
+    box_height = HEIGHT13P
+    box_width = WIDTH13P
+    cx = WIDTH50P
+    cy = HEIGHT12P
     output = "OUTPUT_PLACEHOLDER"
     rotation = 0.0
     type = "clock"
@@ -59,8 +59,8 @@ schema_version = 2
     [lockscreen_widgets.widget."ff-lockscreen-label@OUTPUT_PLACEHOLDER"]
     box_height = 0.0
     box_width = 0.0
-    cx = 960.0
-    cy = 220.0
+    cx = WIDTH50P
+    cy = HEIGHT19P
     output = "OUTPUT_PLACEHOLDER"
     rotation = 0.0
     type = "label"
