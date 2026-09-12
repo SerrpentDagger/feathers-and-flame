@@ -5,17 +5,28 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 template="$FEATHERTL/noctalia/lockscreen-template.toml"
 if ! [[ -f "$template" ]]; then
 	echo "ERROR: missing template file."
+	source "$FEATHERH/show-done.sh" --no-done
 	exit 1
 fi
 target_dir="$FEATHERSTATE/noctalia/autogen"
 if ! mkdir -p "$target_dir"; then
 	echo "ERROR: failed to make target dir $target_dir"
+	source "$FEATHERH/show-done.sh" --no-done
 	exit 1
 fi
 if source "$FEATHERH/state.sh" check 'lockscreen_disabled'; then
 	echo "Manual configuration of lockscreen is selected."
+	source "$FEATHERH/show-done.sh" --no-done
 	exit 0
 fi
+gum style --bold "Resetting current lockscreens to default widgets."
+echo "Please plug in all the monitors for which you would like the default widgets. Then proceed."
+if ! gum confirm "Ready to proceed?"; then
+	echo "Aborting due to user request!"
+	source "$FEATHERH/show-done.sh" --no-done
+	exit 0
+fi
+echo "Proceeding with lockscreens..."
 
 sed_placeholders() {
 	sed_file="$1"
@@ -40,7 +51,7 @@ awk_dims() {
 		echo "ERROR: No target file!"
 		return 1
 	fi
-	echo "Awking $awk_file for $prefix of dimension $dimension"
+	echo "  Awking $awk_file for $prefix of dimension $dimension"
 	awk -v prefix="$prefix" -v dimension="$dimension" '
 	BEGIN{ OFS=""; }
 	{
@@ -61,7 +72,8 @@ lockscreen_prefix="FEATHER-TEMP-LOCKSCREEN"
 # rm "$target_dir/$lockscreen_prefix"* &>/dev/null || true
 source "$FEATHERH/tmp-spawn.sh"
 for output in $(niri msg --json outputs | jq -r '. | keys[]'); do
-	echo "Generating for $output"
+	echo ""
+	echo "Generating lockscreen for $output"
 
 	target_file="$target_dir/$lockscreen_prefix-$output.toml"
 	temp_file="$FEATHERT/$output.toml"
@@ -77,8 +89,10 @@ for output in $(niri msg --json outputs | jq -r '. | keys[]'); do
 	yq -i 'del(.lockscreen_widgets.widget_order)' "$temp_file"
 	cp "$temp_file" "$target_file"
 done
+echo ""
 
 state_file="$HOME/.local/state/noctalia/settings.toml"
 source "$FEATHERH/backup.sh" "$state_file"
 # Use yq to override override of workaround.
 yq -i 'del(.lockscreen_widgets.enabled, .lockscreen_widgets.widget_order)' "$state_file"
+source "$FEATHERH/show-done.sh"

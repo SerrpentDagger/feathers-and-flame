@@ -84,7 +84,7 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"  Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside. Then Super-Shift-<Number>" \
 	"  Theme User Templates: Define custom theming for your favourite applications. (Noctalia User Templates)" \
 	"  Theme System Templates: View the system theme templates for reference (Read-Only)" \
-	"  Reset Lockscreens: Put the default Feathers lockscreen widgets on all connected monitors. NOTE: Current is discarded!" \
+	"  Reset Lockscreens: Put the default Feathers lockscreen widgets on all connected monitors. NOTE: Current is discarded to backup!" \
 	"  GUI Overrides: View the GUI overrides to default shell settings (including widget positions). Usually set by Super-S." \
 	"AppImage Args: Define custom environment arguments for certain AppImages in the AppImage Launcher." \
 	"Fish Config: Set command aliases and other shell script configs." \

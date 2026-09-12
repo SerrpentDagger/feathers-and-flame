@@ -1,6 +1,10 @@
 #!/bin/bash
 
 dflt_msg='Done! Press any key to close...'
+if [[ "--no-done" == "$1" ]]; then
+	dflt_msg='Press any key to close...'
+	shift
+fi
 disp_msg="${1:-"$dflt_msg"}"
 disp_msg="  $disp_msg"
 
