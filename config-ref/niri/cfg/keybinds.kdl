@@ -134,7 +134,7 @@ binds {
 	Mod+Q                                                                  { toggle-column-tabbed-display; }
 
 	// ─── Window Focus ───
-	Mod+Left hotkey-overlay-title="Switch Focus							( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span> )" { focus-column-or-monitor-left; }
+	Mod+Left hotkey-overlay-title="Switch Focus							( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span>, <span background=\"#303030\"><tt>Scroll</tt></span> )" { focus-column-or-monitor-left; }
 	Mod+H           { focus-column-or-monitor-left; }
 	Mod+Right       { focus-column-or-monitor-right; }
 	Mod+L           { focus-column-or-monitor-right; }
@@ -142,6 +142,13 @@ binds {
 	Mod+K           { focus-window-or-workspace-up; }
 	Mod+Down        { focus-window-or-workspace-down; }
 	Mod+J           { focus-window-or-workspace-down; }
+
+	Mod+WheelScrollDown             hotkey-overlay-title=null cooldown-ms=150 { focus-window-or-workspace-down; }
+	Mod+WheelScrollUp               hotkey-overlay-title=null cooldown-ms=150 { focus-window-or-workspace-up; }
+	Mod+WheelScrollRight            hotkey-overlay-title=null cooldown-ms=150 { focus-column-or-monitor-right; }
+	Mod+WheelScrollLeft             hotkey-overlay-title=null cooldown-ms=150 { focus-column-or-monitor-left; }
+	Mod+Shift+WheelScrollDown       hotkey-overlay-title=null cooldown-ms=150 { focus-column-or-monitor-right; }
+	Mod+Shift+WheelScrollUp         hotkey-overlay-title=null cooldown-ms=150 { focus-column-or-monitor-left; }
 
 	Mod+Home        { focus-column-first; }
 	Mod+End         { focus-column-last; }
@@ -158,7 +165,7 @@ binds {
 	Mod+Shift+J     { focus-monitor-down; }
 
 	// ─── Window Movement ───
-	Mod+CTRL+Left hotkey-overlay-title="Move Focused							( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span> )" { move-column-left-or-to-monitor-left; }
+	Mod+CTRL+Left hotkey-overlay-title="Move Focused							( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span>, <span background=\"#303030\"><tt>Scroll</tt></span> )" { move-column-left-or-to-monitor-left; }
 	Mod+CTRL+H           { move-column-left-or-to-monitor-left; }
 	Mod+CTRL+Right       { move-column-right-or-to-monitor-right; }
 	Mod+CTRL+L           { move-column-right-or-to-monitor-right; }
@@ -166,6 +173,13 @@ binds {
 	Mod+CTRL+K           { move-window-up-or-to-workspace-up; }
 	Mod+CTRL+Down        { move-window-down-or-to-workspace-down; }
 	Mod+CTRL+J           { move-window-down-or-to-workspace-down; }
+
+	Mod+CTRL+WheelScrollDown        hotkey-overlay-title=null cooldown-ms=150 { move-window-down-or-to-workspace-down; }
+	Mod+CTRL+WheelScrollUp          hotkey-overlay-title=null cooldown-ms=150 { move-window-up-or-to-workspace-up; }
+	Mod+CTRL+WheelScrollRight       hotkey-overlay-title=null cooldown-ms=150 { move-column-right-or-to-monitor-right; }
+	Mod+CTRL+WheelScrollLeft        hotkey-overlay-title=null cooldown-ms=150 { move-column-left-or-to-monitor-left; }
+	Mod+CTRL+Shift+WheelScrollDown  hotkey-overlay-title=null cooldown-ms=150 { move-window-down-or-to-workspace-down; }
+	Mod+CTRL+Shift+WheelScrollUp    hotkey-overlay-title=null cooldown-ms=150 { move-window-up-or-to-workspace-up; }
 
 	Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
 	Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
@@ -198,21 +212,6 @@ binds {
 	Mod+Shift+Ctrl+Alt+L     { move-workspace-to-monitor-right; }
 
 	// ─── Workspace Switching ───
-	Mod+WheelScrollDown             hotkey-overlay-title="Switch Workspace Down					( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { focus-workspace-down; }
-	Mod+WheelScrollUp               hotkey-overlay-title=null cooldown-ms=150 { focus-workspace-up; }
-	Mod+CTRL+WheelScrollDown        hotkey-overlay-title="Move Column to Workspace Down			( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { move-column-to-workspace-down; }
-	Mod+CTRL+WheelScrollUp          hotkey-overlay-title=null cooldown-ms=150 { move-column-to-workspace-up; }
-
-	Mod+WheelScrollRight            hotkey-overlay-title=null                 { focus-column-right; }
-	Mod+WheelScrollLeft                                                       { focus-column-left; }
-	Mod+CTRL+WheelScrollRight       hotkey-overlay-title=null                 { move-column-right; }
-	Mod+CTRL+WheelScrollLeft                                                  { move-column-left; }
-
-	Mod+Shift+WheelScrollDown                                                 { focus-column-right; }
-	Mod+Shift+WheelScrollUp         hotkey-overlay-title=null                 { focus-column-left; }
-	Mod+CTRL+Shift+WheelScrollDown                                            { move-column-right; }
-	Mod+CTRL+Shift+WheelScrollUp    hotkey-overlay-title=null                 { move-column-left; }
-
 	Mod+1 hotkey-overlay-title="Switch to Workspace 1					( <span background=\"#303030\"><tt>Numbers</tt></span> )"         { focus-workspace 1; }
 	Mod+2                                                                                                                       { focus-workspace 2; }
 	Mod+3                                                                                                                       { focus-workspace 3; }
@@ -223,7 +222,7 @@ binds {
 	Mod+8                                                                                                                       { focus-workspace 8; }
 	Mod+9                                                                                                                       { focus-workspace 9; }
 
-	Mod+CTRL+1 hotkey-overlay-title="Move Column to Workspace 1				( <span background=\"#303030\"><tt>Numbers</tt></span> )"  { move-column-to-workspace 1; }
+	Mod+CTRL+1 hotkey-overlay-title="Move Column to Workspace 1				( <span background=\"#303030\"><tt>Numbers</tt></span> )" { move-column-to-workspace 1; }
 	Mod+CTRL+2                                                                                                                  { move-column-to-workspace 2; }
 	Mod+CTRL+3                                                                                                                  { move-column-to-workspace 3; }
 	Mod+CTRL+4                                                                                                                  { move-column-to-workspace 4; }
