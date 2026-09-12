@@ -22,7 +22,7 @@ if gum confirm "Proceed?"; then
 		source "$FEATHERH/show-done.sh" --no-done
 		exit 1
 	fi
-	source "$FEATHER_PATH/refresh.sh" --no-desk
+	source "$FEATHERH/sel-comps.sh" check "Configs" && source "$FEATHERS/configs.sh" --deploy-refs
 	pkill -x 'noctalia'
 	sleep 0.5
 	nohup qs -c noctalia-shell >/dev/null 2>&1 &
