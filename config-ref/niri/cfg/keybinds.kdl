@@ -178,8 +178,8 @@ binds {
 	Mod+CTRL+WheelScrollUp          hotkey-overlay-title=null cooldown-ms=150 { move-window-up-or-to-workspace-up; }
 	Mod+CTRL+WheelScrollRight       hotkey-overlay-title=null cooldown-ms=150 { move-column-right-or-to-monitor-right; }
 	Mod+CTRL+WheelScrollLeft        hotkey-overlay-title=null cooldown-ms=150 { move-column-left-or-to-monitor-left; }
-	Mod+CTRL+Shift+WheelScrollDown  hotkey-overlay-title=null cooldown-ms=150 { move-window-down-or-to-workspace-down; }
-	Mod+CTRL+Shift+WheelScrollUp    hotkey-overlay-title=null cooldown-ms=150 { move-window-up-or-to-workspace-up; }
+	Mod+CTRL+Shift+WheelScrollDown  hotkey-overlay-title=null cooldown-ms=150 { move-column-right-or-to-monitor-right; }
+	Mod+CTRL+Shift+WheelScrollUp    hotkey-overlay-title=null cooldown-ms=150 { move-column-left-or-to-monitor-left; }
 
 	Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
 	Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
