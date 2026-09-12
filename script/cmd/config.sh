@@ -85,6 +85,7 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"Shell Settings: Open the Noctalia settings menu. (Super-S)" \
 	"Fish Config: Set command aliases and other shell script configs." \
 	"Alacritty Config: Change terminal settings like font size and bindings." \
+	"Noctalia V5: Migrate your system to Noctalia V5." \
 	--header "Choose what configs to view and/or edit." --height=18) || exit 0
 
 ro="0"
@@ -115,6 +116,7 @@ Shell\ Settings*) qs -c noctalia-shell ipc call settings toggle ;;
 
 Fish\ Config*) cf="$h_conf/fish/config.fish" ;;
 Alacritty*) cf="$h_conf/alacritty/alacritty.toml" ;;
+Noctalia*) source "$FEATHERM/00009-ff-v2-switch.sh" ;;
 
 *) echo "ERROR: Unrecognised option! Exiting." && sleep 2 && exit 1 ;;
 esac
