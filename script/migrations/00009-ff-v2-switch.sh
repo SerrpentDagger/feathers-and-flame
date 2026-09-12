@@ -14,6 +14,7 @@ echo ""
 gum style --bold "You will need to run the updater once more after switching, to trigger the migrations."
 
 if gum confirm "Switch to the Noctalia V5 branch?"; then
+	source "$FEATHERH/state.sh" set 'migrated-v1'
 	cd "$FEATHER_PATH" || exit 1
 	if ! git checkout master-v2; then
 		gum style --foreground="#FF2222" "ERROR: Unable to switch git branch! Exiting."
