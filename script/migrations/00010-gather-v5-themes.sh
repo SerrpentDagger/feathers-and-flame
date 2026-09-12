@@ -22,7 +22,10 @@ extract_from() {
 	for folder in "$1"/*; do
 		if [[ -d "$folder" ]]; then
 			for file in "$folder"/*.json; do
-				target_name=$(basename "$file")
+				# Noctalia makes formatting exceptions for those names, so we translate.
+				target_name=$(basename "$file" |
+					sed "s/Noctalia-default/Noctalia (default)/g" |
+					sed "s/Tokyo-Night/Tokyo Night/g")
 				"$FEATHERH/back-cp.sh" "$file" "$target_dir/$target_name"
 			done
 		fi
