@@ -93,6 +93,7 @@ for output in $(niri msg --json outputs | jq -r '. | keys[]'); do
 	yq -i 'del(.lockscreen_widgets.widget_order)' "$temp_file"
 	cp "$temp_file" "$target_file"
 done
+source "$FEATHERH/tmp-clear.sh"
 echo ""
 
 state_file="$HOME/.local/state/noctalia/settings.toml"
