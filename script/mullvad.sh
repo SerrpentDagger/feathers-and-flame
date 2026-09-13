@@ -3,7 +3,7 @@
 gum style --bold --foreground="#DDDD44" "Installing Browser..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-tor_version="15.0.8"
+tor_version="15.0.22"
 dl_link="https://mullvad.net/en/download/browser/linux-x86_64/latest"
 app_name="mullvad"
 pending_name="Mullvad"
