@@ -51,6 +51,6 @@ if [[ "$for_diff" -eq 1 ]]; then
 	rm "$subdir/niri/noctalia.kdl"
 	rm "$subdir/nvim/lua/matugen.lua"
 else
-	source "$FEATHERCMD/lockscreen-process.sh"
+	source "$FEATHERCMD/lockscreen-process.sh" --no-confirm
 	source "$FEATHERH/sel-comps.sh" --pending remove "Configs"
 fi

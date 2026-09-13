@@ -2,6 +2,10 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
+no_confirm="0"
+if [[ "--no-confirm" == "${1:-}" ]]; then
+	no_confirm="1"
+fi
 template="$FEATHERTL/noctalia/lockscreen-template.toml"
 if ! [[ -f "$template" ]]; then
 	echo "ERROR: missing template file."
@@ -21,7 +25,7 @@ if source "$FEATHERH/state.sh" check 'lockscreen_disabled'; then
 fi
 gum style --bold "Resetting current lockscreens to default widgets."
 echo "Please plug in all the monitors for which you would like the default widgets. Then proceed."
-if ! gum confirm "Ready to proceed?"; then
+if [[ "$no_confirm" == "0" ]] && ! gum confirm "Ready to proceed?"; then
 	echo "Aborting due to user request!"
 	source "$FEATHERH/show-done.sh" --no-done
 	exit 0
@@ -95,4 +99,4 @@ state_file="$HOME/.local/state/noctalia/settings.toml"
 source "$FEATHERH/backup.sh" "$state_file"
 # Use yq to override override of workaround.
 yq -i 'del(.lockscreen_widgets.enabled, .lockscreen_widgets.widget_order)' "$state_file"
-source "$FEATHERH/show-done.sh"
+[[ "$no_confirm" == "1" ]] || source "$FEATHERH/show-done.sh"
