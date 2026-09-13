@@ -4,7 +4,7 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 notrap="0"
 if [[ "--no-trap" == "${1:-}" ]]; then
-	notrap=1
+	notrap="1"
 	shift
 fi
 
