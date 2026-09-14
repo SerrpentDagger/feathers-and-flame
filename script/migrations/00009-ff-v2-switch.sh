@@ -22,6 +22,8 @@ if gum confirm "Switch to the Noctalia V5 branch?"; then
 	cd "$FEATHER_PATH" || exit 1
 	if ! git checkout master-v2; then
 		gum style --foreground="#FF2222" "ERROR: Unable to switch git branch! Exiting."
+		echo "Are there conflicts in the git repo?"
+		echo "Check $FEATHER_PATH for git conflicts."
 		exit 1
 	fi
 	if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
