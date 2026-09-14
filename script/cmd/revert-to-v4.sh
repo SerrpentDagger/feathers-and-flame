@@ -17,11 +17,17 @@ echo "If you have encountered problems with the system after updating, \
 please post an issue on the Feathers and Flame GitHub repository!"
 echo ""
 if gum confirm "Proceed?"; then
-	git fetch
 	if ! git checkout master; then
-		echo "ERROR: Unable to switch branch to master!"
+		gum style --bold --foreground="#FF2222" "ERROR: Unable to switch branch to master!"
+		echo "Are there conflicts in the git repo?"
+		echo "Check $FEATHER_PATH for git conflicts."
 		source "$FEATHERH/show-done.sh" --no-done
 		exit 1
+	fi
+	if ! git pull; then
+		gum style --bold --foreground="#DDDD44" "WARNING: Unable to update to latest master!"
+		echo "Are there conflicts in the git repo?"
+		echo "Check $FEATHER_PATH for git conflicts."
 	fi
 	source "$FEATHERH/sel-comps.sh" check "Configs" && source "$FEATHERS/configs.sh" --deploy-refs
 	pkill -x 'noctalia'
