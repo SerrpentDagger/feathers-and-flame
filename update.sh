@@ -12,7 +12,13 @@ fi
 
 # Update scripts and local config reference
 cd "$FEATHER_PATH"
-git pull
+if ! git pull; then
+	gum style --bold "ERROR: Unable to pull changes!"
+	echo "Are there conflicts in the git repo?"
+	echo "Check: $FEATHER_PATH for conflicts with git pull."
+	source "$FEATHERH/show-done.sh" --no-done
+	exit 1
+fi
 
 source "$FEATHERS/migrations.sh"
 source "$FEATHER_PATH/refresh.sh"
