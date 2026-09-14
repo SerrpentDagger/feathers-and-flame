@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
-bash "$FEATHERCMD/wallpaper.sh" hook --clear
 if ! source "$FEATHERH/state.sh" check first-run-done; then
 	source "$FEATHERCMD/wallpaper.sh" random
 
