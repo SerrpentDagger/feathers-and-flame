@@ -5,14 +5,33 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 applications_dir="$HOME/AppImages"
 args_file=".appimage-args"
 if ! cd "$applications_dir"; then
-	echo "Unable to cd to $applications_dir! Exiting."
-	sleep 2
-	exit 1
+	source "$FEATHERH/show-logo.sh" -small
+	gum style --bold "The AppImages directory is missing!"
+	echo "To start an AppImage through this launcher, you must place it in"
+	echo "  $applications_dir"
+	echo ""
+	if gum confirm "Make directory?"; then
+		if ! source "$FEATHERH/back-cp.sh" "$FEATHERA/AppImages" "$HOME/AppImages"; then
+			gum style --bold "Unable to make $applications_dir!"
+			echo "Exiting."
+			source "$FEATHERH/show-done.sh" --no-done
+			exit 1
+		elif ! cd "$applications_dir"; then
+			gum style --bold "Unable to cd to AppImages directory!"
+			echo "Exiting."
+			source "$FEATHERH/show-done.sh" --no-done
+			exit 1
+		fi
+	else
+		source "$FEATHERH/show-done.sh" --no-done
+		exit 1
+	fi
 fi
-if ! [ "$(ls -A "$applications_dir")" ]; then
+if [[ -z "$(find '.' -name "*.AppImage")" ]]; then
 	source "$FEATHERH/show-logo.sh" -small
 	gum style --bold "No AppImages found."
-	echo "To launch an AppImage through this launcher, you must place it in $applications_dir"
+	echo "To start an AppImage through this launcher, you must place it in"
+	echo "  $applications_dir"
 	echo ""
 	source "$FEATHERH/show-done.sh" --no-done
 	exit 0
