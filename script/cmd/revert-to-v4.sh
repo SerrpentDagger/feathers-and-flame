@@ -17,6 +17,7 @@ echo "If you have encountered problems with the system after updating, \
 please post an issue on the Feathers and Flame GitHub repository!"
 echo ""
 if gum confirm "Proceed?"; then
+	git fetch
 	if ! git checkout master; then
 		echo "ERROR: Unable to switch branch to master!"
 		source "$FEATHERH/show-done.sh" --no-done
