@@ -7,6 +7,10 @@ if [[ "--do-pause" == "${1:-}" ]]; then
 	do_pause="1"
 fi
 
+needs_migrate="1"
+if source "$FEATHERH/state.sh" check 'migrated-v1'; then
+	needs_migrate="0"
+fi
 gum style --bold "Feathers and Flame is switching to Noctalia V5"
 echo "You can stay on V4 if you want, but after this, all future work will be on Noctalia V5."
 echo "There are a several things to note about the switch:"
@@ -16,7 +20,7 @@ echo " · If you have made your own user-templates these must be copied over to 
 echo " · noctalia and go-yq will be installed as dependencies of the V5 branch."
 echo " · This migration can be re-run at a later time from the Quick-Config menu."
 echo ""
-if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
+if [[ "$needs_migrate" == "1" ]]; then
 	gum style --bold "You will need to run the updater once more after switching, to trigger the migrations."
 fi
 
@@ -28,7 +32,7 @@ if gum confirm "Switch to the Noctalia V5 branch?"; then
 		echo "Check $FEATHER_PATH for git conflicts."
 		exit 1
 	fi
-	if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
+	if [[ "$needs_migrate" == "1" ]]; then
 		gum style --bold "Switched branch. Please run the updater once more after this."
 	else
 		source "$FEATHER_PATH/refresh.sh" --no-desk
@@ -39,6 +43,6 @@ if gum confirm "Switch to the Noctalia V5 branch?"; then
 else
 	echo "Aborting switch. This migration can be re-run later from the Quick-Config menu if desired."
 fi
-if [[ "$do_pause" == "1" ]]; then
+if [[ "$do_pause" == "1" || "$needs_migrate" == "1" ]]; then
 	source "$FEATHERH/show-done.sh" "Press any key to continue..."
 fi
