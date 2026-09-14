@@ -27,6 +27,7 @@ if gum confirm "Switch to the Noctalia V5 branch?"; then
 	if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
 		gum style --bold "Switched branch. Please run the updater once more after this."
 	else
+		sleep 0.75
 		source "$FEATHER_PATH/refresh.sh" --no-desk
 		source "$FEATHERCMD/noctalia-restart.sh"
 	fi
