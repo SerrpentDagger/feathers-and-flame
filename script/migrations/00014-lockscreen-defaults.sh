@@ -2,4 +2,4 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-source "$FEATHERCMD/lockscreen-process.sh"
+source "$FEATHERCMD/lockscreen-process.sh" --no-done
