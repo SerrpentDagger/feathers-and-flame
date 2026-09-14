@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dflt_msg='Done! Press any key to close...'
-if [[ "--no-done" == "$1" ]]; then
+if [[ "--no-done" == "${1:-}" ]]; then
 	dflt_msg='Press any key to close...'
 	shift
 fi
