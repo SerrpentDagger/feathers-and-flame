@@ -16,7 +16,9 @@ echo " · If you have made your own user-templates these must be copied over to 
 echo " · noctalia and go-yq will be installed as dependencies of the V5 branch."
 echo " · This migration can be re-run at a later time from the Quick-Config menu."
 echo ""
-gum style --bold "You will need to run the updater once more after switching, to trigger the migrations."
+if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
+	gum style --bold "You will need to run the updater once more after switching, to trigger the migrations."
+fi
 
 if gum confirm "Switch to the Noctalia V5 branch?"; then
 	cd "$FEATHER_PATH" || exit 1
