@@ -116,7 +116,7 @@ Shell\ Settings*) qs -c noctalia-shell ipc call settings toggle ;;
 
 Fish\ Config*) cf="$h_conf/fish/config.fish" ;;
 Alacritty*) cf="$h_conf/alacritty/alacritty.toml" ;;
-Noctalia*) source "$FEATHERM/00009-ff-v2-switch.sh" ;;
+Noctalia*) source "$FEATHERM/00009-ff-v2-switch.sh" --do-pause ;;
 
 *) echo "ERROR: Unrecognised option! Exiting." && sleep 2 && exit 1 ;;
 esac

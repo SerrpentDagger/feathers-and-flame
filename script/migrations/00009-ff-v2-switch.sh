@@ -2,6 +2,11 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
+do_pause="0"
+if [[ "--do-pause" == "${1:-}" ]]; then
+	do_pause="1"
+fi
+
 gum style --bold "Feathers and Flame is switching to Noctalia V5"
 echo "You can stay on V4 if you want, but after this, all future work will be on Noctalia V5."
 echo "There are a several things to note about the switch:"
@@ -14,13 +19,20 @@ echo ""
 gum style --bold "You will need to run the updater once more after switching, to trigger the migrations."
 
 if gum confirm "Switch to the Noctalia V5 branch?"; then
-	source "$FEATHERH/state.sh" set 'migrated-v1'
 	cd "$FEATHER_PATH" || exit 1
 	if ! git checkout master-v2; then
 		gum style --foreground="#FF2222" "ERROR: Unable to switch git branch! Exiting."
 		exit 1
 	fi
-	gum style --bold "Switched branch. Please run the updater once more after this."
+	if ! source "$FEATHERH/state.sh" check 'migrated-v1'; then
+		gum style --bold "Switched branch. Please run the updater once more after this."
+	else
+		source "$FEATHER_PATH/refresh.sh" --no-desk
+		source "$FEATHERCMD/noctalia-restart.sh"
+	fi
 else
 	echo "Aborting switch. This migration can be re-run later from the Quick-Config menu if desired."
+fi
+if [[ "$do_pause" == "1" ]]; then
+	source "$FEATHERH/show-done.sh" "Press any key to continue..."
 fi
