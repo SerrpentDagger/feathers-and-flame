@@ -7,6 +7,9 @@ enabled = false
 [control_center]
 sidebar_section = "none"
 
+[control_center.calendar]
+show_events_card = false
+
 [lockscreen_widgets]
 enabled = false
 
