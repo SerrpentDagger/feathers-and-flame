@@ -57,9 +57,8 @@ echo -e "\n$ansi_art\n"
 echo "Preparing to install..."
 sudo pacman -Syu --noconfirm --needed git gum
 
-# Use custom branch if instructed, otherwise default to master
-FEATHERS_REF="${FEATHERS_REF:-master}"
-# Use custom repo if specified, otherwise default to basecamp/omarchy
+# Default git coords.
+FEATHERS_REF="${FEATHERS_REF:-master-v2}"
 FEATHERS_REPO="${FEATHERS_REPO:-SerrpentDagger/feathers-and-flame}"
 
 echo -e "\nCloning Feathers and Flame from: https://github.com/${FEATHERS_REPO}.git"

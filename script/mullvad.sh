@@ -3,14 +3,14 @@
 gum style --bold --foreground="#DDDD44" "Installing Browser..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-tor_version="15.0.8"
+tor_version="15.0.22"
 dl_link="https://mullvad.net/en/download/browser/linux-x86_64/latest"
 app_name="mullvad"
 pending_name="Mullvad"
 if [[ "tor" == "$1" ]]; then
-	tor_link="https://www.torproject.org/download/"
+	tor_link="https://download.torproject.org/tor-browser-for-desktop"
 	html_text="$(curl -fsSL "$tor_link")"
-	tor_version=$(echo "$html_text" | grep "/dist/torbrowser" | grep -Po -m 1 "tor-browser-linux-x86_64-\\K\\d\\d\\.\\d+\\.\\d+")
+	tor_version=$(echo "$html_text" | grep "GNU/Linux" | grep -Po -m 1 "tor-browser-linux-x86_64-\\K\\d\\d\\.\\d+\\.\\d+" || echo "$tor_version")
 	dl_link="https://www.torproject.org/dist/torbrowser/$tor_version/tor-browser-linux-x86_64-$tor_version.tar.xz"
 	app_name="tor"
 	pending_name="Tor"
