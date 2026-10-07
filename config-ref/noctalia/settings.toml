@@ -13,6 +13,9 @@ show_events_card = false
 [lockscreen_widgets]
 enabled = false
 
+[audio]
+enable_sounds = false
+
 [hooks]
 colors_changed = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
 session_locked = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screen-lock.sh"
