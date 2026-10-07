@@ -84,6 +84,7 @@ choice=$(gum choose "Niri Modules: Top-level Niri config where all others are im
 	"  Wallpaper Favourites: Defined by placing folders here named '0' through '9' with images inside. Then Super-Shift-<Number>" \
 	"  Theme User Templates: Define custom theming for your favourite applications. (Noctalia User Templates)" \
 	"  Theme System Templates: View the system theme templates for reference (Read-Only)" \
+	"  Colour Palettes: View, add, remove or modify the system's various colour palettes." \
 	"  Reset Lockscreens: Put the default Feathers lockscreen widgets on all connected monitors. NOTE: Current is discarded to backup!" \
 	"  GUI Overrides: View the GUI overrides to default shell settings (including widget positions). Usually set by Super-S." \
 	"AppImage Args: Define custom environment arguments for certain AppImages in the AppImage Launcher." \
@@ -120,6 +121,7 @@ Shell\ Settings*) noctalia msg settings-toggle ;;
 *Wallpaper\ Favourites*) mkdir -p "$FEATHERWP" && cf="$FEATHERWP" ;;
 *Theme\ User*) cf="$noct_top/user-templates-v5.toml" ;;
 *Theme\ System*) ro="1" && cf="$noct_dep/user-templates.toml" ;;
+*Palettes*) cf="$noct_top/palettes/" ;;
 *Reset\ Lock*) bash "$FEATHERCMD/lockscreen-process.sh" ;;
 *GUI\ Override*) cf="$HOME/.local/state/noctalia/settings.toml" ;;
 
