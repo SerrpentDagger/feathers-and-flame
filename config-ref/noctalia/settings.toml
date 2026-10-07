@@ -63,6 +63,7 @@ pre_action_fade_seconds = 0
 
 [shell]
 clipboard_enabled = false
+polkit_agent = true
 corner_radius_scale = 2.0
 offline_mode = false
 show_location = false
