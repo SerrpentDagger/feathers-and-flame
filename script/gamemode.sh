@@ -7,7 +7,7 @@ sudo usermod -aG gamemode "$USER"
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
-gm_dir="/usr/share/gamemode"
+gm_dir="/etc/"
 gm_file="$gm_dir/gamemode.ini"
 
 # Make sure dir exists
