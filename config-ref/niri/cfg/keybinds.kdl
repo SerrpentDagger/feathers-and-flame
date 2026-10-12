@@ -76,8 +76,8 @@ binds {
 	Mod+Y            repeat=false hotkey-overlay-title="Open FreeTube YT-viewer"  { spawn "freetube"; }
 
 	// ─── Nautilus ───
-	Mod+E            repeat=false hotkey-overlay-title="File Manager							( <span background=\"#303030\"><tt>+Shift</tt></span>: Starred )" { spawn-sh "nautilus"; }
-	Mod+Shift+E      repeat=false hotkey-overlay-title=null { spawn-sh "nautilus starred:///"; }
+	Mod+E            repeat=false hotkey-overlay-title="File Manager							( <span background=\"#303030\"><tt>+Shift</tt></span>: Starred )" { spawn-sh "nautilus -w"; }
+	Mod+Shift+E      repeat=false hotkey-overlay-title=null { spawn-sh "nautilus -w starred:///"; }
 
 	// ─── System Monitors ───
 	Mod+Shift+C      repeat=false hotkey-overlay-title="<b>System Monitor</b>							( <span background=\"#303030\"><tt>I</tt></span>: Internet,  <span background=\"#303030\"><tt>G</tt></span>: GPU )" { spawn-sh "alacritty -e btop"; }
