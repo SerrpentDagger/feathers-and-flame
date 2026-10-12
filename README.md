@@ -5,7 +5,7 @@ It's completely modular; you can either breeze through the install menu, pressin
 
 ## Some highlights
 
-- Niri, Noctalia, CachyOS (obv)
+- Niri, Noctalia v5, CachyOS (obv)
 - Comprehensive theming setup; colours chosen dynamically from wallpaper or specific theme per wallpaper
 - Wallpaper keybinds for favourite groups: get a random wallpaper from any favourite category
 - Highly keyboard-driven with carefully thought-out bindings for most use
@@ -13,6 +13,7 @@ It's completely modular; you can either breeze through the install menu, pressin
 - Night light with `wlsunset`
 - Fine-tuned window rules and shell configuration; custom hot-swap rules
 - Quick-Config menu to easily customise your system (`Super-G`)
+- AppImage launcher to start AppImages from the Noctalia launcher
 - LUKS-encrypted auto-login
 - Refined LazyVim out of the box
 - Advanced power-management with `tlp`
