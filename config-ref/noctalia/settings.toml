@@ -115,6 +115,8 @@ show_location = false
     [shell.launcher]
     fetch_exchange_rates = false
     categories = false
+    layout = "simple"
+
 
     [shell.screenshot]
     copy_to_clipboard = false
@@ -131,6 +133,7 @@ margin_edge = 9
 margin_ends = 8
 start = [ "edge", "cpu", "ram", "sysmon", "between", "workspaces" ]
 thickness = 25
+background_opacity = 0.93
 widget_spacing = 8
 
     [bar.default.dead_zone.actions]

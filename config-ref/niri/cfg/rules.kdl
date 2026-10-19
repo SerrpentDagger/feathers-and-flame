@@ -6,6 +6,12 @@ layer-rule {
 	match namespace="^noctalia-wallpaper*"
 	place-within-backdrop true
 }
+layer-rule {
+	match namespace="^noctalia-"
+	background-effect {
+		blur false
+	}
+}
 
 //////////////////////// GEOMETRY
 // Open the Firefox picture-in-picture player as floating by default.
