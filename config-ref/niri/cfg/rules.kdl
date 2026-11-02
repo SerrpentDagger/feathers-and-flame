@@ -43,6 +43,7 @@ window-rule {
 	match app-id="keepassxc" title="Open database"
 	match app-id="org.gnome.Calculator"
 	match app-id="org.cachyos.hello"
+	match app-id="Mullvad Browser" title="About Mullvad Browser"
 
 	open-floating true
 	default-column-width { proportion 0.3; }
@@ -111,5 +112,13 @@ window-rule {
 
 	open-fullscreen false
 	open-maximized true
+	default-window-height { proportion 1.0; }
+}
+
+// Force certain windows to open tiled.
+window-rule {
+	match app-id="Vtk"
+
+	default-column-width { proportion 0.5; }
 	default-window-height { proportion 1.0; }
 }
