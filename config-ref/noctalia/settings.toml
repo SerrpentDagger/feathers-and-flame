@@ -9,6 +9,7 @@ sidebar_section = "none"
 
 [control_center.calendar]
 show_events_card = false
+show_week_numbers = true
 
 [lockscreen_widgets]
 enabled = false
