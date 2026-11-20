@@ -20,7 +20,7 @@ function M.setup()
     base0C = "{{colors.tertiary_container.default.hex | invert | darken 5}}", -- Regex, Escape Chars
     base0D = "{{colors.tertiary.default.hex}}", -- Functions, Methods
     base0E = "{{colors.primary.default.hex}}", -- Keywords, Storage
-    base0F = "{{colors.error_container.default.hex}}", -- Deprecated, Embedded Tags
+    base0F = "{{colors.error_container.default.hex | invert | darken 20}}", -- Deprecated, Embedded Tags
   })
 end
 --[[
@@ -85,13 +85,22 @@ invert: {{colors.primary.default.hex | invert}}
 invert: {{colors.secondary.default.hex | invert}}
 invert: {{colors.tertiary.default.hex | invert}}
 --]]
--- Register a signal handler for SIGUSR1 (matugen updates)
+
+-- Register a signal handler for SIGUSR1 (matugen updates).
+-- The handler re-requires this module, which re-runs the code below, so the
+-- previous handle is stopped first; otherwise handlers double on every signal.
+if _G.__matugen_signal then
+  _G.__matugen_signal:stop()
+  _G.__matugen_signal:close()
+end
+
 local signal = vim.uv.new_signal()
+_G.__matugen_signal = signal
 signal:start(
-  "sigusr1",
+  'sigusr1',
   vim.schedule_wrap(function()
-    package.loaded["matugen"] = nil
-    require("matugen").setup()
+    package.loaded['matugen'] = nil
+    require('matugen').setup()
   end)
 )
 
