@@ -24,11 +24,13 @@ set_autoformat({ "lua" }, false)
 set_autoformat({ "perl" }, false)
 set_autoformat({ "yaml" }, false)
 set_autoformat({ "py" }, false)
+set_autoformat({ "toml" }, false)
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = "*",
 	callback = function()
 		vim.opt.expandtab = false -- Stupid Spaces!!!! >:(
+		vim.opt.formatoptions:remove({ "o", "r" })
 	end
 })
 
