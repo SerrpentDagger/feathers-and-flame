@@ -21,3 +21,9 @@ export FEATHERM="$FEATHERS/migrations"
 
 export NIRI_CONFIG="$HOME/.config/niri"
 export NIRI_CONFIG_CFG="$NIRI_CONFIG/cfg"
+
+export FEATHER_WARNING="#DDDD44"
+export FEATHER_ERROR="#FF2222"
+export FEATHER_SUCCESS="#55FF99"
+export FEATHER_CODE_FG="#CCCCCC"
+export FEATHER_CODE_BG="#444444"
