@@ -32,7 +32,7 @@ else
 	if ! [[ -e "$2" ]]; then
 		# If there is no file to be replaced
 		do_copy=1
-	elif ! diff -r --color --label="CURRENT" --label="NEW" "$1" "$2" &&
+	elif ! diff -ru --color --label="CURRENT: $2" --label="NEW: $1" "$2" "$1" &&
 		gum confirm "Update file in-place? (Backups created in $FEATHER_BACKUPS) Otherwise you can just make the modification yourself."; then
 		# Or if the user accepts the diff
 		do_copy=1
