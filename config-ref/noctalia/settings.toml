@@ -52,6 +52,7 @@ pre_action_fade_seconds = 0
     [idle.behavior.Screensaver]
     action = "command"
     command = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh"
+    resume_command = "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill"
     enabled = true
     timeout = 480.0
 
