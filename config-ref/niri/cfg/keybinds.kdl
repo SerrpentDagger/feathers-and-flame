@@ -62,18 +62,13 @@ binds {
 	// ─── Hot-Rules ───
 	Mod+Alt+D        repeat=false hotkey-overlay-title="Toggle laptop-monitor on/off" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh hdmi-only"; }
 	Mod+Alt+T        repeat=false hotkey-overlay-title="Toggle global transparency"   { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh transparency"; }
-	Mod+Alt+P        repeat=false hotkey-overlay-title=null                           { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh tablet-to-hdmi"; }
 	Mod+Alt+C        repeat=false hotkey-overlay-title=null                           { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh mass-screenshot && notify-send 'Toggled Mass-Screenshot Binding'"; }
 
 	// ────── Applications ──────
-	Mod+B            repeat=false hotkey-overlay-title="Open Browser							( <span background=\"#303030\"><tt>+Shift</tt></span>: Private )" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
-	Mod+Shift+B      repeat=false hotkey-overlay-title=null                       { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
 	Mod+Return       repeat=false hotkey-overlay-title="Open Terminal"            { spawn "alacritty"; }
 	Mod+Space        repeat=false hotkey-overlay-title="<b>Open App Launcher</b>" { spawn-sh "noctalia msg panel-toggle launcher"; }
 	Mod+Shift+O      repeat=false hotkey-overlay-title="Lock Screen"              { spawn-sh "noctalia msg session lock"; }
 	Mod+Escape       repeat=false hotkey-overlay-title="Session Menu"             { spawn-sh "noctalia msg panel-toggle session"; }
-	Mod+Shift+Ctrl+G repeat=false hotkey-overlay-title="Open Gimp"                { spawn "gimp"; }
-	Mod+Y            repeat=false hotkey-overlay-title="Open FreeTube YT-viewer"  { spawn "freetube"; }
 
 	// ─── Nautilus ───
 	Mod+E            repeat=false hotkey-overlay-title="File Manager							( <span background=\"#303030\"><tt>+Shift</tt></span>: Starred )" { spawn-sh "nautilus -w"; }
@@ -86,11 +81,6 @@ binds {
 
 	xF86Calculator   repeat=false                                     { spawn-sh "gnome-calculator"; }
 	Mod+N            repeat=false hotkey-overlay-title="Open LazyVim" { spawn-sh "alacritty -e nvim"; }
-
-	// ─── File Share ───
-	Mod+Ctrl+S       repeat=false hotkey-overlay-title="LocalSend Share File						( <span background=\"#303030\"><tt>Shift</tt></span>: Folder,  <span background=\"#303030\"><tt>Alt</tt></span>: Clipboard )" { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh file"; }
-	Mod+Shift+S      repeat=false hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh folder"; }
-	Mod+Alt+S        repeat=false hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh clipboard"; }
 
 	// ─── Media Controls ───
 	XF86AudioRaiseVolume       allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }

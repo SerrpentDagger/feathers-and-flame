@@ -15,6 +15,20 @@ binds {
 	// Toggle custom chunks of niri config with keybinds
 	// Mod+Shift+Ctrl+Alt+Space hotkey-overlay-title="Toggle global transparency" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh transparency"; }
 
-	// ─── Applications ───
-	// Run applications with keybinds
+	// ─── Browsers ───
+	// NOTE: Changing from these browsers will almost certainly harm your privacy.
+	// See: https://serpentdagger.com/pages/content/digital-privacy-for-normal-people.html
+	// More specifically: https://privacytests.org/
+	// I suggest trying librewolf as a fallback if something isn't working, as it's almost as good.
+	Mod+B            repeat=false hotkey-overlay-title="Open Browser							( <span background=\"#303030\"><tt>+Shift</tt></span>: Private )" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
+	Mod+Shift+B      repeat=false hotkey-overlay-title=null                       { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
+
+	// ─── Misc Applications ───
+	Mod+Shift+Ctrl+G repeat=false hotkey-overlay-title="Open Gimp"                { spawn "gimp"; }
+	Mod+Y            repeat=false hotkey-overlay-title="Open FreeTube YT-viewer"  { spawn "freetube"; }
+
+	// ─── File Share ───
+	Mod+Ctrl+S       repeat=false hotkey-overlay-title="LocalSend Share File						( <span background=\"#303030\"><tt>Shift</tt></span>: Folder,  <span background=\"#303030\"><tt>Alt</tt></span>: Clipboard )" { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh file"; }
+	Mod+Shift+S      repeat=false hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh folder"; }
+	Mod+Alt+S        repeat=false hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh clipboard"; }
 }
